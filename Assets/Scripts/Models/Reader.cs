@@ -7,18 +7,24 @@ public class Reader {
 
 	// Class properties
 	public string email;
-	public int score;
-	public int level;
+	public int mood;
+	public int dynamic;
+	public int intensity;
+	public bool isReady;
 
-	public Reader(string email, int score, int level) {
+	public Reader(string email) {
 		this.email = email;
-		this.score = score;
-		this.level = level;
+		this.mood = 0;
+		this.dynamic = 0;
+		this.intensity = 0;
+		this.isReady = false;
 	}
 	
 	public Reader(IDictionary<string, object> dict) {
 		this.email = dict["email"].ToString();
-		this.score = Convert.ToInt32(dict["score"]);
-		this.level = Convert.ToInt32(dict["level"]);
+		this.mood = Convert.ToInt32(dict["mood"]);
+		this.dynamic = Convert.ToInt32(dict["dynamic"]);
+		this.intensity = Convert.ToInt32(dict["intensity"]);
+		this.isReady = Convert.ToBoolean(dict["isReady"]);
 	}
 }

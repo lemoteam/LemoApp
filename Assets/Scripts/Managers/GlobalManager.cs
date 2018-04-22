@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class GlobalManager : MonoBehaviour {
 
 	public static GlobalManager instance = null;
 	public DatabaseManager database;     
-	public SceneLoader sceneLoader;  
+	public SceneLoader sceneLoader;
+	
+	protected internal Reader reader = null;
+	protected internal string currentReaderUid = null;
 
 	public void Awake() {
 
@@ -31,12 +35,12 @@ public class GlobalManager : MonoBehaviour {
 		InitDatabase ();
 	}
 
-	void InitDatabase() {
-		database.InitDatabase();
+	private void InitDatabase() {
+		DatabaseManager.InitDatabase();
 		StartCoroutine(MinWaitForLogoAnimation());
 	}
 
-	IEnumerator MinWaitForLogoAnimation()
+	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);
 		sceneLoader.LoadScene ("Main");

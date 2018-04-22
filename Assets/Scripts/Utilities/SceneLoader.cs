@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,15 +13,15 @@ public class SceneLoader : MonoBehaviour {
 		StartCoroutine (LoadAsynchronously (sceneName));
 	}
 
-	IEnumerator LoadAsynchronously(string sceneName){
-		AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
+	private IEnumerator LoadAsynchronously(string sceneName){
+		var operation = SceneManager.LoadSceneAsync (sceneName);
 
 		progressText.text = "";
 		loadingScene.SetActive(true);
 
 		while (!operation.isDone) {
 			Debug.Log (operation.progress);
-			float progress = Mathf.Clamp01 (operation.progress / .9f);
+			var progress = Mathf.Clamp01 (operation.progress / .9f);
 			progressText.text = progress * 100f + "%";
 			yield return null;
 			loadingScene.SetActive(false);

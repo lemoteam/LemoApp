@@ -1,100 +1,84 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Firebase;
-using Firebase.Auth;
-using UnityEngine.SceneManagement;
 
 public class FormManager : MonoBehaviour {
 
 	// UI objects linked from the inspector
-	public InputField emailInput;
-	public InputField passwordInput;
-
-	public Button signUpButton;
-	public Button loginButton;
-
 	public Text statusText;
-
+	
+	// Manager
 	public AuthManager authManager;
-
-	void Awake() {
-		ToggleButtonStates (false);
+	
+	
+	// Awake
+	private void Awake() {
 
 		// Auth Delegate Subscription
 		authManager.authCallback += HandleAuthCallback;
 	}
 
-	/// <summary>
-	/// Validates the email input
-	/// </summary>
-	public void ValidateEmail() { 
-		string email = emailInput.text;
-		var regexPattern = @"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
-                + @"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\."
-                + @"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
-                + @"([a-zA-Z]+[\w-]+\.)+[a-zA-Z]{2,4})$";
-
-		if (email != "" && Regex.IsMatch(email, regexPattern)) {
-			ToggleButtonStates (true);
-		} else {
-			ToggleButtonStates (false);
-		}
-	}
-
+	
 	// Firebase methods
-	public void OnSignUp() {
+	// NOTE: FACTORISER - Ici on passera l'email et le password grace à l'ID du marker scanné
+	private void OnSignUp() {
 		Debug.Log ("Sign Up");
-		authManager.SignUpNewUser(emailInput.text, passwordInput.text);
+		const string email = "IDduMarker" + "@lemo.fr";
+		const string password = "IDduMarker" + "IDduMarker";
+		authManager.SignUpNewUser(email, password);
 	}
-
+	
+	
 	public void OnLogin() {
 		Debug.Log ("Login");
-		authManager.LoginExistingUser(emailInput.text, passwordInput.text);
+		const string email = "IDduMarker" + "@lemo.fr";
+		const string password = "IDduMarker" + "IDduMarker";
+		authManager.LoginExistingUser(email, password);
 	}
 
-
-	IEnumerator HandleAuthCallback (Task<Firebase.Auth.FirebaseUser> task, string operation) {
+	
+	// HandleCallback
+	private IEnumerator HandleAuthCallback (Task<Firebase.Auth.FirebaseUser> task, string operation) {
 		if (task.IsCanceled) {
 			UpdateStatus ("La création a été annulée.");
 		}
+		
 		if (task.IsFaulted) {
-			UpdateStatus ("Oups une erreur est survenue : " + task.Exception);
-		}
-		if (task.IsCompleted) {
-
-			// Firebase user has been created.
-			Firebase.Auth.FirebaseUser newUser = task.Result;
-			Debug.LogFormat("Tu es bien inscrit à Lémo {0}!", newUser.Email);
-
-			if (operation == "sign_up") {		
-				Debug.Log ("SIGN SIGN SIGN");		
-				Reader reader = new Reader(newUser.Email, 0, 1);
-				GlobalManager.instance.database.CreateNewReader(reader, newUser.UserId);
+			UpdateStatus ("Nous te créons un compte.");
+			
+			// If there is no account create
+			if (operation == "login") {
+				OnSignUp();
+				yield break;
 			}
-
-			UpdateStatus ("On charge ton expérience");
-
-			yield return new WaitForSeconds (1.5f);
-			GlobalManager.instance.sceneLoader.LoadScene ("Dashboard");
 		}
-	} 
 
-	void OnDestroy() {
+		if (!task.IsCompleted) yield break;
+		
+		// Firebase user has been created.
+		var newUser = task.Result;
+		Debug.LogFormat("Tu es bien inscrit à Lémo {0}!", newUser.Email);
+
+		if (operation == "sign_up") {		
+			var reader = new Reader(newUser.Email);
+			DatabaseManager.CreateNewReader(reader, newUser.UserId);
+		}
+
+		UpdateStatus ("Nous chargeons ton expérience");
+
+		yield return new WaitForSeconds (1.5f);
+		GlobalManager.instance.sceneLoader.LoadScene ("InGame");
+	}
+
+	
+	private void OnDestroy() {
 		// Auth Delegate Subscription
 		authManager.authCallback -= HandleAuthCallback;
 	}
 
+	
 	// Utilities
-	private void ToggleButtonStates(bool toState) {
-		signUpButton.interactable = toState;
-		loginButton.interactable = toState;
-	}
-
 	private void UpdateStatus(string message) {
 		statusText.text = message;
 	}

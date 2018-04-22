@@ -1,19 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Firebase;
+﻿using UnityEngine;
 using Firebase.Database;
-using Firebase.Unity.Editor;
 
 public class Router : MonoBehaviour {
 
-	private static DatabaseReference baseRef = FirebaseDatabase.DefaultInstance.RootReference;
-
-	public static DatabaseReference Reader() {
-		return baseRef.Child("reader");
-	}
+	private static readonly DatabaseReference baseRef = FirebaseDatabase.DefaultInstance.RootReference;
 
 	public static DatabaseReference ReaderWithUID(string uid) {
 		return baseRef.Child("reader").Child(uid);
+	}
+	
+	public static DatabaseReference CurrentReader() {
+		return baseRef.Child("reader").Child(GlobalManager.instance.currentReaderUid);
 	}
 }

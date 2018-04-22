@@ -14,7 +14,7 @@ public class AuthManager : MonoBehaviour {
 	public delegate IEnumerator AuthCallback(Task<Firebase.Auth.FirebaseUser> task, string operation);
 	public event AuthCallback authCallback;
 
-	void Awake() {
+	private void Awake() {
 		auth = FirebaseAuth.DefaultInstance;
 	}
 

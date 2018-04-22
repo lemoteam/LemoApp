@@ -1,0 +1,50 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public class ReaderManager : MonoBehaviour {
+	
+	Firebase.Auth.FirebaseAuth auth;
+	
+	// UI objects linked from the inspector
+	public Text userEmail;
+	public Text userValue;
+
+	private void Awake()
+	{
+		auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+		DatabaseManager.GetReader(auth.CurrentUser.UserId, result => {
+			GlobalManager.instance.reader = result;
+			GlobalManager.instance.currentReaderUid = auth.CurrentUser.UserId;
+			
+			UpdateEmail("L'utilisateur connecté est " + GlobalManager.instance.reader.email);
+		});
+	}
+	
+	// Need cause cannot add to parameters on OnClick UI Button method
+	public string parameterKey { private get; set; }  // not visible without these properties   
+
+	
+	public void UpdateReaderSettings(int value) {
+		// key list : mood / dynamic / intensity
+		
+		// Update in Firebase
+		Router.CurrentReader().Child(parameterKey).SetValueAsync(value);
+		
+		// Update in GlobalManager
+		var prop = GlobalManager.instance.reader.GetType().GetProperty(parameterKey);
+		if (prop != null) prop.SetValue(GlobalManager.instance.reader, value, null);
+
+		UpdateValue(parameterKey.ToString() + " est le " + value.ToString());
+
+	}
+	
+	// Utilities
+	private void UpdateEmail(string message){
+		userEmail.text = message;
+	}
+	
+	private void UpdateValue(string message) {
+		userValue.text = message;
+	}
+}
+  
