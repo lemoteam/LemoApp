@@ -7,6 +7,7 @@ public class LoadSceneOnDetection : MonoBehaviour,
 {
 
 	private TrackableBehaviour mTrackableBehaviour;
+	private string currentScene;
 
 	void Start()
 	{
@@ -33,20 +34,32 @@ public class LoadSceneOnDetection : MonoBehaviour,
 	{
 
 		Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
-
+		getActiveSceneName();
 		switch( mTrackableBehaviour.TrackableName ){
 			case "example_5-star_grayscale" :
-				Debug.Log( "load detection scene");
-				// GlobalManager.instance.sceneLoader.LoadScene ("InGame");
-				// SceneManager.LoadScene( "sphereScene" );
+				var sceneName = "InGame";
+				if (GlobalManager.instance.isLoggin && currentScene != sceneName)
+				{
+					Debug.Log( "load detection scene");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneName);
+				}
 				break;
 
 			case "qrcode" :
+				Debug.Log("Current scene :" + currentScene);
 				Debug.Log( "load cube scene");
 				// SceneManager.LoadScene( "cubeScene" );
 				break;
 		}
 
-	}			
+	}	
+	
+	
+	private void getActiveSceneName()
+	{
+		var scene = SceneManager.GetActiveScene();
+		currentScene = scene.name;
+	}
+	
 }    
 

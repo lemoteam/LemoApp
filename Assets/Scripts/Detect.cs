@@ -1,17 +1,23 @@
 ﻿
 using UnityEngine;
 using Vuforia;
+using Image = UnityEngine.UI.Image;
+
 
 public class Detect : MonoBehaviour, ITrackableEventHandler
 {
     public FormManager formManager;
     protected TrackableBehaviour mTrackableBehaviour;
+    private GameObject scan;
+    private GameObject text;
 
     protected virtual void Start()
     {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+        scan = GameObject.FindWithTag("scan");
+        text = GameObject.FindWithTag("text");
     }
 
     public void OnTrackableStateChanged(
@@ -26,12 +32,14 @@ public class Detect : MonoBehaviour, ITrackableEventHandler
             if (!GlobalManager.instance.isLoggin)
             {
                 formManager.OnLogin(mTrackableBehaviour.TrackableName);
+                scan.GetComponent<Image>().color = new Color32(0,0,0,100);
+                text.SetActive(false);
             }
-          
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NOT_FOUND)
         {
+            scan.GetComponent<Image>().color = new Color32(255,255,255,100);
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
         
