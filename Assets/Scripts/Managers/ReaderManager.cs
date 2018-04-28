@@ -40,7 +40,7 @@ public class ReaderManager : MonoBehaviour {
 	}
 	
 	// Get reader setting by key
-	public static string GetReaderSetting(string key)
+	public string GetReaderSetting(string key)
 	{
 		return GlobalManager.instance.reader.GetType().GetProperty(key).GetValue(GlobalManager.instance.reader, null).ToString();
 	}

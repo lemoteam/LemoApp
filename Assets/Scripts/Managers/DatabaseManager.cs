@@ -3,6 +3,8 @@ using UnityEngine;
 using Firebase;
 using Firebase.Unity.Editor;
 using System;
+using System.Linq;
+using Firebase.Database;
 
 public class DatabaseManager : MonoBehaviour {
 
@@ -23,6 +25,19 @@ public class DatabaseManager : MonoBehaviour {
 			var readerDict = (IDictionary<string, object>)reader.Value;
 			var newReader = new Reader(readerDict);
 			completionBlock(newReader);
+		});
+	}
+
+	public static void GetMessages(Action<List<Message>> completionBlock)
+	{
+		var tmpList = new List<Message>();
+
+		Router.Messages().GetValueAsync().ContinueWith(task =>
+		{
+			var messages = task.Result;
+
+			tmpList.AddRange(from item in messages.Children let key = item.Key let value = item.Value.ToString() select new Message(key, value));
+			completionBlock(tmpList);
 		});
 	}
 }

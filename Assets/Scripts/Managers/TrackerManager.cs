@@ -5,11 +5,11 @@ using Image = UnityEngine.UI.Image;
 
 public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 {
-	protected TrackableBehaviour mTrackableBehaviour;
+	private TrackableBehaviour mTrackableBehaviour;
 	private GameObject scan;
 	private GameObject text;
 
-	protected virtual void Start() {
+	void Start() {
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		
 		// Trackable Behaviour
@@ -32,7 +32,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND) {
 			
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-			onTrackingLost();
+			OnTrackingLost();
 		}
 	}
 	
@@ -43,7 +43,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		switch (mTrackableBehaviour.TrackableName) {
 			case "qrcode":
 				if (GlobalManager.instance.isLoggin) return;
-				onScan();
+				OnScan();
 				break;
 			
 			default:
@@ -54,10 +54,10 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	
 	
 	// Tracking Lost
-	private void onTrackingLost() {
+	private void OnTrackingLost() {
 		switch (mTrackableBehaviour.TrackableName) {
 			case "qrcode":
-				offScan();
+				OffScan();
 				break;
 			
 			default:
@@ -72,7 +72,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	///////////////
 	
 	// Scan
-	private void onScan() {
+	private void OnScan() {
 		
 		scan = GameObject.FindWithTag("scan");
 		text = GameObject.FindWithTag("text");
@@ -80,10 +80,17 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
 		text.SetActive(false);
+
+		LaunchMessage("scan");
 	}
 
-	private void offScan() {
+	private void OffScan() {
 		scan.GetComponent<Image>().color = new Color32(255,255,255,100);
+	}
+	
+	// Messages
+	public void LaunchMessage(string key) {
+		MessageManager.ShowMessage(key);
 	}
 	
 	

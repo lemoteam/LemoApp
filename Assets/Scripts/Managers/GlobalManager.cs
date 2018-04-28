@@ -11,10 +11,13 @@ public class GlobalManager : MonoBehaviour {
 	public static GlobalManager instance = null;
 	public DatabaseManager database;     
 	public SceneLoader sceneLoader;
+	public MessageManager messageManager;
 	
 	protected internal Reader reader = null;
 	protected internal string currentReaderUid = null;
 	protected internal bool isLoggin = false;
+	protected internal List<Message> messageList = new List<Message>();
+
 
 	public void Awake() {
 
@@ -34,6 +37,10 @@ public class GlobalManager : MonoBehaviour {
 		//Get a component reference to the attached DatabaseManager
 		database = GetComponent<DatabaseManager>();
 		sceneLoader = GetComponent<SceneLoader> ();
+		messageManager = GetComponent<MessageManager> ();
+		
+		//Clear Message List
+		messageList.Clear();
 		
 		//Call the InitGame function to initialize the database
 		InitDatabase ();
@@ -43,6 +50,8 @@ public class GlobalManager : MonoBehaviour {
 	private void OnVuforiaStarted(){
 		getNewGameObject();
 	}
+
+
 	void getNewGameObject() {
 		var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
 		foreach (var item in obj) {
@@ -52,11 +61,16 @@ public class GlobalManager : MonoBehaviour {
 
 	private void InitDatabase() {
 		var vuforia = VuforiaARController.Instance;
+		// Init Database
 		DatabaseManager.InitDatabase();
+		// Init Vuforia
 		vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+		// Get Messages
+		DatabaseManager.GetMessages(result => { messageList = result; });
 		StartCoroutine(MinWaitForLogoAnimation());
 	}
 
+	
 	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);
