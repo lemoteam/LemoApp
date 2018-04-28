@@ -35,8 +35,9 @@ public class LoadSceneOnDetection : MonoBehaviour,
 
 		Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
 		getActiveSceneName();
-		switch( mTrackableBehaviour.TrackableName ){
+		switch( mTrackableBehaviour.TrackableName )  {
 			case "virtualbutton:" :
+			case "virtualbutton-02-03" :
 				var sceneName = "InGame";
 				if (GlobalManager.instance.isLoggin && currentScene != sceneName)
 				{
