@@ -32,12 +32,10 @@ public class LoadSceneOnDetection : MonoBehaviour,
 
 	private void OnTrackingFound()
 	{
-
 		Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
 		getActiveSceneName();
 		switch( mTrackableBehaviour.TrackableName )  {
-			case "virtualbutton:" :
-			case "virtualbutton-02-03" :
+			case "virtualbutton" :
 				var sceneName = "Choice1";
 				if (GlobalManager.instance.isLoggin && currentScene != sceneName)
 				{
@@ -47,9 +45,21 @@ public class LoadSceneOnDetection : MonoBehaviour,
 				break;
 
 			case "qrcode" :
-				Debug.Log("Current scene :" + currentScene);
-				Debug.Log( "load cube scene");
-				// SceneManager.LoadScene( "cubeScene" );
+				var sceneNameMain = "Main";
+				if (currentScene != sceneNameMain)
+				{
+					Debug.Log( "load couverture scene");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneNameMain);
+				}
+				break;
+			
+			case "example_5-star_grayscale" :
+				var sceneNameChoice2 = "Choice2";
+				if (GlobalManager.instance.isLoggin && currentScene != sceneNameChoice2)
+				{
+					Debug.Log( "load scene choix 2");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneNameChoice2);
+				}
 				break;
 		}
 
