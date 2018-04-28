@@ -102,10 +102,10 @@ public class AuthManager : MonoBehaviour {
 		UpdateStatus ("Nous chargeons ton expérience");
 
 		yield return new WaitForSeconds (1.5f);
-		UpdateStatus ("Allez va faire tes choix mané");
+		//UpdateStatus ("Allez va faire tes choix mané");
 		GlobalManager.instance.isLoggin = true;
 
-		// GlobalManager.instance.sceneLoader.LoadScene ("InGame");
+		GlobalManager.instance.sceneLoader.LoadScene ("InGame");
 	}
 
 
