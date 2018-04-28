@@ -38,7 +38,7 @@ public class LoadSceneOnDetection : MonoBehaviour,
 		switch( mTrackableBehaviour.TrackableName )  {
 			case "virtualbutton:" :
 			case "virtualbutton-02-03" :
-				var sceneName = "InGame";
+				var sceneName = "Choice1";
 				if (GlobalManager.instance.isLoggin && currentScene != sceneName)
 				{
 					Debug.Log( "load detection scene");
