@@ -7,9 +7,9 @@ public class Reader {
 
 	// Class properties
 	public string email;
-	public int mood;
-	public int dynamic;
-	public int intensity;
+	public int mood { get; private set; }
+	public int dynamic { get; private set; }
+	public int intensity { get; private set; }
 	public bool isReady;
 
 	public Reader(string email) {

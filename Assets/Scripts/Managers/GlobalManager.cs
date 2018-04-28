@@ -14,7 +14,7 @@ public class GlobalManager : MonoBehaviour {
 	
 	protected internal Reader reader = null;
 	protected internal string currentReaderUid = null;
-	protected internal Boolean isLoggin = false;
+	protected internal bool isLoggin = false;
 
 	public void Awake() {
 

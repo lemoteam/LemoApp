@@ -33,9 +33,16 @@ public class ReaderManager : MonoBehaviour {
 		// Update in GlobalManager
 		var prop = GlobalManager.instance.reader.GetType().GetProperty(parameterKey);
 		if (prop != null) prop.SetValue(GlobalManager.instance.reader, value, null);
+		
+		// Print value
+		UpdateValue(parameterKey.ToString() + " est le " + GetReaderSetting(parameterKey));
 
-		UpdateValue(parameterKey.ToString() + " est le " + value.ToString());
-
+	}
+	
+	// Get reader setting by key
+	public static string GetReaderSetting(string key)
+	{
+		return GlobalManager.instance.reader.GetType().GetProperty(key).GetValue(GlobalManager.instance.reader, null).ToString();
 	}
 	
 	// Utilities
