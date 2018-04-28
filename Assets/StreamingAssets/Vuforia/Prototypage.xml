@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Test289238479237-16-16" size="1297.000000 358.000000" />
+    <ImageTarget name="motif-scene" size="1638.000000 464.000000" />
+    <ImageTarget name="debut" size="1236.000000 828.000000" />
+    <ImageTarget name="Txt" size="800.000000 630.000000" />
+    <ImageTarget name="iuhoog" size="800.000000 239.000000" />
+    <ImageTarget name="pasGrain" size="800.000000 239.000000" />
+    <ImageTarget name="grain" size="800.000000 267.555542" />
+    <ImageTarget name="virtualbutton" size="278.000000 392.000000" />
+    <ImageTarget name="virtualbutton-02-03" size="279.000000 392.000000" />
+    <ImageTarget name="Motifs" size="1000.000000 457.000000" />
+    <ImageTarget name="2222" size="1040.000000 490.000000" />
+    <ImageTarget name="1111" size="1042.000000 518.000000" />
+    <ImageTarget name="3" size="1112.000000 1556.000000" />
+  </Tracking>
+</QCARConfig>

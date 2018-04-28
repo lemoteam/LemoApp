@@ -44,8 +44,10 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - Prototypage
     - butterfly
     dataSetsToActivate:
+    - Prototypage
     - butterfly
   videoBackground:
     clippingMode: 0

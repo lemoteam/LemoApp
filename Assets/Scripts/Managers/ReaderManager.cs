@@ -21,7 +21,7 @@ public class ReaderManager : MonoBehaviour {
 	}
 	
 	// Need cause cannot add to parameters on OnClick UI Button method
-	public string parameterKey { private get; set; }  // not visible without these properties   
+	public string parameterKey; // not visible without these properties   
 
 	
 	public void UpdateReaderSettings(int value) {
