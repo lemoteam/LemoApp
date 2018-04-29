@@ -46,6 +46,11 @@ public class getGemMood : MonoBehaviour {
 			index++;
 			obj = Resources.Load("Prefabs/"+moodName+"/mood"+index) as GameObject;
 			cloneObj = Instantiate (obj);
+			ButtonChoice btnScript = cloneObj.GetComponent<ButtonChoice>();
+			btnScript.parameter = index;
+			btnScript.readerManager = readerManager;
+			var selectBbtn = imgTarget.transform.GetChild(0);
+			btnScript.virtualButton = selectBbtn.gameObject;
 			cloneObj.transform.parent = imgTarget.transform;
 			cloneObj.transform.localScale = new Vector3(.5f,.5f,.5f);
 		}

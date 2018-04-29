@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 529438836}
   - component: {fileID: 529438835}
   m_Layer: 0
-  m_Name: selectCube
+  m_Name: selectBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 642214147}
   m_Layer: 0
   m_Name: ReaderManager
-  m_TagString: Untagged
+  m_TagString: readerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 656506552}
   - component: {fileID: 656506551}
   m_Layer: 0
-  m_Name: selectSphere
+  m_Name: selectBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2077,7 +2077,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Mood
+  m_Text: 'Intensity
+
+'
 --- !u!222 &1629943062
 CanvasRenderer:
   m_ObjectHideFlags: 0
