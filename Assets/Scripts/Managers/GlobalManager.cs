@@ -41,9 +41,9 @@ public class GlobalManager : MonoBehaviour {
 		
 	// Do what you want when vuforia is load 	
 	private void OnVuforiaStarted(){
-		getNewGameObject();
+		GetNewGameObject();
 	}
-	void getNewGameObject() {
+	void GetNewGameObject() {
 		var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
 		foreach (var item in obj) {
 			item.gameObject.AddComponent<LoadSceneOnDetection> ();

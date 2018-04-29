@@ -9,7 +9,7 @@ public class getGemMood : MonoBehaviour {
 	private GameObject[] targetChoice;
 	public ReaderManager readerManager;
 
-	void Start()
+	private void Awake()
 	{
 		mood = readerManager.GetReaderSetting("mood");
 		createGemMood();

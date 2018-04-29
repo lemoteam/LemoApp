@@ -10,16 +10,10 @@ public class ReaderManager : MonoBehaviour {
 	public Text userValue;
 
 	private void Awake()
-	{
-		auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-		DatabaseManager.GetReader(auth.CurrentUser.UserId, result => {
-			GlobalManager.instance.reader = result;
-			GlobalManager.instance.currentReaderUid = auth.CurrentUser.UserId;
-			
-			UpdateEmail("L'utilisateur connecté est " + GlobalManager.instance.reader.email);
-		});
+	{		
+		UpdateEmail("L'utilisateur connecté est " + GlobalManager.instance.reader.email);
 	}
-	
+	 
 	// Need cause cannot add to parameters on OnClick UI Button method
 	public string parameterKey; // not visible without these properties   
 

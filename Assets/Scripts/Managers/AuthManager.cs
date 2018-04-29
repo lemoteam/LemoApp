@@ -100,12 +100,20 @@ public class AuthManager : MonoBehaviour {
 		}
 
 		UpdateStatus ("Nous chargeons ton expérience");
+		
+		SetGlobalReader();
 
 		yield return new WaitForSeconds (1.5f);
 		UpdateStatus ("Allez va faire tes choix mané");
 		GlobalManager.instance.isLoggin = true;
+	}
 
-		// GlobalManager.instance.sceneLoader.LoadScene ("InGame");
+
+	private void SetGlobalReader() {
+		DatabaseManager.GetReader(auth.CurrentUser.UserId, result => {
+			GlobalManager.instance.reader = result;
+			GlobalManager.instance.currentReaderUid = auth.CurrentUser.UserId;
+		});
 	}
 
 
