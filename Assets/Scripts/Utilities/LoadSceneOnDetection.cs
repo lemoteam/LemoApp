@@ -54,7 +54,7 @@ public class LoadSceneOnDetection : MonoBehaviour,
 				break;
 			
 			case "example_5-star_grayscale" :
-				var sceneNameChoice2 = "Choice2";
+				var sceneNameChoice2 = "Choice3";
 				if (GlobalManager.instance.isLoggin && currentScene != sceneNameChoice2)
 				{
 					Debug.Log( "load scene choix 2");
