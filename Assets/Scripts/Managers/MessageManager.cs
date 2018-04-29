@@ -8,17 +8,27 @@ public class MessageManager : MonoBehaviour
     private static MessageManager instance;
     
     private static GameObject popupPanel;
+    private static Image popupPanelImage;
+    private static Text popupPanelText;
+    
     private static Text popupText;
     private static Animator popupAni;
     private static bool isAnimated;
 
     private void Awake() {
         instance = this;
-        popupPanel = GameObject.Find("PopupPanel").GetComponent<GameObject>();
+        popupPanel = GameObject.Find("PopupPanel");
         popupText = GameObject.Find("PopupText").GetComponent<Text>();
         popupAni = GameObject.Find("PopupPanel").GetComponent<Animator>();
+
+        popupPanelImage = popupPanel.GetComponent<Image>();
+        popupPanelText = popupPanel.GetComponentInChildren<Text>();
+
+        popupPanelImage.canvasRenderer.SetAlpha(0f);
+        popupPanelText.canvasRenderer.SetAlpha(0f);
     }
 
+    
     public static void ShowMessage(string key) { 
         var list = GlobalManager.instance.messageList; 
         
@@ -29,19 +39,35 @@ public class MessageManager : MonoBehaviour
         }
     }
 
+    
     private static void ActivePopup(Message item) {
         if (isAnimated) return;
-        isAnimated = true;
         instance.StartCoroutine(DisplayPopup(item));
     }
 
+
     private static IEnumerator DisplayPopup(Message item) {
-        
         popupText.text = item.value;
+        Show();
+        yield return new WaitForSeconds(3);
+        Hide();
+    }
+
+    
+    private static void Show()
+    {
+        isAnimated = true;
         popupAni.Play("popupIn");
-        yield return new WaitForSeconds(4);
-        popupText.text = "back";
+        popupPanelImage.CrossFadeAlpha(1.0f, 1.0f, false);
+        popupPanelText.CrossFadeAlpha(1.0f, 1.0f, false);
+    }
+
+    
+    private static void Hide()
+    {
         popupAni.Play("popupOut");
+        popupPanelImage.CrossFadeAlpha(0.0f, 1.0f, false);
+        popupPanelText.CrossFadeAlpha(0.0f, 1.0f, false);
         isAnimated = false;
     }
 }
