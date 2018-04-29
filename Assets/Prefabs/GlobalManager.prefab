@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 224895102140767526}
   - component: {fileID: 222510262577283288}
   - component: {fileID: 114205657933117626}
+  - component: {fileID: 95586576755739636}
   m_Layer: 5
   m_Name: PopupPanel
   m_TagString: Untagged
@@ -130,6 +131,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95586576755739636
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902974612784116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 335b6ab193e9b4cafa9ca3152dbe6263, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114045612703923584
 MonoBehaviour:
   m_ObjectHideFlags: 1
