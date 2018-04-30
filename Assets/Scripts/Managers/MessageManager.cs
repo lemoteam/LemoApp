@@ -40,9 +40,9 @@ public class MessageManager : MonoBehaviour
     }
 
     
-    private static void ActivePopup(Message item) {
-        if (isAnimated) return;
-        instance.StartCoroutine(DisplayPopup(item));
+    private static void ActivePopup(Message item)
+    {
+        instance.StartCoroutine(!isAnimated ? DisplayPopup(item) : HidePopup(item));
     }
 
 
@@ -52,7 +52,12 @@ public class MessageManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         Hide();
     }
-
+    
+    private static IEnumerator HidePopup(Message item) {
+        Hide();
+        yield return new WaitForSeconds(1);
+        instance.StartCoroutine(DisplayPopup(item));
+    }
     
     private static void Show()
     {

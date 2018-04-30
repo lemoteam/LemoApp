@@ -106,6 +106,7 @@ public class AuthManager : MonoBehaviour {
 		yield return new WaitForSeconds (1.5f);
 		UpdateStatus ("Allez va faire tes choix mané");
 		GlobalManager.instance.isLoggin = true;
+		MessageManager.ShowMessage("scanAfter");
 	}
 
 
