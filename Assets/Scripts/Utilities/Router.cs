@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using Firebase.Database;
 
-public class Router : MonoBehaviour {
+public class Router : MonoBehaviour
+{
 
 	private static readonly DatabaseReference baseRef = FirebaseDatabase.DefaultInstance.RootReference;
+
+	public static DatabaseReference Messages() {
+		return baseRef.Child("messages");
+	}
 
 	public static DatabaseReference ReaderWithUID(string uid) {
 		return baseRef.Child("reader").Child(uid);

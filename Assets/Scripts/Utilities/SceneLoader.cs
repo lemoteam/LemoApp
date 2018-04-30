@@ -17,14 +17,14 @@ public class SceneLoader : MonoBehaviour {
 		var operation = SceneManager.LoadSceneAsync (sceneName);
 
 		progressText.text = "";
-		loadingScene.SetActive(true);
+		//loadingScene.SetActive(true);
 
 		while (!operation.isDone) {
 			Debug.Log (operation.progress);
 			var progress = Mathf.Clamp01 (operation.progress / .9f);
 			progressText.text = progress * 100f + "%";
 			yield return null;
-			loadingScene.SetActive(false);
+			//loadingScene.SetActive(false);
 		}
 	} 
 }

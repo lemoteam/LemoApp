@@ -33,3 +33,35 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# ===========================
+# Default Collab Ignore Rules
+# ===========================
+
+# OS Generated
+# ============
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Visual Studio / MonoDevelop generated
+# =====================================
+[Ee]xported[Oo]bj/
+*.suo
+*.unityproj
+
+# Unity generated
+# ===============
+[Oo]bj/
+[Bb]uild
+sysinfo.txt
+*.stackdump
+.idea
+.idea/
+.idea.LemoApp-dev-0.1.0 2/
+.idea/workspace.xml
