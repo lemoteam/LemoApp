@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class buttonChoice : MonoBehaviour, IVirtualButtonEventHandler {
+public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public GameObject virtualButton;
 	public Animator animController;
 	public ReaderManager readerManager;
-	public int parameterKey;
+	public int parameter;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,7 @@ public class buttonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
 		animController.Play("sphere_animation");
-		readerManager.UpdateReaderSettings(parameterKey);
+		readerManager.UpdateReaderSettings(parameter);
 		Debug.Log("Btn pressed");
 	}
 

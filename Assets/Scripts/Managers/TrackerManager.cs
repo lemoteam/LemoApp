@@ -55,11 +55,21 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice1");
 				break;
 			
+			case "Drone" :
+				ChangeScene("Choice2");
+				break;
+			
+			case "Astronaut" :
+				ChangeScene("Choice3");
+				break;
+			
 			default:
 				Debug.Log("Tracking FOUND but no specific action");
 				break;
 		}		 
 	}
+	
+	
 	
 	
 	// Tracking Lost

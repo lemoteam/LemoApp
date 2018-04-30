@@ -32,12 +32,18 @@ public class LoadSceneOnDetection : MonoBehaviour,
 
 	private void OnTrackingFound()
 	{
-
 		Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
 		getActiveSceneName();
 		switch( mTrackableBehaviour.TrackableName )  {
-			case "virtualbutton:" :
-			case "virtualbutton-02-03" :
+			case "qrcode" :
+				var sceneNameMain = "Main";
+				if (currentScene != sceneNameMain)
+				{
+					Debug.Log( "load couverture scene");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneNameMain);
+				}
+				break;
+			case "virtualbutton" :
 				var sceneName = "Choice1";
 				if (GlobalManager.instance.isLoggin && currentScene != sceneName)
 				{
@@ -45,11 +51,22 @@ public class LoadSceneOnDetection : MonoBehaviour,
 					GlobalManager.instance.sceneLoader.LoadScene (sceneName);
 				}
 				break;
-
-			case "qrcode" :
-				Debug.Log("Current scene :" + currentScene);
-				Debug.Log( "load cube scene");
-				// SceneManager.LoadScene( "cubeScene" );
+			case "Drone" :
+				var sceneNameChoice2 = "Choice2";
+				if (GlobalManager.instance.isLoggin && currentScene != sceneNameChoice2)
+				{
+					Debug.Log( "load scene choix 2");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneNameChoice2);
+				}
+				break;
+			
+			case "Astronaut" :
+				var sceneNameChoice3 = "Choice3";
+				if (GlobalManager.instance.isLoggin && currentScene != sceneNameChoice3)
+				{
+					Debug.Log( "load scene choix 2");
+					GlobalManager.instance.sceneLoader.LoadScene (sceneNameChoice3);
+				}
 				break;
 		}
 

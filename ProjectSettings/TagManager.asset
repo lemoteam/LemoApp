@@ -6,6 +6,9 @@ TagManager:
   tags:
   - scan
   - text
+  - targetChoice2
+  - readerManager
+  - targetChoice3
   layers:
   - Default
   - TransparentFX
