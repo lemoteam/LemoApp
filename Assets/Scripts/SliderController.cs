@@ -15,7 +15,7 @@ public class SliderController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Vector3 distance = max.position - this.transform.position;
-        Debug.Log("position max :"+max);
+        Debug.Log("position max :"+max.position);
         Debug.Log("position image target:"+this.transform.position);
         //Debug.Log("distance : "+ distance.magnitude);
         // readerManager.UpdateReaderSettings(parameter);

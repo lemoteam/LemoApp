@@ -28,6 +28,9 @@ public class ReaderManager : MonoBehaviour {
 		var prop = GlobalManager.instance.reader.GetType().GetProperty(parameterKey);
 		if (prop != null) prop.SetValue(GlobalManager.instance.reader, value, null);
 		
+		// Reset intensity 
+		ResetIntensity();	
+		
 		// Print value
 		UpdateValue(parameterKey.ToString() + " est le " + GetReaderSetting(parameterKey));
 
@@ -46,6 +49,13 @@ public class ReaderManager : MonoBehaviour {
 	
 	private void UpdateValue(string message) {
 		userValue.text = message;
+	}
+	
+	private void ResetIntensity() {
+		if (parameterKey != "mood") return;
+		Router.CurrentReader().Child("intensity").SetValueAsync(0);
+		var prop = GlobalManager.instance.reader.GetType().GetProperty("intensity");
+		if (prop != null) prop.SetValue(GlobalManager.instance.reader, 0, null);
 	}
 }
   

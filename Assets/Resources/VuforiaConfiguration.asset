@@ -45,12 +45,10 @@ MonoBehaviour:
   databaseLoad:
     dataSetsToLoad:
     - VuforiaMars_Images
-    - VuforiaMars_VuMark
     - Prototypage
     - butterfly
     dataSetsToActivate:
     - VuforiaMars_Images
-    - VuforiaMars_VuMark
     - Prototypage
     - butterfly
   videoBackground:
