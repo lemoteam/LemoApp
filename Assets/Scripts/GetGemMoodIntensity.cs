@@ -43,6 +43,7 @@ public class GetGemMoodIntensity : MonoBehaviour {
 		targetChoice = GameObject.FindWithTag("targetChoice3");
 		obj = Resources.Load("Prefabs/"+moodName+"/mood"+intensity) as GameObject;
 		cloneObj = Instantiate (obj);
+		Destroy(cloneObj.GetComponent("ButtonChoice"));
 		cloneObj.transform.parent = targetChoice.transform;
 		cloneObj.transform.localScale = new Vector3(.5f,.5f,.5f);
 	}
