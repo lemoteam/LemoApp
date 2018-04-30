@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vuforia;
 using Image = UnityEngine.UI.Image;
 
@@ -8,6 +9,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private TrackableBehaviour mTrackableBehaviour;
 	private GameObject scan;
 	private GameObject text;
+	private string currentScene;
 
 	void Start() {
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -40,10 +42,17 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	// Tracking Found
 	private void OnTrackingFound() {
 		
+		GetActiveSceneName();
+		
 		switch (mTrackableBehaviour.TrackableName) {
 			case "qrcode":
 				if (GlobalManager.instance.isLoggin) return;
 				OnScan();
+				break;
+			
+			case "virtualbutton:" :
+			case "virtualbutton-02-03" :
+				ChangeScene("Choice1");
 				break;
 			
 			default:
@@ -93,5 +102,16 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		MessageManager.ShowMessage(key);
 	}
 	
+	// Scenes
+	private void GetActiveSceneName() {
+		var scene = SceneManager.GetActiveScene();
+		currentScene = scene.name;
+	}
+
+	private void ChangeScene(string sceneName) {
+		if (GlobalManager.instance.isLoggin && currentScene != sceneName) {
+			GlobalManager.instance.sceneLoader.LoadScene (sceneName);
+		}
+	}
 	
 }
