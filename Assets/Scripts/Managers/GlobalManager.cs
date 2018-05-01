@@ -14,10 +14,10 @@ public class GlobalManager : MonoBehaviour {
 	public MessageManager messageManager;
 	
 	protected internal Reader reader = null;
+	protected internal bool dynamicHasChanded = false;
 	protected internal string currentReaderUid = null;
 	protected internal bool isLoggin = false;
 	protected internal List<Message> messageList = new List<Message>();
-
 
 	public void Awake() {
 
@@ -29,7 +29,8 @@ public class GlobalManager : MonoBehaviour {
 		} else if (instance != this) {
 			//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
 			Destroy (gameObject);    
-		}		
+		}
+		
 			
 		//Sets this to not be destroyed when reloading scene
 		DontDestroyOnLoad(gameObject);
@@ -51,7 +52,6 @@ public class GlobalManager : MonoBehaviour {
 		GetNewGameObject();
 	}
 
-
 	private static void GetNewGameObject() {
 		var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
 		foreach (var item in obj) {
@@ -70,7 +70,6 @@ public class GlobalManager : MonoBehaviour {
 		StartCoroutine(MinWaitForLogoAnimation());
 	}
 
-	
 	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AQ/vnPT/////AAAAmQPofxC/iEQ8ngsan8y6NwcdtjZ8jioXtrckPfIdsMyjAs9Rw7TEBoOfJ+vrx0wLhuoJa5Afz2kNCQ+rlbDdAAugWoxj40GAC0mICr4KUxHui+PD/yhBhvXwVDlWccjzSbhRKGO1QXQt8+a9AH08Q1rThtKlCeQTZ5HBzQbi/nMkaMLMBdIIaUv8DXS3k43Oc3uW6dfGgzkXHN3wWpzfI+r+cOm5W7fANU1SChYuwJTKCgbWR56c//xnE0X3ShUAb5l/1lk3gwGaOmG2R64VbgxuwqQxGy4gSRKaFcTnVRax2/EhYcvzYFNZ0p24AVHWeFzUW8p/oaO1OEklLWLB0a2iox9D0rPYQUwpkmGRwuUX
+    vuforiaLicenseKey: '`AWGye+b/////AAADmc5HOmXJUUL1hTRHdDmHj0IhwCic543t5A5s+3XSVDUnAU/t7Le8LprPT884Z9O4aNJSSrO588IF9jzFkBLvTJwreFvqXQp6+sKkYDRMLDvV1BNTi4WokXnSLUndc+ap98TcbSz7GOpXkFeWLYaT0pNaTpy1WsnX8QoskF4oqwNPEFD2ikCSkTU1dGsoPhuwrwQmh6rd4EWunwzVPO8a/hSAQLq9d/jr2MsqvcpCgM2sonOrqAsZDJg3ohCiwYkqbCzQYEzGnjAp+MPYNb3dP49mLiiE+o7K3tgEjetBe5r0InP59mpRon4EslQ1WZiRoUm11c1dWOnXJsndAgOAK7bOqZOy/aj15dtmG3e9PZJl`'
     ufoLicenseKey: QVU1ZlREdi8vLy8vQUFBQUtIZll6L1EvR1VtRnNyaDc2WTdhejlWaHF0bVN6NW5nT0FZQlQ0aFJOTFNtMXZoKzRubGFHMWpwdjFTYlVnUlZMT0RLZHRKVWxuNmRCYWtucDEwUDdLL3NoS0pOTjkxQTZtYXlxaUlRdjZoTVp3YUVOeExaQ0tzR0huTlRhY0RUejdyMXNWL0xBL2R1ODFCQzlPclAvc2ovVHArMUxCU0srRUlTUVA2QUh3cy8xdXJHTVRiUEVoaUplL0NtOWdjVHlZTkJRa1NTRDlqTk5NS2FHeHZpeUo1THl5WDIwNm4yRmdVUlVrWG5MN0FKRnZyU29KbFB2QlZKcEs1cXNQaVgwVUM4NnVqT3RmL0lHOXpDbW9acjZBSS9Od21VV1d5MUV5NkJOV1ZxZXpwQVBhTmxRL3JwTmVQb2hoc3dnaEJ6SHV1UnpWNmtybTY0dm1uYTlQZVd0aWJiNndIaytVWTFTSVhrMEhlT0xFSlQ=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 5
+    maxSimultaneousObjectTargets: 5
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -44,13 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - VuforiaMars_Images
-    - Prototypage
-    - butterfly
+    - lemo
     dataSetsToActivate:
-    - VuforiaMars_Images
-    - Prototypage
-    - butterfly
+    - lemo
   videoBackground:
     clippingMode: 0
     numDivisions: 2

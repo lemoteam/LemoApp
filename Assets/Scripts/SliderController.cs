@@ -8,16 +8,33 @@ public class SliderController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log ("START !!!!!!");
+        Debug.Log ("START !!!!");
         max = GameObject.Find ("Max").transform;
     }
 	
     // Update is called once per frame
     void Update () {
-        Vector3 distance = max.position - this.transform.position;
-        Debug.Log("position max :"+max.position);
-        Debug.Log("position image target:"+this.transform.position);
-        //Debug.Log("distance : "+ distance.magnitude);
+        Debug.Log("position de lmnt: "+this.transform.position);
+        var distance = max.position.x - this.transform.position.x;
+        if (distance > 300 || distance < 170)
+        {
+            GlobalManager.instance.dynamicHasChanded = true;
+        }
+
+        if (distance > 300)
+        {
+            var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
+            if (prop != null) prop.SetValue(GlobalManager.instance.reader, 1, null);
+        }
+
+        if (distance < 170)
+        {
+            var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
+            if (prop != null) prop.SetValue(GlobalManager.instance.reader, 2, null);  
+        } 
+       // Debug.Log("position max :"+distance);
+        // Debug.Log("position image target:"+this.transform.position);
+        Debug.Log("distance : "+ distance);
         // readerManager.UpdateReaderSettings(parameter);
     }
 }

@@ -45,7 +45,7 @@ public class GetGemMoodIntensity : MonoBehaviour {
 		cloneObj = Instantiate (obj);
 		Destroy(cloneObj.GetComponent("ButtonChoice"));
 		cloneObj.transform.parent = targetChoice.transform;
-		cloneObj.transform.localScale = new Vector3(.5f,.5f,.5f);
+		cloneObj.transform.localScale = new Vector3(.2f,.2f,.2f);
 	}
 		
 }

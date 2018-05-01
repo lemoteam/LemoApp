@@ -43,6 +43,13 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private void OnTrackingFound() {
 		
 		GetActiveSceneName();
+
+		if (GlobalManager.instance.dynamicHasChanded)
+		{	
+			// Persist to firebase
+			Router.CurrentReader().Child("dynamic").SetValueAsync(GlobalManager.instance.reader.dynamic);
+			GlobalManager.instance.dynamicHasChanded = false;
+		}
 		
 		switch (mTrackableBehaviour.TrackableName) {
 			case "qrcode":
@@ -50,16 +57,18 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "virtualbutton:" :
-			case "virtualbutton-02-03" :
+			case "mood1" :
+			case "mood2" :
+			case "mood3" :
 				ChangeScene("Choice1");
 				break;
 			
-			case "Drone" :
+			case "intensity1" :
+			case "intensity2" :
 				ChangeScene("Choice2");
 				break;
 			
-			case "Astronaut" :
+			case "dynamic" :
 				ChangeScene("Choice3");
 				break;
 			
