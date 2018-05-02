@@ -30,8 +30,9 @@ public class getGemMood : MonoBehaviour {
 			createObj (moodName);
 			break;
 		case "3":
-			Debug.Log ("jui bien");
+			Debug.Log ("jui paisble");
 			moodName = "paisible";
+			createObj (moodName);
 			break;
 		}
 	}

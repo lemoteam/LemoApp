@@ -116,7 +116,7 @@ MonoBehaviour:
   virtualButton: {fileID: 0}
   animController: {fileID: 95512190196996394}
   readerManager: {fileID: 0}
-  parameter: 1
+  parameter: 0
 --- !u!136 &136060251608865798
 CapsuleCollider:
   m_ObjectHideFlags: 1
