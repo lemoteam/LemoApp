@@ -17,7 +17,7 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
-		animController.Play("sphere_animation");
+		animController.Play("cube_animation");
 		readerManager.UpdateReaderSettings(parameter);
 		Debug.Log("Btn pressed");
 	}
