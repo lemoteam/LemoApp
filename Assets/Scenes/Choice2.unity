@@ -419,10 +419,10 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.015
+  mAspectRatio: 2.115
   mImageTargetType: 0
-  mWidth: 199.99998
-  mHeight: 403
+  mWidth: 200
+  mHeight: 423
 --- !u!4 &213330421
 Transform:
   m_ObjectHideFlags: 0
@@ -431,7 +431,7 @@ Transform:
   m_GameObject: {fileID: 213330415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 397, y: 0, z: 284}
-  m_LocalScale: {x: 403, y: 403, z: 403}
+  m_LocalScale: {x: 423, y: 423, z: 423}
   m_Children:
   - {fileID: 656506550}
   m_Father: {fileID: 0}
@@ -733,7 +733,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529438833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.001, z: -0.336}
+  m_LocalPosition: {x: 0.0010000487, y: 0.001, z: -0.29599997}
   m_LocalScale: {x: 0.2931791, y: 1, z: 0.2931791}
   m_Children: []
   m_Father: {fileID: 1083173745}
@@ -806,18 +806,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 117.56482
+    e00: 123.4284
     e01: 0
     e02: 0
-    e03: 828.401
+    e03: 828.421
     e10: 0
-    e11: 401
+    e11: 421
     e12: 0
-    e13: 0.40100002
+    e13: 0.42100003
     e20: 0
     e21: 0
-    e22: 117.56482
-    e23: 164.264
+    e22: 123.4284
+    e23: 174.384
     e30: 0
     e31: 0
     e32: 0
@@ -1022,7 +1022,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656506549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: -0.342}
+  m_LocalPosition: {x: 0, y: 0.001, z: -0.301}
   m_LocalScale: {x: 0.29130772, y: 1, z: 0.29130766}
   m_Children: []
   m_Father: {fileID: 213330421}
@@ -1095,18 +1095,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 117.39701
+    e00: 123.22317
     e01: 0
     e02: 0
     e03: 397
     e10: 0
-    e11: 403
+    e11: 423
     e12: 0
-    e13: 0.40300003
+    e13: 0.423
     e20: 0
     e21: 0
-    e22: 117.39699
-    e23: 146.174
+    e22: 123.22314
+    e23: 156.677
     e30: 0
     e31: 0
     e32: 0
@@ -1129,7 +1129,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.24937655, y: 0, z: 0.5}
+      m_Extent: {x: 0.2375297, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1182,7 +1182,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 915c7fbe00000000000000bf000000000000803f000000000000000000000000915c7fbe000000000000003f000000000000803f00000000000000000000803f915c7f3e00000000000000bf000000000000803f000000000000803f00000000915c7f3e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: fc3a73be00000000000000bf000000000000803f000000000000000000000000fc3a73be000000000000003f000000000000803f00000000000000000000803ffc3a733e00000000000000bf000000000000803f000000000000803f00000000fc3a733e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1397,7 +1397,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ef9b4759632c450b8c0312b3b3b9fc04, type: 3}
+        m_Texture: {fileID: 2800000, guid: 217fb5b97e294ebcb48f41e3a18d72b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1502,10 +1502,10 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.005
+  mAspectRatio: 2.105
   mImageTargetType: 0
-  mWidth: 199.99998
-  mHeight: 401
+  mWidth: 200
+  mHeight: 421
 --- !u!4 &1083173745
 Transform:
   m_ObjectHideFlags: 0
@@ -1514,7 +1514,7 @@ Transform:
   m_GameObject: {fileID: 1083173739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 828, y: 0, z: 299}
-  m_LocalScale: {x: 401, y: 401, z: 401}
+  m_LocalScale: {x: 421, y: 421, z: 421}
   m_Children:
   - {fileID: 529438834}
   m_Father: {fileID: 0}
@@ -1672,7 +1672,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 67c9d5c14fcf44abbc5da70338c232e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: b99ffaceeb124d16b3850577998d847c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2220,7 +2220,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.24813895, y: 0, z: 0.5}
+      m_Extent: {x: 0.23640662, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2273,7 +2273,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 23187ebe00000000000000bf000000000000803f00000000000000000000000023187ebe000000000000003f000000000000803f00000000000000000000803f23187e3e00000000000000bf000000000000803f000000000000803f0000000023187e3e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 941472be00000000000000bf000000000000803f000000000000000000000000941472be000000000000003f000000000000803f00000000000000000000803f9414723e00000000000000bf000000000000803f000000000000803f000000009414723e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0

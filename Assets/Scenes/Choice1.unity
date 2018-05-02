@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 213330417}
   - component: {fileID: 213330416}
   m_Layer: 0
-  m_Name: Mood1
+  m_Name: Mood2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,10 +419,10 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.132275
+  mAspectRatio: 2.2275133
   mImageTargetType: 0
   mWidth: 189
-  mHeight: 403
+  mHeight: 421
 --- !u!4 &213330421
 Transform:
   m_ObjectHideFlags: 0
@@ -430,13 +430,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 213330415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 397, y: 0, z: 284}
-  m_LocalScale: {x: 403, y: 403, z: 403}
+  m_LocalPosition: {x: 869, y: 0, z: 284}
+  m_LocalScale: {x: 421, y: 421, z: 421}
   m_Children:
   - {fileID: 1975671918}
   - {fileID: 656506550}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315495835
 GameObject:
@@ -693,7 +693,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529438833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: -0.342}
+  m_LocalPosition: {x: 0, y: 0.0009999999, z: -0.29999992}
   m_LocalScale: {x: 0.30408797, y: 1, z: 0.30408797}
   m_Children: []
   m_Father: {fileID: 1083173745}
@@ -766,18 +766,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 122.54745
+    e00: 128.32512
     e01: 0
     e02: 0
-    e03: 828
+    e03: 484
     e10: 0
-    e11: 403
+    e11: 422
     e12: 0
-    e13: 0.40300003
+    e13: 0.42199996
     e20: 0
     e21: 0
-    e22: 122.54745
-    e23: 155.174
+    e22: 128.32512
+    e23: 166.40002
     e30: 0
     e31: 0
     e32: 0
@@ -982,7 +982,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656506549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.017999994, y: 0.001, z: -0.338}
+  m_LocalPosition: {x: -0.009999907, y: 0.001, z: -0.2989999}
   m_LocalScale: {x: 0.29065767, y: 1, z: 0.29065758}
   m_Children: []
   m_Father: {fileID: 213330421}
@@ -1055,18 +1055,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 117.13504
+    e00: 122.36688
     e01: 0
     e02: 0
-    e03: 389.746
+    e03: 864.79004
     e10: 0
-    e11: 403
+    e11: 421
     e12: 0
-    e13: 0.40300003
+    e13: 0.42100003
     e20: 0
     e21: 0
-    e22: 117.135
-    e23: 147.786
+    e22: 122.366844
+    e23: 158.12103
     e30: 0
     e31: 0
     e32: 0
@@ -1089,7 +1089,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.24813895, y: 0, z: 0.5}
+      m_Extent: {x: 0.2375297, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1142,7 +1142,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 23187ebe00000000000000bf000000000000803f00000000000000000000000023187ebe000000000000003f000000000000803f00000000000000000000803f23187e3e00000000000000bf000000000000803f000000000000803f0000000023187e3e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: fc3a73be00000000000000bf000000000000803f000000000000000000000000fc3a73be000000000000003f000000000000803f00000000000000000000803ffc3a733e00000000000000bf000000000000803f000000000000803f00000000fc3a733e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1228,7 +1228,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736463956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: -0.342}
+  m_LocalPosition: {x: 0, y: 0.001, z: -0.302}
   m_LocalScale: {x: 0.30408797, y: 1, z: 0.30408797}
   m_Children: []
   m_Father: {fileID: 1193337307}
@@ -1301,18 +1301,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 122.54745
+    e00: 128.02103
     e01: 0
     e02: 0
     e03: 1218
     e10: 0
-    e11: 403
+    e11: 421
     e12: 0
-    e13: 0.40300003
+    e13: 0.42100003
     e20: 0
     e21: 0
-    e22: 122.54745
-    e23: 155.174
+    e22: 128.02103
+    e23: 165.858
     e30: 0
     e31: 0
     e32: 0
@@ -1592,7 +1592,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c44aa8bab3e846a48d0c16d70757b282, type: 3}
+        m_Texture: {fileID: 2800000, guid: a5169a0f9e9f415ab6abdba7e23ac486, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 1083173741}
   - component: {fileID: 1083173740}
   m_Layer: 0
-  m_Name: Mood2
+  m_Name: Mood1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1697,10 +1697,10 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.015
+  mAspectRatio: 2.11
   mImageTargetType: 0
-  mWidth: 189
-  mHeight: 403
+  mWidth: 200.00002
+  mHeight: 422
 --- !u!4 &1083173745
 Transform:
   m_ObjectHideFlags: 0
@@ -1708,13 +1708,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1083173739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 828, y: 0, z: 293}
-  m_LocalScale: {x: 403, y: 403, z: 403}
+  m_LocalPosition: {x: 484, y: 0, z: 293}
+  m_LocalScale: {x: 422, y: 422, z: 422}
   m_Children:
   - {fileID: 1477083544}
   - {fileID: 529438834}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193337301
 GameObject:
@@ -1815,10 +1815,10 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.015
+  mAspectRatio: 2.105
   mImageTargetType: 0
-  mWidth: 199.99998
-  mHeight: 403
+  mWidth: 200
+  mHeight: 421
 --- !u!4 &1193337307
 Transform:
   m_ObjectHideFlags: 0
@@ -1827,7 +1827,7 @@ Transform:
   m_GameObject: {fileID: 1193337301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1218, y: 0, z: 293}
-  m_LocalScale: {x: 403, y: 403, z: 403}
+  m_LocalScale: {x: 421, y: 421, z: 421}
   m_Children:
   - {fileID: 985927218}
   - {fileID: 736463957}
@@ -1986,7 +1986,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5016ef468acf436a9501c4a460ea4241, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9adefc63f81642a2a0a8305f38385b45, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2207,7 +2207,6 @@ GameObject:
   - component: {fileID: 1477083549}
   - component: {fileID: 1477083548}
   - component: {fileID: 1477083547}
-  - component: {fileID: 1477083546}
   - component: {fileID: 1477083550}
   - component: {fileID: 1477083545}
   m_Layer: 0
@@ -2224,7 +2223,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1477083543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.059, y: 0.335, z: 0.2}
+  m_LocalPosition: {x: 0.006, y: 0.335, z: 0.2}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1083173745}
@@ -2247,20 +2246,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1477083546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477083543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c9e980d6c0d44353a86243e651854da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vbBtnObj: {fileID: 529438833}
-  cubeAni: {fileID: 0}
-  readerManager: {fileID: 642214147}
 --- !u!23 &1477083547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2328,7 +2313,7 @@ MonoBehaviour:
   virtualButton: {fileID: 529438833}
   animController: {fileID: 1477083545}
   readerManager: {fileID: 642214147}
-  parameter: 2
+  parameter: 1
 --- !u!1 &1508572763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,7 +2650,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.23449132, y: 0, z: 0.5}
+      m_Extent: {x: 0.22446555, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2718,7 +2703,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 7e1e70be00000000000000bf000000000000803f0000000000000000000000007e1e70be000000000000003f000000000000803f00000000000000000000803f7e1e703e00000000000000bf000000000000803f000000000000803f000000007e1e703e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 4cda65be00000000000000bf000000000000803f0000000000000000000000004cda65be000000000000003f000000000000803f00000000000000000000803f4cda653e00000000000000bf000000000000803f000000000000803f000000004cda653e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2907,7 +2892,7 @@ MonoBehaviour:
   virtualButton: {fileID: 656506549}
   animController: {fileID: 1975671919}
   readerManager: {fileID: 642214147}
-  parameter: 1
+  parameter: 2
 --- !u!23 &1975671921
 MeshRenderer:
   m_ObjectHideFlags: 0

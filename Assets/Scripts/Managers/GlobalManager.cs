@@ -15,6 +15,9 @@ public class GlobalManager : MonoBehaviour {
 	
 	protected internal Reader reader = null;
 	protected internal bool dynamicHasChanded = false;
+	protected internal bool isActiveMood = false;
+	protected internal bool isActiveIntensity = false;
+	protected internal bool isActiveDynamism = false;
 	protected internal string currentReaderUid = null;
 	protected internal bool isLoggin = false;
 	protected internal List<Message> messageList = new List<Message>();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb80c646d3b2428c909bfcc69cd76bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formManager: {fileID: 0}
 --- !u!33 &24622661
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -223,12 +222,12 @@ MonoBehaviour:
   mTrackableName: qrcode
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/butterfly.xml
+  mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
   mAspectRatio: 1
   mImageTargetType: 0
-  mWidth: 320
-  mHeight: 320
+  mWidth: 174
+  mHeight: 174
 --- !u!4 &24622666
 Transform:
   m_ObjectHideFlags: 0
@@ -237,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 24622659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 320, y: 320, z: 320}
+  m_LocalScale: {x: 174, y: 174, z: 174}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -688,7 +687,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6c394a191d124829a136a884f6993f89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
