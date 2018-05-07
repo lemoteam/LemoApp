@@ -12,6 +12,7 @@ public class GlobalManager : MonoBehaviour {
 	public DatabaseManager database;     
 	public SceneLoader sceneLoader;
 	public MessageManager messageManager;
+	public Camera camera;
 	
 	protected internal Reader reader = null;
 	protected internal bool dynamicHasChanded = false;
@@ -79,5 +80,6 @@ public class GlobalManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(1.5f);
 		sceneLoader.LoadScene ("Main");
+		camera = Camera.main;
 	}
 }
