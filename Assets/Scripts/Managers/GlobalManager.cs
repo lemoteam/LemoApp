@@ -57,8 +57,10 @@ public class GlobalManager : MonoBehaviour {
 
 	private static void GetNewGameObject() {
 		var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
-		foreach (var item in obj) {
-			item.gameObject.AddComponent<TrackerManager> ();
+		foreach (var item in obj)
+		{
+			item.gameObject.AddComponent<TrackerManager>();
+			item.transform.parent = instance.transform;
 		}
 	}
 
