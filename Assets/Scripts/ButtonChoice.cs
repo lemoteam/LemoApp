@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Vuforia;
 
 public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
@@ -17,13 +15,14 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
-		animController.Play("cube_animation");
+		animController.Play("sphere_animation");
 		readerManager.UpdateReaderSettings(parameter);
-		Debug.Log("Btn pressed");
+		Debug.Log("Btn pressed"+ parameter);
 	}
 
 	public void OnButtonReleased(VirtualButtonBehaviour vb){
 		animController.Play("none");
 		Debug.Log("Btn released");
 	} 
+	
 }

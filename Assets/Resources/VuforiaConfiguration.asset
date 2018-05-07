@@ -44,8 +44,12 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - VuforiaMars_Images
+    - VuforiaMars_VuMark
     - lemo
     dataSetsToActivate:
+    - VuforiaMars_Images
+    - VuforiaMars_VuMark
     - lemo
   videoBackground:
     clippingMode: 0

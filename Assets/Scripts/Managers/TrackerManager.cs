@@ -56,19 +56,24 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				if (GlobalManager.instance.isLoggin) return;
 				OnScan();
 				break;
-			
-			case "mood1" :
-			case "mood2" :
-			case "mood3" :
+			case "L1" :
+			case "L2" :
+			case "M2" :
+				LaunchMessage("scanChoice1");
 				ChangeScene("Choice1");
 				break;
 			
 			case "intensity1" :
 			case "intensity2" :
+				if (GlobalManager.instance.isActiveIntensity)
+				{
+					LaunchMessage("scanChoice2");
+				}
 				ChangeScene("Choice2");
 				break;
 			
 			case "dynamic" :
+				LaunchMessage("scanChoice3");
 				ChangeScene("Choice3");
 				break;
 			
@@ -77,8 +82,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				break;
 		}		 
 	}
-	
-	
 	
 	
 	// Tracking Lost
