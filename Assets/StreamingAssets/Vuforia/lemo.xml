@@ -3,7 +3,27 @@
   <Tracking>
     <ImageTarget name="I2" size="277.000000 472.000000" />
     <ImageTarget name="I1" size="277.000000 472.000000" />
+    <ImageTarget name="M3" size="277.000000 472.000000" />
     <ImageTarget name="M2" size="277.000000 472.000000" />
+    <ImageTarget name="M1" size="277.000000 472.000000" />
+    <ImageTarget name="bo1" size="277.000000 472.000000" />
+    <ImageTarget name="bo" size="277.000000 472.000000" />
+    <ImageTarget name="mooood2" size="277.000000 475.432739" />
+    <ImageTarget name="mooood1" size="275.000000 472.000000" />
+    <ImageTarget name="test02" size="1852.000000 987.000000" />
+    <ImageTarget name="image" size="550.000000 385.000000" />
+    <ImageTarget name="protomoodB" size="395.000000 572.000000" />
+    <ImageTarget name="protomoodA" size="395.000000 573.000000" />
+    <ImageTarget name="protomood3" size="269.000000 373.000000" />
+    <ImageTarget name="protomood2" size="269.000000 371.618530" />
+    <ImageTarget name="protomood1" size="269.000000 367.000000" />
+    <ImageTarget name="ayo" size="262.000000 273.000000" />
+    <ImageTarget name="mood1" size="189.000000 421.000000" />
+    <ImageTarget name="mood2" size="200.000000 422.000000" />
+    <ImageTarget name="mood3" size="200.000000 421.000000" />
+    <ImageTarget name="intensity1" size="200.000000 421.000000" />
+    <ImageTarget name="intensity2" size="200.000000 423.000000" />
+    <ImageTarget name="dynamic" size="200.000000 200.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
 </QCARConfig>

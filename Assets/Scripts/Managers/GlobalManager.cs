@@ -61,7 +61,7 @@ public class GlobalManager : MonoBehaviour {
 		foreach (var item in obj)
 		{
 			item.gameObject.AddComponent<TrackerManager>();
-			item.transform.parent = instance.transform;
+			//item.transform.parent = instance.transform;
 		}
 	}
 
