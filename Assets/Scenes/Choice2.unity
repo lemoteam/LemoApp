@@ -414,14 +414,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: intensity2
+  mTrackableName: I2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.115
+  mAspectRatio: 1.7039711
   mImageTargetType: 0
-  mWidth: 0.47281325
+  mWidth: 0.5868644
   mHeight: 1
 --- !u!4 &213330421
 Transform:
@@ -433,6 +433,7 @@ Transform:
   m_LocalPosition: {x: 1.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1288765505}
   - {fileID: 656506550}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1026,7 +1027,7 @@ Transform:
   m_LocalScale: {x: 0.29130772, y: 1, z: 0.29130766}
   m_Children: []
   m_Father: {fileID: 213330421}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &656506551
 MeshFilter:
@@ -1129,7 +1130,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.2375297, y: 0, z: 0.5}
+      m_Extent: {x: 0.2934322, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1182,7 +1183,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: fc3a73be00000000000000bf000000000000803f000000000000000000000000fc3a73be000000000000003f000000000000803f00000000000000000000803ffc3a733e00000000000000bf000000000000803f000000000000803f00000000fc3a733e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: bf3c96be00000000000000bf000000000000803f000000000000000000000000bf3c96be000000000000003f000000000000803f00000000000000000000803fbf3c963e00000000000000bf000000000000803f000000000000803f00000000bf3c963e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1450,7 +1451,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: intensity1Material
+  m_Name: M3Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -1463,7 +1464,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 939f3d23489d4cb6a178b4c153c2ca92, type: 3}
+        m_Texture: {fileID: 2800000, guid: b3bb4de05f7c4f368402d39abe5d9006, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1563,14 +1564,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: intensity1
+  mTrackableName: M3
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 2.105
+  mAspectRatio: 1.7039711
   mImageTargetType: 0
-  mWidth: 0.4750594
+  mWidth: 0.5868644
   mHeight: 1
 --- !u!4 &1083173745
 Transform:
@@ -1726,7 +1727,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: intensity2Material
+  m_Name: I2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -1739,12 +1740,59 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5754448c16c247a298f2679adf980656, type: 3}
+        m_Texture: {fileID: 2800000, guid: 288cdea001ba442684807452f906bc61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
     - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+--- !u!1001 &1288765504
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 213330421}
+    m_Modifications:
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1288765505 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff,
+    type: 2}
+  m_PrefabInternal: {fileID: 1288765504}
 --- !u!1 &1364697552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2335,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.23640662, y: 0, z: 0.5}
+      m_Extent: {x: 0.2934322, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2340,7 +2388,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 941472be00000000000000bf000000000000803f000000000000000000000000941472be000000000000003f000000000000803f00000000000000000000803f9414723e00000000000000bf000000000000803f000000000000803f000000009414723e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: bf3c96be00000000000000bf000000000000803f000000000000000000000000bf3c96be000000000000003f000000000000803f00000000000000000000803fbf3c963e00000000000000bf000000000000803f000000000000803f00000000bf3c963e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
