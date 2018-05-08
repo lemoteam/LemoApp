@@ -10,7 +10,7 @@ public class MessageManager : MonoBehaviour
     private static GameObject globalManagerCanvas;
     
     private static List<GameObject> popupList = new List<GameObject>();
-    
+        
 
     private void Awake() {
         instance = this;
@@ -18,17 +18,17 @@ public class MessageManager : MonoBehaviour
     }
 
     
-    public static void ShowMessage(string key) { 
+    public static void ShowMessage(string key, float time) { 
         var list = GlobalManager.instance.messageList; 
         
         foreach (var item in list) {
             if (item.key == key) {
-               ActivePopup(item);
+               ActivePopup(item, time);
             } 
         }
     }
 
-    private static void ActivePopup(Message item)
+    private static void ActivePopup(Message item, float time)
     {
         var obj = Resources.Load("Prefabs/ui/modalDialoguePanelWrapper") as GameObject;
         var cloneWrapper = Instantiate (obj) as GameObject;
@@ -37,11 +37,11 @@ public class MessageManager : MonoBehaviour
     
         var cloneText = cloneWrapper.GetComponentInChildren<Text>();
         
-        instance.StartCoroutine(MinWaitForGetSize(cloneWrapper, cloneText, item));
+        instance.StartCoroutine(MinWaitForGetSize(cloneWrapper, cloneText, item, time));
     }
 
     
-    private static IEnumerator MinWaitForGetSize(GameObject cloneWrapper, Text cloneText, Message item)
+    private static IEnumerator MinWaitForGetSize(GameObject cloneWrapper, Text cloneText, Message item, float time)
     {
         
         yield return new WaitForSeconds(1.5f);
@@ -55,12 +55,12 @@ public class MessageManager : MonoBehaviour
             popup.transform.position = new Vector3(position.x, position.y + totalHeight + 120f, position.z);
         }
         
-        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneText, item));
+        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneText, item, time));
     }
 
 
     
-    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneText,  Message item)
+    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneText,  Message item, float time)
     {
 
         var popupPanelImage = cloneWrapper.GetComponentsInChildren<Image>()[1];
@@ -71,7 +71,7 @@ public class MessageManager : MonoBehaviour
         
         cloneText.text = item.value;
         Show(cloneWrapper, popupPanelImage, popupPanelText);
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(time);
         Hide(cloneWrapper, popupPanelImage, popupPanelText);
     }
 

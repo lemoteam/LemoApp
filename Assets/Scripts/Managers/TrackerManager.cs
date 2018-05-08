@@ -61,7 +61,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			case "I2" :
 			case "M2" :
 				ChangeScene("Choice1");
-				MessageManager.ShowMessage("scanAfter");
+				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
 			case "intensity1" :
@@ -110,7 +110,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
 		text.SetActive(false);
 
-		MessageManager.ShowMessage("scan");
+		MessageManager.ShowMessage("scan", 2f);
 	}
 
 	private void OffScan() {
