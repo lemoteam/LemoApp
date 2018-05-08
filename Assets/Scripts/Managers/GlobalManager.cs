@@ -77,5 +77,6 @@ public class GlobalManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(1.5f);
 		sceneLoader.LoadScene ("Main");
+		//sceneLoader.LoadScene ("test-scene");
 	}
 }
