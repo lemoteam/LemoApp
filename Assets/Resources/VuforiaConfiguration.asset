@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: '`AWGye+b/////AAADmc5HOmXJUUL1hTRHdDmHj0IhwCic543t5A5s+3XSVDUnAU/t7Le8LprPT884Z9O4aNJSSrO588IF9jzFkBLvTJwreFvqXQp6+sKkYDRMLDvV1BNTi4WokXnSLUndc+ap98TcbSz7GOpXkFeWLYaT0pNaTpy1WsnX8QoskF4oqwNPEFD2ikCSkTU1dGsoPhuwrwQmh6rd4EWunwzVPO8a/hSAQLq9d/jr2MsqvcpCgM2sonOrqAsZDJg3ohCiwYkqbCzQYEzGnjAp+MPYNb3dP49mLiiE+o7K3tgEjetBe5r0InP59mpRon4EslQ1WZiRoUm11c1dWOnXJsndAgOAK7bOqZOy/aj15dtmG3e9PZJl`'
+    vuforiaLicenseKey: AWGye+b/////AAADmc5HOmXJUUL1hTRHdDmHj0IhwCic543t5A5s+3XSVDUnAU/t7Le8LprPT884Z9O4aNJSSrO588IF9jzFkBLvTJwreFvqXQp6+sKkYDRMLDvV1BNTi4WokXnSLUndc+ap98TcbSz7GOpXkFeWLYaT0pNaTpy1WsnX8QoskF4oqwNPEFD2ikCSkTU1dGsoPhuwrwQmh6rd4EWunwzVPO8a/hSAQLq9d/jr2MsqvcpCgM2sonOrqAsZDJg3ohCiwYkqbCzQYEzGnjAp+MPYNb3dP49mLiiE+o7K3tgEjetBe5r0InP59mpRon4EslQ1WZiRoUm11c1dWOnXJsndAgOAK7bOqZOy/aj15dtmG3e9PZJl
     ufoLicenseKey: QVU1ZlREdi8vLy8vQUFBQUtIZll6L1EvR1VtRnNyaDc2WTdhejlWaHF0bVN6NW5nT0FZQlQ0aFJOTFNtMXZoKzRubGFHMWpwdjFTYlVnUlZMT0RLZHRKVWxuNmRCYWtucDEwUDdLL3NoS0pOTjkxQTZtYXlxaUlRdjZoTVp3YUVOeExaQ0tzR0huTlRhY0RUejdyMXNWL0xBL2R1ODFCQzlPclAvc2ovVHArMUxCU0srRUlTUVA2QUh3cy8xdXJHTVRiUEVoaUplL0NtOWdjVHlZTkJRa1NTRDlqTk5NS2FHeHZpeUo1THl5WDIwNm4yRmdVUlVrWG5MN0FKRnZyU29KbFB2QlZKcEs1cXNQaVgwVUM4NnVqT3RmL0lHOXpDbW9acjZBSS9Od21VV1d5MUV5NkJOV1ZxZXpwQVBhTmxRL3JwTmVQb2hoc3dnaEJ6SHV1UnpWNmtybTY0dm1uYTlQZVd0aWJiNndIaytVWTFTSVhrMEhlT0xFSlQ=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -24,7 +24,7 @@ MonoBehaviour:
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
-    eyewearType: 1
+    eyewearType: 0
     stereoFramework: 0
     seeThroughConfiguration: 0
     viewerName: 

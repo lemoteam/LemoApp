@@ -313,6 +313,7 @@ MonoBehaviour:
   database: {fileID: 0}
   sceneLoader: {fileID: 0}
   messageManager: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!114 &114451530197305296
 MonoBehaviour:
   m_ObjectHideFlags: 1

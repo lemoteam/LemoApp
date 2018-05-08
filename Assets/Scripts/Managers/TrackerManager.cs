@@ -57,9 +57,9 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "mood1" :
-			case "mood2" :
-			case "mood3" :
+			case "I1" :
+			case "I2" :
+			case "M2" :
 				ChangeScene("Choice1");
 				break;
 			

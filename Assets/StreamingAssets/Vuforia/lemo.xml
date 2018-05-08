@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="mood1" size="189.000000 421.000000" />
-    <ImageTarget name="mood2" size="200.000000 422.000000" />
-    <ImageTarget name="mood3" size="200.000000 421.000000" />
-    <ImageTarget name="intensity1" size="200.000000 421.000000" />
-    <ImageTarget name="intensity2" size="200.000000 423.000000" />
-    <ImageTarget name="dynamic" size="200.000000 200.000000" />
+    <ImageTarget name="I2" size="277.000000 472.000000" />
+    <ImageTarget name="I1" size="277.000000 472.000000" />
+    <ImageTarget name="M2" size="277.000000 472.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
 </QCARConfig>
