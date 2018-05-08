@@ -80,6 +80,6 @@ public class GlobalManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(1.5f);
 		sceneLoader.LoadScene ("Main");
-		camera = Camera.main;
+		//camera = Camera.main; 
 	}
 }

@@ -25,10 +25,6 @@ public class SceneLoader : MonoBehaviour {
 			progressText.text = progress * 100f + "%";
 			yield return null;
 			//loadingScene.SetActive(false);
-			var transformPosition = GlobalManager.instance.camera.transform.position;
-			transformPosition.x = 0f;
-			transformPosition.y = 0f;
-			transformPosition.z = 0f;
 		}
 	} 
 }
