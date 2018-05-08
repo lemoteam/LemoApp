@@ -4,24 +4,24 @@ using Vuforia;
 public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public GameObject virtualButton;
-	public Animator animController;
 	public ReaderManager readerManager;
 	public int parameter;
+	public ObjectPooler objectpooler;
 
 	// Use this for initialization
 	void Start () {
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
-		animController.GetComponent<Animator>();
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
-		animController.Play("sphere_animation");
 		readerManager.UpdateReaderSettings(parameter);
+		objectpooler.isLevitate = true;
 		Debug.Log("Btn pressed"+ parameter);
 	}
 
-	public void OnButtonReleased(VirtualButtonBehaviour vb){
-		animController.Play("none");
+	public void OnButtonReleased(VirtualButtonBehaviour vb)
+	{
+		// objectpooler.isLevitate = false;
 		Debug.Log("Btn released");
 	} 
 	

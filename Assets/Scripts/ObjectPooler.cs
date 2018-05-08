@@ -13,12 +13,11 @@ public class ObjectPooler : MonoBehaviour {
 		public int size; 
 	} */
 
-
 	public GameObject gem;
 	private Vector3 gemPosition;
 	private Vector3 currentGemPosition;
 	
-	private bool isLevitate;
+	public bool isLevitate;
 	private bool isCurrentPositionSet;
 	
 	private float gemAmplitude = 5.0f;
@@ -30,11 +29,9 @@ public class ObjectPooler : MonoBehaviour {
 	//public List<Pool> pools;
 	public Dictionary<string, Queue<GameObject>> poolDictionary;
 	
-
-	
 	void Start()
 	{
-		isLevitate = true;
+		isLevitate = false;
 		gemPosition = gem.transform.position;
 		poolDictionary = new Dictionary<string, Queue<GameObject>>();
 		/*foreach (var pool in pools)

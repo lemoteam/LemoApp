@@ -520,7 +520,6 @@ Transform:
   m_LocalPosition: {x: -1.506, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 442592597}
   - {fileID: 1420955360}
   - {fileID: 1975671918}
   - {fileID: 656506550}
@@ -845,47 +844,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &442592596
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 442592597}
-  - component: {fileID: 442592598}
-  m_Layer: 0
-  m_Name: Objectpooler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &442592597
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 442592596}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5074389, y: 0.38761634, z: 0.09847025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 213330421}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &442592598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 442592596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gem: {fileID: 1420955361}
 --- !u!1 &529438833
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +875,7 @@ Transform:
   m_Children:
   - {fileID: 113234790}
   m_Father: {fileID: 1083173745}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &529438835
 MeshFilter:
@@ -1294,7 +1252,7 @@ Transform:
   m_Children:
   - {fileID: 635646721}
   m_Father: {fileID: 213330421}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &656506551
 MeshFilter:
@@ -1541,7 +1499,7 @@ Transform:
   m_Children:
   - {fileID: 1547463110}
   m_Father: {fileID: 1193337307}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &736463958
 MeshFilter:
@@ -1750,7 +1708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81e3106b027344af18359ebb943e0501, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81e3106b027344af18359ebb943e0501, type: 3}
       propertyPath: m_LocalScale.x
@@ -1791,9 +1749,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 736463956}
-  animController: {fileID: 985927219}
   readerManager: {fileID: 642214147}
   parameter: 3
+  objectpooler: {fileID: 846644579}
+--- !u!114 &846644579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846644576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gem: {fileID: 846644576}
+  isLevitate: 0
 --- !u!1 &904248166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,7 +1869,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1193337307}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &985927219
 Animator:
@@ -2033,47 +2004,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1029276731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1029276732}
-  - component: {fileID: 1029276733}
-  m_Layer: 0
-  m_Name: Objectpooler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1029276732
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1029276731}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8985611, y: 0.38761634, z: 0.12947026}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1193337307}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1029276733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1029276731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gem: {fileID: 846644576}
 --- !u!1 &1038363950
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,7 +2227,6 @@ Transform:
   m_LocalPosition: {x: -0.283, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1243436170}
   - {fileID: 1477083544}
   - {fileID: 529438834}
   m_Father: {fileID: 0}
@@ -2501,7 +2430,6 @@ Transform:
   m_LocalPosition: {x: 0.9, y: 0, z: -0.041}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1029276732}
   - {fileID: 286129372}
   - {fileID: 985927218}
   - {fileID: 736463957}
@@ -2641,47 +2569,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1232149779}
---- !u!1 &1243436169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1243436170}
-  - component: {fileID: 1243436171}
-  m_Layer: 0
-  m_Name: Objectpooler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1243436170
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1243436169}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28443885, y: 0.38761634, z: 0.08847025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1083173745}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1243436171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1243436169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gem: {fileID: 1477083543}
 --- !u!21 &1272609951
 Material:
   serializedVersion: 6
@@ -2948,7 +2835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4670143155612226, guid: 5bf3506b81e4145809c57aefe91e7aae, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4670143155612226, guid: 5bf3506b81e4145809c57aefe91e7aae, type: 2}
       propertyPath: m_LocalScale.x
@@ -2991,9 +2878,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 656506549}
-  animController: {fileID: 1975671919}
   readerManager: {fileID: 642214147}
   parameter: 1
+  objectpooler: {fileID: 1420955363}
+--- !u!114 &1420955363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420955361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gem: {fileID: 1420955361}
+  isLevitate: 0
 --- !u!1 &1477083543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,6 +2907,7 @@ GameObject:
   - component: {fileID: 1477083547}
   - component: {fileID: 1477083550}
   - component: {fileID: 1477083545}
+  - component: {fileID: 1477083546}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3025,7 +2926,7 @@ Transform:
   m_LocalScale: {x: -0.26218098, y: -0.2621811, z: -0.2621811}
   m_Children: []
   m_Father: {fileID: 1083173745}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1477083545
 Animator:
@@ -3044,6 +2945,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1477083546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477083543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gem: {fileID: 1477083543}
+  isLevitate: 0
 --- !u!23 &1477083547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3109,9 +3023,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 529438833}
-  animController: {fileID: 1477083545}
   readerManager: {fileID: 642214147}
   parameter: 2
+  objectpooler: {fileID: 1477083546}
 --- !u!1 &1508572763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3757,7 +3671,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 213330421}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1975671919
 Animator:
