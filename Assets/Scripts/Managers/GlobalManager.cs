@@ -21,6 +21,7 @@ public class GlobalManager : MonoBehaviour {
 	protected internal string currentReaderUid = null;
 	protected internal bool isLoggin = false;
 	protected internal List<Message> messageList = new List<Message>();
+	protected internal List<ObjectPooler> objectPoolerList = new List<ObjectPooler>();
 
 	public void Awake() {
 

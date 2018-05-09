@@ -15,7 +15,18 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
 		readerManager.UpdateReaderSettings(parameter);
-		objectpooler.isLevitate = true;
+		
+		// reset object pooler
+		if (objectpooler)
+		{
+			foreach (var objPooler in GlobalManager.instance.objectPoolerList)
+			{
+				objPooler.isLevitate = false;
+			}
+			// launch new object pooler levitation
+			objectpooler.isLevitate = true;
+		}
+		
 		Debug.Log("Btn pressed"+ parameter);
 	}
 

@@ -31,9 +31,11 @@ public class ObjectPooler : MonoBehaviour {
 	
 	void Start()
 	{
+		
 		isLevitate = false;
 		gemPosition = gem.transform.position;
 		poolDictionary = new Dictionary<string, Queue<GameObject>>();
+		GlobalManager.instance.objectPoolerList.Add(this);
 		/*foreach (var pool in pools)
 		{
 			var objectPool = new Queue<GameObject>();
