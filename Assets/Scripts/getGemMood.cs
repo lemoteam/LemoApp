@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vuforia;
 
 public class getGemMood : MonoBehaviour {
@@ -8,6 +13,7 @@ public class getGemMood : MonoBehaviour {
 	private GameObject cloneObj;
 	private GameObject[] targetChoice;
 	public ReaderManager readerManager;
+	
 
 	private void Awake()
 	{
@@ -54,7 +60,14 @@ public class getGemMood : MonoBehaviour {
 			btnScript.virtualButton = selectBbtn.gameObject;
 			cloneObj.transform.parent = imgTarget.transform;
 			cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
-			cloneObj.transform.position = new Vector3(0.834f,0.505f,0.173f);
+			
+			StartCoroutine(SetPosition(cloneObj, index));
 		}
+	}
+	
+	private static IEnumerator SetPosition(GameObject cloneObj, float index)
+	{
+		yield return new WaitForSeconds(1.5f);
+		cloneObj.transform.localPosition = new Vector3(0f, 0.52f, 0.18f);
 	}
 }

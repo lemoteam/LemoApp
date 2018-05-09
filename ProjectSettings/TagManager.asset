@@ -9,6 +9,7 @@ TagManager:
   - targetChoice2
   - readerManager
   - targetChoice3
+  - sceneMarker
   layers:
   - Default
   - TransparentFX

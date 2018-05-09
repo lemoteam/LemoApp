@@ -79,6 +79,11 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice3");
 				break;
 			
+			case "motifs" :
+				MessageManager.ShowMessage("scanScene1", 3f);
+				ChangeScene("Scene1");
+				break;
+			
 			default:
 				Debug.Log("Tracking FOUND but no specific action");
 				break;
