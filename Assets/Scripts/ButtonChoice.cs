@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using Vuforia;
 
-public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
-
+public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
+{
+	private string parameterKey;
 	public GameObject virtualButton;
 	public ReaderManager readerManager;
+	public Animator animController;
 	public int parameter;
 	public ObjectPooler objectpooler;
 
@@ -14,17 +16,24 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler {
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
+		parameterKey = readerManager.parameterKey;
 		readerManager.UpdateReaderSettings(parameter);
 		
-		// reset object pooler
-		if (objectpooler)
+		if (parameterKey == "mood")
 		{
-			foreach (var objPooler in GlobalManager.instance.objectPoolerList)
+			// reset object pooler
+			if (objectpooler)
 			{
-				objPooler.isLevitate = false;
-			}
-			// launch new object pooler levitation
-			objectpooler.isLevitate = true;
+				foreach (var objPooler in GlobalManager.instance.objectPoolerList)
+				{
+					objPooler.isLevitate = false;
+				}
+				// launch new object pooler levitation
+				objectpooler.isLevitate = true;
+			}		}
+		else
+		{
+			animController.Play("anim");
 		}
 		
 		Debug.Log("Btn pressed"+ parameter);

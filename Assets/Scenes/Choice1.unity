@@ -1833,6 +1833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 736463956}
   readerManager: {fileID: 642214147}
+  animController: {fileID: 0}
   parameter: 3
   objectpooler: {fileID: 857967223}
 --- !u!1 &857967222
@@ -3015,6 +3016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 656506549}
   readerManager: {fileID: 642214147}
+  animController: {fileID: 0}
   parameter: 1
   objectpooler: {fileID: 2107109025}
 --- !u!1 &1477083543
@@ -3116,6 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 529438833}
   readerManager: {fileID: 642214147}
+  animController: {fileID: 0}
   parameter: 2
   objectpooler: {fileID: 591297153}
 --- !u!1 &1508572763

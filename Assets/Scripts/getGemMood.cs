@@ -53,7 +53,7 @@ public class getGemMood : MonoBehaviour {
 			var selectBbtn = imgTarget.transform.GetChild(0);
 			btnScript.virtualButton = selectBbtn.gameObject;
 			cloneObj.transform.parent = imgTarget.transform;
-			cloneObj.transform.localScale = new Vector3(5f,5f,5f);
+			cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
 			cloneObj.transform.position = new Vector3(0.834f,0.505f,0.173f);
 		}
 	}
