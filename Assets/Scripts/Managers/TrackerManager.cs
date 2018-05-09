@@ -57,7 +57,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "M2" :
+			case "protoA1" :
 				LaunchMessage("scanChoice1");
 				ChangeScene("Choice1");
 				break;
@@ -65,7 +65,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			//case "intensity1" :
 			//case "intensity2" :
 			//case "l1" :
-			case "M3" :
+			case "protoB1" :
 				/*if (GlobalManager.instance.isActiveIntensity)
 				{
 					LaunchMessage("scanChoice2");
@@ -73,7 +73,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice2");
 				break;
 			
-			case "dynamic" :
+			case "protoC1" :
 				LaunchMessage("scanChoice3");
 				ChangeScene("Choice3");
 				break;

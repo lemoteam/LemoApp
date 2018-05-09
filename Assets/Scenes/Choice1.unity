@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44525248, g: 0.49487883, b: 0.573898, a: 1}
-  m_UseRadianceAmbientProbe: 0
+  m_IndirectSpecularColor: {r: 0.44523734, g: 0.49486423, b: 0.57389015, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,10 +54,11 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -365,7 +365,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -448,7 +447,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 1272609951}
   m_StaticBatchInfo:
@@ -503,14 +501,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: M2
+  mTrackableName: protoA1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 1.7039711
+  mAspectRatio: 1.4347826
   mImageTargetType: 0
-  mWidth: 0.5868644
+  mWidth: 0.6969697
   mHeight: 1
 --- !u!4 &213330421
 Transform:
@@ -826,7 +824,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -874,8 +871,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529438833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004000008, y: 0.001, z: -0.246}
-  m_LocalScale: {x: -0.14814304, y: 1, z: 0.09320215}
+  m_LocalPosition: {x: -0.055999994, y: 0.001, z: -0.35}
+  m_LocalScale: {x: -0.18131435, y: 1, z: 0.14576727}
   m_Children:
   - {fileID: 113234790}
   m_Father: {fileID: 1083173745}
@@ -901,7 +898,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a88c225b69241164ab829bccf61d8845, type: 2}
   m_StaticBatchInfo:
@@ -946,21 +942,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mName: 
-  mSensitivity: 0
+  mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: -0.14814304
+    e00: -0.18131435
     e01: 0
     e02: 0
-    e03: -0.287
+    e03: -0.339
     e10: -0
     e11: 1
     e12: 0
     e13: 0.001
     e20: -0
     e21: 0
-    e22: 0.09320215
-    e23: -0.246
+    e22: 0.14576727
+    e23: -0.35
     e30: 0
     e31: 0
     e32: 0
@@ -1042,29 +1038,13 @@ Mesh:
   m_IndexBuffer: 000001000200020001000300
   m_Skin: []
   m_VertexData:
-    serializedVersion: 2
+    m_CurrentChannels: 0
     m_VertexCount: 4
     m_Channels:
     - stream: 0
       offset: 0
       format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
       dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -1093,8 +1073,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f000000000000803f000000000000003f00000000000000bf000000000000803f00000000000000000000803f0000003f000000000000003f000000000000803f000000000000803f0000803f
+    m_DataSize: 0
+    _typelessdata: 
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1199,7 +1179,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -1311,8 +1290,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656506549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005428672, y: 0.001, z: -0.294}
-  m_LocalScale: {x: 0.20595479, y: 1, z: 0.18139118}
+  m_LocalPosition: {x: -0.0056055784, y: 0.001, z: -0.278}
+  m_LocalScale: {x: 0.14220579, y: 1, z: 0.14306699}
   m_Children:
   - {fileID: 635646721}
   m_Father: {fileID: 213330421}
@@ -1338,7 +1317,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a88c225b69241164ab829bccf61d8845, type: 2}
   m_StaticBatchInfo:
@@ -1386,18 +1364,18 @@ MonoBehaviour:
   mSensitivity: 2
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 0.20595479
+    e00: 0.14220579
     e01: 0
     e02: 0
-    e03: -1.5114287
+    e03: -1.5116056
     e10: 0
     e11: 1
     e12: 0
     e13: 0.001
     e20: 0
     e21: 0
-    e22: 0.18139118
-    e23: -0.304
+    e22: 0.14306699
+    e23: -0.288
     e30: 0
     e31: 0
     e32: 0
@@ -1420,7 +1398,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.2934322, y: 0, z: 0.5}
+      m_Extent: {x: 0.34848484, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1437,7 +1415,7 @@ Mesh:
   m_IndexBuffer: 000001000200020001000300
   m_Skin: []
   m_VertexData:
-    serializedVersion: 2
+    m_CurrentChannels: 11
     m_VertexCount: 4
     m_Channels:
     - stream: 0
@@ -1448,10 +1426,6 @@ Mesh:
       offset: 12
       format: 0
       dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
     - stream: 0
       offset: 0
       format: 0
@@ -1476,20 +1450,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
     m_DataSize: 128
-    _typelessdata: bf3c96be00000000000000bf000000000000803f000000000000000000000000bf3c96be000000000000003f000000000000803f00000000000000000000803fbf3c963e00000000000000bf000000000000803f000000000000803f00000000bf3c963e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 9b6cb2be00000000000000bf000000000000803f0000000000000000000000009b6cb2be000000000000003f000000000000803f00000000000000000000803f9b6cb23e00000000000000bf000000000000803f000000000000803f000000009b6cb23e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1575,7 +1537,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736463956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: -0.29466}
+  m_LocalPosition: {x: -0.013000011, y: 0.001, z: -0.29466}
   m_LocalScale: {x: 0.19415434, y: 1, z: 0.13960859}
   m_Children:
   - {fileID: 1547463110}
@@ -1602,7 +1564,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a88c225b69241164ab829bccf61d8845, type: 2}
   m_StaticBatchInfo:
@@ -1653,7 +1614,7 @@ MonoBehaviour:
     e00: 0.19415434
     e01: 0
     e02: 0
-    e03: 0.9
+    e03: 0.88699996
     e10: 0
     e11: 1
     e12: 0
@@ -1711,7 +1672,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 25eb1c73ebc5b4904a41f766ce073eea, type: 2}
   m_StaticBatchInfo:
@@ -2001,7 +1961,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &985927221
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2015,7 +1974,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9726eee726a6c4fe198a02248c868813, type: 2}
   m_StaticBatchInfo:
@@ -2183,7 +2141,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -2211,7 +2168,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: I2Material
+  m_Name: protoA3Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2224,7 +2181,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 288cdea001ba442684807452f906bc61, type: 3}
+        m_Texture: {fileID: 2800000, guid: 45abac11442940df8dd3c48016bee24b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2270,7 +2227,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 1070371639}
   m_StaticBatchInfo:
@@ -2325,14 +2281,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: I1
+  mTrackableName: protoA2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 1.7039711
+  mAspectRatio: 1.4347826
   mImageTargetType: 0
-  mWidth: 0.5868644
+  mWidth: 0.6969697
   mHeight: 1
 --- !u!4 &1083173745
 Transform:
@@ -2414,7 +2370,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -2476,7 +2431,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 1070371639}
   m_StaticBatchInfo:
@@ -2531,14 +2485,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: I2
+  mTrackableName: protoA3
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/lemo.xml
   mExtendedTracking: 0
-  mAspectRatio: 1.7039711
+  mAspectRatio: 1.4347826
   mImageTargetType: 0
-  mWidth: 0.5868644
+  mWidth: 0.6969697
   mHeight: 1
 --- !u!4 &1193337307
 Transform:
@@ -2696,7 +2650,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M2Material
+  m_Name: protoA1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2709,7 +2663,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cabe7bf4be7e4b85920e444165fc8736, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8e4f4c75a81b44a188218415e6e6ec51, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2823,29 +2777,13 @@ Mesh:
   m_IndexBuffer: 000001000200020001000300
   m_Skin: []
   m_VertexData:
-    serializedVersion: 2
+    m_CurrentChannels: 0
     m_VertexCount: 4
     m_Channels:
     - stream: 0
       offset: 0
       format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
       dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -2874,8 +2812,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f000000000000803f000000000000003f00000000000000bf000000000000803f00000000000000000000803f0000003f000000000000003f000000000000803f000000000000803f0000803f
+    m_DataSize: 0
+    _typelessdata: 
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -3064,7 +3002,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 497d0e6808b8f481c8c12638fa1e2236, type: 2}
   m_StaticBatchInfo:
@@ -3292,8 +3229,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547463109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.03}
-  m_LocalScale: {x: -0.120223194, y: 0.10425, z: 0.10516235}
+  m_LocalPosition: {x: -0.14, y: -0.0000015702, z: 0.03}
+  m_LocalScale: {x: -0.118120566, y: 0.102426566, z: 0.10332296}
   m_Children:
   - {fileID: 1038363951}
   m_Father: {fileID: 736463957}
@@ -3312,7 +3249,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -3509,7 +3445,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -3546,7 +3482,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.2934322, y: 0, z: 0.5}
+      m_Extent: {x: 0.34848484, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -3563,7 +3499,7 @@ Mesh:
   m_IndexBuffer: 000001000200020001000300
   m_Skin: []
   m_VertexData:
-    serializedVersion: 2
+    m_CurrentChannels: 11
     m_VertexCount: 4
     m_Channels:
     - stream: 0
@@ -3574,10 +3510,6 @@ Mesh:
       offset: 12
       format: 0
       dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
     - stream: 0
       offset: 0
       format: 0
@@ -3602,20 +3534,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
     m_DataSize: 128
-    _typelessdata: bf3c96be00000000000000bf000000000000803f000000000000000000000000bf3c96be000000000000003f000000000000803f00000000000000000000803fbf3c963e00000000000000bf000000000000803f000000000000803f00000000bf3c963e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 9b6cb2be00000000000000bf000000000000803f0000000000000000000000009b6cb2be000000000000003f000000000000803f00000000000000000000803f9b6cb23e00000000000000bf000000000000803f000000000000803f000000009b6cb23e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -3789,7 +3709,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1975671921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3803,7 +3722,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 828614e715b2c480c8ad70bfc105d36b, type: 2}
   m_StaticBatchInfo:
