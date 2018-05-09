@@ -1302,6 +1302,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fa614bbe00a4640ccba76a1ada9fea73, type: 2}
+    - target: {fileID: 100010, guid: 45bb10aceb3494fc9a9cdf8b58c7d8b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45bb10aceb3494fc9a9cdf8b58c7d8b1, type: 3}
   m_IsPrefabParent: 0
@@ -1309,6 +1313,25 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 45bb10aceb3494fc9a9cdf8b58c7d8b1, type: 3}
   m_PrefabInternal: {fileID: 678501265}
+--- !u!1 &678501267 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 45bb10aceb3494fc9a9cdf8b58c7d8b1, type: 3}
+  m_PrefabInternal: {fileID: 678501265}
+--- !u!114 &678501268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678501267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d7291b49da944ec945310cf49b6c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualButton: {fileID: 0}
+  readerManager: {fileID: 0}
+  parameter: 0
+  objectpooler: {fileID: 0}
 --- !u!1 &904248166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1806,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4422951376676316, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100292901365696, guid: 6df8aae23528c4f6aa219d31038d9aff, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -56,19 +56,20 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				if (GlobalManager.instance.isLoggin) return;
 				OnScan();
 				break;
-			case "L1" :
-			case "L2" :
+			case "l1" :
+			case "l2" :
 			case "M2" :
 				LaunchMessage("scanChoice1");
 				ChangeScene("Choice1");
 				break;
 			
-			case "intensity1" :
-			case "intensity2" :
-				if (GlobalManager.instance.isActiveIntensity)
+			//case "intensity1" :
+			//case "intensity2" :
+			case "M3" :
+				/*if (GlobalManager.instance.isActiveIntensity)
 				{
 					LaunchMessage("scanChoice2");
-				}
+				}*/
 				ChangeScene("Choice2");
 				break;
 			
