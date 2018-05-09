@@ -30,7 +30,9 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 				}
 				// launch new object pooler levitation
 				objectpooler.isLevitate = true;
-			}		}
+			}
+			
+		}
 		else
 		{
 			animController.Play("anim");

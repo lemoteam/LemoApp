@@ -58,8 +58,9 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				break;
 			
 			case "protoA1" :
-				LaunchMessage("scanChoice1");
+				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
+				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
 			//case "intensity1" :
@@ -74,7 +75,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				break;
 			
 			case "protoC1" :
-				LaunchMessage("scanChoice3");
+				MessageManager.ShowMessage("scanChoice3", 3f);
 				ChangeScene("Choice3");
 				break;
 			
@@ -113,17 +114,13 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
 		text.SetActive(false);
 
-		LaunchMessage("scan");
+		MessageManager.ShowMessage("scan", 2f);
 	}
 
 	private void OffScan() {
 		scan.GetComponent<Image>().color = new Color32(255,255,255,100);
 	}
 	
-	// Messages
-	public void LaunchMessage(string key) {
-		MessageManager.ShowMessage(key);
-	}
 	
 	// Scenes
 	private void GetActiveSceneName() {
