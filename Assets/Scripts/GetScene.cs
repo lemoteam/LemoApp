@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using Vuforia;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class GetGemMoodIntensity : MonoBehaviour {
+public class GetScene : MonoBehaviour {
 	private string mood; 
 	private string moodName;
 	private int intensity;
@@ -14,10 +15,10 @@ public class GetGemMoodIntensity : MonoBehaviour {
 	{
 		mood = readerManager.GetReaderSetting("mood");
 		intensity = int.Parse(readerManager.GetReaderSetting("intensity"));
-		createGemMood();
+		createScene();
 	}
 		
-	void createGemMood()
+	void createScene()
 	{
 		switch (mood)
 		{
@@ -34,19 +35,19 @@ public class GetGemMoodIntensity : MonoBehaviour {
 			case "3":
 				Debug.Log ("jui paisible");
 				moodName = "paisible";
-				createObj (moodName);
+				createObj(moodName);
 				break;
 		}
 	}
 
 	void createObj(string moodName)
 	{
-		targetChoice = GameObject.FindWithTag("targetChoice3");
-		obj = Resources.Load("Prefabs/"+moodName+"/mood"+intensity) as GameObject;
+		targetChoice = GameObject.FindWithTag("sceneMarker");
+		obj = Resources.Load("Prefabs/"+moodName+"/scene/scene"+intensity) as GameObject;
 		cloneObj = Instantiate (obj);
-		Destroy(cloneObj.GetComponent("ButtonChoice"));
+		// Destroy(cloneObj.GetComponent("ButtonChoice"));
 		cloneObj.transform.parent = targetChoice.transform;
-		cloneObj.transform.localScale = new Vector3(.2f,.2f,.2f);
+		cloneObj.transform.localScale = new Vector3(1f,1f,1f);
+		cloneObj.transform.localPosition = new Vector3(.4f,0.04f,0f);
 	}
-		
 }
