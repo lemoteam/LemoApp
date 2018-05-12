@@ -3,48 +3,42 @@ using Vuforia;
 
 public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 {
-	private string parameterKey;
 	public GameObject virtualButton;
 	public ReaderManager readerManager;
-	public Animator animController;
 	public int parameter;
 	public ObjectPooler objectpooler;
+	public Animation animation;
 
 	// Use this for initialization
 	void Start () {
-		
 		Debug.Log("Btn ready");
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+		animation = this.GetComponent<Animation>();
+		
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
-		parameterKey = readerManager.parameterKey;
 		readerManager.UpdateReaderSettings(parameter);
 		
-		if (parameterKey == "mood")
-		{
-			// reset object pooler
-			if (objectpooler)
+		// reset object pooler
+		if (objectpooler) {
+			foreach (var objPooler in GlobalManager.instance.objectPoolerList)
 			{
-				foreach (var objPooler in GlobalManager.instance.objectPoolerList)
-				{
-					objPooler.isLevitate = false;
-				}
-				// launch new object pooler levitation
-				objectpooler.isLevitate = true;
+				objPooler.isLevitate = false;
 			}
-			
+			// launch new object pooler levitation
+			objectpooler.isLevitate = true;
 		}
-		else
+
+		if (animation)
 		{
-			animController.Play("anim");
+			animation.Play();
 		}
 		
 		Debug.Log("Btn pressed"+ parameter);
 	}
 
-	public void OnButtonReleased(VirtualButtonBehaviour vb)
-	{
+	public void OnButtonReleased(VirtualButtonBehaviour vb) {
 		// objectpooler.isLevitate = false;
 		Debug.Log("Btn released");
 	} 

@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 45bb10aceb3494fc9a9cdf8b58c7d8b1
-timeCreated: 1525800020
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -73,8 +71,10 @@ ModelImporter:
     4300012: recipient_interne_2
     4300014: recipient_2
     4300016: base_2
-    7400000: Cinema_4D_Prise Principale
+    7400000: paisible1
     9500000: //RootNode
+    11100000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -104,6 +104,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -113,11 +114,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cinema_4D_Prise Principale
+      name: paisible1
       takeName: Cinema_4D_Prise Principale
       firstFrame: 0
       lastFrame: 270
-      wrapMode: 0
+      wrapMode: 4
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -184,10 +185,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
