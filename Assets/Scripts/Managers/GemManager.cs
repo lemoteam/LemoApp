@@ -5,14 +5,6 @@ using UnityEngine;
 public class GemManager : MonoBehaviour {
 
 	public GameObject Gem;
-	private Vector3 CurrentGemPosition;
-	
-	private bool isCurrentPositionSet;
-	
-	private float GemReplaceFraction = 0;
-	private float GemReplaceSpeed = 1f;
-	private float RotationSpeed = 0f;
-
 	public Animation animation;
 	
 	// Lifecycle
