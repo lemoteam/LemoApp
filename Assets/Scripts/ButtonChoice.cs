@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Playables;
 using Vuforia;
 
 public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
@@ -6,40 +7,36 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 	public GameObject virtualButton;
 	public ReaderManager readerManager;
 	public int parameter;
-	public ObjectPooler objectpooler;
-	public Animation animation;
+	public GemManager gemManager;
 
 	// Use this for initialization
 	void Start () {
 		Debug.Log("Btn ready");
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
-		animation = this.GetComponent<Animation>();
-		
+		gemManager.animation = this.GetComponent<Animation>();
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
 		readerManager.UpdateReaderSettings(parameter);
 		
-		// reset object pooler
-		if (objectpooler) {
-			foreach (var objPooler in GlobalManager.instance.objectPoolerList)
+		// If animation
+		if (gemManager) {
+			foreach (var gem in GlobalManager.instance.gemManagerList)
 			{
-				objPooler.isLevitate = false;
+				// Stop Animation
+				gem.StopAnimation();
 			}
-			// launch new object pooler levitation
-			objectpooler.isLevitate = true;
+			
+			// Play Animation
+			gemManager.PlayAnimation();
 		}
-
-		if (animation)
-		{
-			animation.Play();
-		}
+		
+		
 		
 		Debug.Log("Btn pressed"+ parameter);
 	}
 
 	public void OnButtonReleased(VirtualButtonBehaviour vb) {
-		// objectpooler.isLevitate = false;
 		Debug.Log("Btn released");
 	} 
 	
