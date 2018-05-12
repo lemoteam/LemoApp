@@ -12,6 +12,8 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 
 	// Use this for initialization
 	void Start () {
+		
+		Debug.Log("Btn ready");
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
 	}
 

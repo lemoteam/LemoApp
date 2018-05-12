@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: f0bf8f6d1e6f44306a7471e77b71d82d
-timeCreated: 1525813259
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -68,6 +66,7 @@ ModelImporter:
     4300016: Tore
     7400000: Cinema_4D_Prise Principale
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -97,6 +96,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

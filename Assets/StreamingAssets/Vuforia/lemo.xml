@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="motifs" size="250.000000 133.000000" />
-    <ImageTarget name="protoA2" size="230.000000 330.000000" />
-    <ImageTarget name="protoC1" size="230.000000 330.000000" />
-    <ImageTarget name="protoB2" size="230.000000 330.000000" />
-    <ImageTarget name="protoB1" size="230.000000 330.000000" />
-    <ImageTarget name="protoA3" size="230.000000 330.000000" />
-    <ImageTarget name="protoA1" size="230.000000 330.000000" />
+    <ImageTarget name="drone" size="550.000000 950.000000" />
+    <ImageTarget name="fissure" size="550.000000 950.000000" />
+    <ImageTarget name="oxgen" size="550.000000 950.000000" />
+    <ImageTarget name="astronaut" size="550.000000 950.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
 </QCARConfig>

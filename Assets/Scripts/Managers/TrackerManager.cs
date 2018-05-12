@@ -57,7 +57,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "protoA1" :
+			case "oxgen" :
 				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
 				MessageManager.ShowMessage("scanAfter", 4f);
@@ -117,7 +117,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
-		text.SetActive(false);
+		//text.SetActive(false);
 
 		MessageManager.ShowMessage("scan", 2f);
 	}

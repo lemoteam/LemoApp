@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457781491574900}
   - component: {fileID: 95700370000396198}
-  - component: {fileID: 114524295987824674}
+  - component: {fileID: 114144434571948110}
   m_Layer: 0
   m_Name: mood2
   m_TagString: Untagged
@@ -347,8 +347,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202636739359490}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.242}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_Children:
   - {fileID: 4127314390401926}
   - {fileID: 4052084400820116}
@@ -881,7 +881,7 @@ Animator:
   m_GameObject: {fileID: 1202636739359490}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f0bf8f6d1e6f44306a7471e77b71d82d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 94133c67d656244619352207a7d284fa, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -890,7 +890,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114524295987824674
+--- !u!114 &114144434571948110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -903,6 +903,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 0}
   readerManager: {fileID: 0}
-  animController: {fileID: 95700370000396198}
-  parameter: 0
+  animController: {fileID: 0}
+  parameter: 1
   objectpooler: {fileID: 0}
