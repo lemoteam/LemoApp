@@ -57,7 +57,7 @@ public class GetGem : MonoBehaviour
     void getGem(string currentParameter, string currentSettingName) {
         
         // Variables
-        var loadUrl = "Prefabs/" + currentSettingName + "/" + currentParameter;
+        var loadUrl = "Prefabs/" + currentSettingName + "/gem/" + currentParameter;
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var index = 1;
         

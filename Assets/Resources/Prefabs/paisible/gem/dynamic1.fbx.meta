@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 9b732f04a7066403b8118877f05860dd
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: "Arri\xE8re_Plan"
+    100004: capuchon_choix_3
+    100006: Ciel_Physique
+    100008: gem_phase_3
+    100010: "Lumi\xE8re_lunaire"
+    100012: "Lumi\xE8re_solaire"
+    100014: Lune
+    100016: Objet_Neutre_Ciel
+    100018: Objet_Soleil
+    100020: Plan_des_ombres
+    100022: recipient_choix_3
+    100024: recipient_interne_choix_3
+    100026: Sky_Dome
+    100028: Source_des_effets_de_lentille
+    100030: "Sph\xE8re"
+    100032: "Sph\xE8re_1"
+    100034: "Sph\xE8re_1_2"
+    100036: "Sph\xE8re_2"
+    100038: "Sph\xE8re_2_2"
+    100040: "Sph\xE8re_2_3"
+    100042: "Sph\xE8re_3"
+    100044: "Sph\xE8re_4"
+    100046: "Sph\xE8re_5"
+    100048: "Sph\xE8re_6"
+    100050: "Sph\xE8re_7"
+    100052: "sph\xE8res_centrales"
+    100054: Surface_de_Subdivision
+    100056: Tore
+    400000: //RootNode
+    400002: "Arri\xE8re_Plan"
+    400004: capuchon_choix_3
+    400006: Ciel_Physique
+    400008: gem_phase_3
+    400010: "Lumi\xE8re_lunaire"
+    400012: "Lumi\xE8re_solaire"
+    400014: Lune
+    400016: Objet_Neutre_Ciel
+    400018: Objet_Soleil
+    400020: Plan_des_ombres
+    400022: recipient_choix_3
+    400024: recipient_interne_choix_3
+    400026: Sky_Dome
+    400028: Source_des_effets_de_lentille
+    400030: "Sph\xE8re"
+    400032: "Sph\xE8re_1"
+    400034: "Sph\xE8re_1_2"
+    400036: "Sph\xE8re_2"
+    400038: "Sph\xE8re_2_2"
+    400040: "Sph\xE8re_2_3"
+    400042: "Sph\xE8re_3"
+    400044: "Sph\xE8re_4"
+    400046: "Sph\xE8re_5"
+    400048: "Sph\xE8re_6"
+    400050: "Sph\xE8re_7"
+    400052: "sph\xE8res_centrales"
+    400054: Surface_de_Subdivision
+    400056: Tore
+    2100000: lambert1
+    2100002: Metal 06
+    2300000: "Sph\xE8re_1_2"
+    2300002: "Sph\xE8re_2_2"
+    2300004: "Sph\xE8re_2_3"
+    2300006: "Sph\xE8re_3"
+    2300008: "Sph\xE8re_4"
+    2300010: "Sph\xE8re_5"
+    2300012: "Sph\xE8re_6"
+    2300014: "Sph\xE8re_7"
+    2300016: Tore
+    3300000: "Sph\xE8re_1_2"
+    3300002: "Sph\xE8re_2_2"
+    3300004: "Sph\xE8re_2_3"
+    3300006: "Sph\xE8re_3"
+    3300008: "Sph\xE8re_4"
+    3300010: "Sph\xE8re_5"
+    3300012: "Sph\xE8re_6"
+    3300014: "Sph\xE8re_7"
+    3300016: Tore
+    4300000: "Sph\xE8re_7"
+    4300002: "Sph\xE8re_6"
+    4300004: "Sph\xE8re_5"
+    4300006: "Sph\xE8re_4"
+    4300008: "Sph\xE8re_3"
+    4300010: "Sph\xE8re_2_2"
+    4300012: "Sph\xE8re_1_2"
+    4300014: "Sph\xE8re_2_3"
+    4300016: Tore
+    10800000: "Lumi\xE8re_lunaire"
+    10800002: "Lumi\xE8re_solaire"
+    10800004: Sky_Dome
+    10800006: Source_des_effets_de_lentille
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal 06
+    second: {fileID: 2100000, guid: 1cab4eb7354ac4abd923840390bbf064, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: d895622f53c6b4accab20d946f1f5ac2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

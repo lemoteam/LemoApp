@@ -30,16 +30,16 @@ public class GemManager : MonoBehaviour {
 	
 	// Methods
 	public void PlayAnimation()
-	{	
-		if (animation) {
-			animation.Play();
-		}
+	{
+		if (!animation) return;
+		Debug.Log("PLAYYYY");
+		animation.Play();
 	}
 
 	public void StopAnimation()
 	{
-		if (animation) {
-			animation.Stop();
-		}
+		if (!animation) return;
+		Debug.Log("STOOOOOP");
+		animation.Stop();
 	}
 }
