@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Reflection.Emit;
 using UnityEngine;
 
 public class GetGem : MonoBehaviour
@@ -43,7 +42,7 @@ public class GetGem : MonoBehaviour
                 currentSettingName = "mysterieux";
                 break;
             case "2":
-                currentSettingName = "loufoque";
+                currentSettingName = "extraordinaire";
                 break;
             case "3":
                 currentSettingName = "paisible";
