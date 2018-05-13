@@ -66,7 +66,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			//case "intensity1" :
 			//case "intensity2" :
 			//case "l1" :
-			case "protoB1" :
+			case "astronaut" :
 				/*if (GlobalManager.instance.isActiveIntensity)
 				{
 					LaunchMessage("scanChoice2");

@@ -29,7 +29,7 @@ public class GetGem : MonoBehaviour
         }
 
         setCurrentSettingName(currentSettingInt);
-        getGem(currentParameter.ToLower(), currentSettingName.ToLower());
+        getCurrentGems(currentParameter.ToLower(), currentSettingName.ToLower());
     }
 		
     
@@ -39,26 +39,28 @@ public class GetGem : MonoBehaviour
         switch (currentSetting)
         {
             case "1":
-                currentSettingName = "mysterieux";
+                currentSettingName = "paisible";
                 break;
             case "2":
                 currentSettingName = "extraordinaire";
                 break;
             case "3":
-                currentSettingName = "paisible";
+                currentSettingName = "mysterieux";
                 break;
         }
     }
     
     
-    // Get gem -> currentParameter (mood,intensity) / currentSettingName(mysterieux,...)
+    // Get gem -> currentParameter (mood,    intensity) / currentSettingName(mysterieux,...)
 
-    void getGem(string currentParameter, string currentSettingName) {
+    void getCurrentGems(string currentParameter, string currentSettingName) {
         
         // Variables
         var loadUrl = "Prefabs/" + currentSettingName + "/gem/" + currentParameter;
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var index = 1;
+        
+        Debug.Log(loadUrl);
         
         
         foreach (GameObject imgTarget in targetChoice) {
@@ -69,13 +71,22 @@ public class GetGem : MonoBehaviour
             // Instance
             var cloneObj = Instantiate (obj);
             
-            ButtonChoice btnScript = cloneObj.GetComponent<ButtonChoice>();
+            // Btn Script
+            var selectBbtn = imgTarget.transform.GetChild(0);
+            var btnScript = cloneObj.GetComponent<ButtonChoice>();
             btnScript.parameter = index;
             btnScript.readerManager = readerManager;
-            
-            var selectBbtn = imgTarget.transform.GetChild(0);
             btnScript.virtualButton = selectBbtn.gameObject;
             
+            // Gem Manager
+            var gemManagerObj = imgTarget.transform.GetChild(1);
+            var gemManager = gemManagerObj.GetComponent<GemManager>();
+            gemManager.Gem = cloneObj;
+            
+            // Attach gem manager to cloneObj
+            btnScript.gemManager = gemManager;
+            
+            // Position cloneObj
             cloneObj.transform.parent = imgTarget.transform;
             cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
 			
