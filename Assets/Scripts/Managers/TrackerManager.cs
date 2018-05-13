@@ -57,7 +57,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "oxgen" :
+			case "fissure" :
 				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
 				MessageManager.ShowMessage("scanAfter", 4f);

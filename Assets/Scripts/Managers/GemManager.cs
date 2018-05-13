@@ -6,6 +6,7 @@ public class GemManager : MonoBehaviour {
 
 	public GameObject Gem;
 	public Animation animation;
+	public ParticleSystem baseParticle, particles;
 	
 	// Lifecycle
 	void Start()
@@ -34,12 +35,24 @@ public class GemManager : MonoBehaviour {
 		if (animation) {
 			animation.Play();
 		}
+
+		if (baseParticle && particles && !baseParticle.isPlaying)
+		{
+			baseParticle.Play();
+			particles.Play();
+		}
 	}
 
 	public void StopAnimation()
 	{
 		if (animation) {
 			animation.Stop();
+		}
+		
+		if (baseParticle && particles && baseParticle.isPlaying)
+		{
+			baseParticle.Stop();
+			particles.Stop();
 		}
 	}
 }
