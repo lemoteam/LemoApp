@@ -15,8 +15,8 @@ public class SliderController : MonoBehaviour {
 	
     // Update is called once per frame
     void Update () {
-        Debug.Log("position de lmnt: "+this.transform.position);
         var distance = max.position.x - this.transform.position.x;
+        Debug.Log("disatance : "+distance);
         var scaleMultiplier = Map(2.0f,0.5f,170.0f,300.0f,distance);
         dynamicObj.transform.localScale = new Vector3(0, scaleMultiplier, 0);
         if (distance > 300 || distance < 170)

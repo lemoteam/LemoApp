@@ -5,6 +5,8 @@
     <ImageTarget name="fissure" size="550.000000 950.000000" />
     <ImageTarget name="oxgen" size="550.000000 950.000000" />
     <ImageTarget name="astronaut" size="550.000000 950.000000" />
+    <ImageTarget name="protoA1" size="230.000000 330.000000" />
+    <ImageTarget name="image" size="550.000000 385.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
 </QCARConfig>

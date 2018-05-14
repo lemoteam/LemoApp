@@ -22,8 +22,8 @@ public class GetGemMoodIntensity : MonoBehaviour {
 		switch (mood)
 		{
 			case "1":
-				Debug.Log ("mytique");
-				moodName = "mysterieux";
+				Debug.Log ("jui paisible");
+				moodName = "paisible";
 				createObj (moodName);
 				break;
 			case "2":
@@ -32,8 +32,8 @@ public class GetGemMoodIntensity : MonoBehaviour {
 				createObj (moodName);
 				break;
 			case "3":
-				Debug.Log ("jui paisible");
-				moodName = "paisible";
+				Debug.Log ("jui mystérieux");
+				moodName = "mysterieux";
 				createObj (moodName);
 				break;
 		}
@@ -42,11 +42,10 @@ public class GetGemMoodIntensity : MonoBehaviour {
 	void createObj(string moodName)
 	{
 		targetChoice = GameObject.FindWithTag("targetChoice3");
-		obj = Resources.Load("Prefabs/"+moodName+"/mood"+intensity) as GameObject;
+		obj = Resources.Load("Prefabs/"+moodName+"/gem/dynamic") as GameObject;
 		cloneObj = Instantiate (obj);
-		Destroy(cloneObj.GetComponent("ButtonChoice"));
 		cloneObj.transform.parent = targetChoice.transform;
-		cloneObj.transform.localScale = new Vector3(.2f,.2f,.2f);
+		cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
 	}
 		
 }

@@ -20,9 +20,9 @@ public class GemManager : MonoBehaviour {
 		// Levitation
 		var newGemPosition = Gem.transform.position;
 		newGemPosition.y += (Mathf.Cos(Time.time) / 10f)* Time.deltaTime;
-		// vnewGemPosition.x = (Mathf.PerlinNoise(Mathf.Cos(90), Time.time / 50f) * .2f) - 2f;
+		// newGemPosition.x = (Mathf.PerlinNoise(Mathf.Cos(90), Time.time / 50f) * .2f) - 2f;
 		// newGemPosition.z = (Mathf.PerlinNoise(Mathf.Sin(45), Time.time / 10f) * 2f) - 2f;
-		Debug.Log(Mathf.PerlinNoise(Mathf.Cos(90), Time.time / 10f) * 2f);
+		//Debug.Log(Mathf.PerlinNoise(Mathf.Cos(90), Time.time / 10f) * 2f);
 		Gem.transform.position = newGemPosition;
 	}
 

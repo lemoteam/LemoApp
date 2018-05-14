@@ -74,7 +74,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice2");
 				break;
 			
-			case "protoC1" :
+			case "image" :
 				MessageManager.ShowMessage("scanChoice3", 3f);
 				ChangeScene("Choice3");
 				break;
