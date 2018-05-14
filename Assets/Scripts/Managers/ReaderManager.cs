@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 public class ReaderManager : MonoBehaviour {
-			 
+		 
 	// Need cause cannot add to parameters on OnClick UI Button method
 	public string parameterKey; // not visible without these properties   
 	
@@ -15,9 +15,10 @@ public class ReaderManager : MonoBehaviour {
 		// Update in GlobalManager
 		var prop = GlobalManager.instance.reader.GetType().GetProperty(parameterKey);
 		if (prop != null) prop.SetValue(GlobalManager.instance.reader, value, null);
-		
+	
 		// Reset intensity 
 		ResetIntensity();	
+
 	}
 	
 	// Get reader setting by key

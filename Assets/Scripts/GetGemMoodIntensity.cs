@@ -4,7 +4,6 @@ using Vuforia;
 public class GetGemMoodIntensity : MonoBehaviour {
 	private string mood; 
 	private string moodName;
-	private int intensity;
 	private GameObject obj;
 	private GameObject cloneObj;
 	private GameObject targetChoice;
@@ -13,7 +12,6 @@ public class GetGemMoodIntensity : MonoBehaviour {
 	private void Awake()
 	{
 		mood = readerManager.GetReaderSetting("mood");
-		intensity = int.Parse(readerManager.GetReaderSetting("intensity"));
 		createGemMood();
 	}
 		
@@ -32,7 +30,7 @@ public class GetGemMoodIntensity : MonoBehaviour {
 				createObj (moodName);
 				break;
 			case "3":
-				Debug.Log ("jui mystérieux");
+				Debug.Log ("jui mysterieux");
 				moodName = "mysterieux";
 				createObj (moodName);
 				break;
@@ -45,7 +43,7 @@ public class GetGemMoodIntensity : MonoBehaviour {
 		obj = Resources.Load("Prefabs/"+moodName+"/gem/dynamic") as GameObject;
 		cloneObj = Instantiate (obj);
 		cloneObj.transform.parent = targetChoice.transform;
-		cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
+		cloneObj.transform.localScale = new Vector3(4.7f,4.72f,4.7f);
 	}
 		
 }
