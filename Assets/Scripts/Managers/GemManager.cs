@@ -14,7 +14,6 @@ public class GemManager : MonoBehaviour {
 		GlobalManager.instance.gemManagerList.Add(this);
 	}
 
-
 	private void FixedUpdate()
 	{	
 		// Levitation
