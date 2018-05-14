@@ -822,7 +822,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 1282337513}
+  - {fileID: 823401106}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1345,12 +1345,72 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0.0049819946
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: -1.5390793
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: -1.5390793
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.5559257
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 1.6452999
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 1.6452999
+      objectReference: {fileID: 0}
+    - target: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
+        type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.29716292
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7077b6239a6514369a8b54f8992d3f52, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &324699300 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4171163684044050, guid: 7077b6239a6514369a8b54f8992d3f52,
+    type: 2}
+  m_PrefabInternal: {fileID: 324699299}
+--- !u!198 &324699301 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198207401333150368, guid: 7077b6239a6514369a8b54f8992d3f52,
+    type: 2}
+  m_PrefabInternal: {fileID: 324699299}
+--- !u!198 &324699302 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198760533619493682, guid: 7077b6239a6514369a8b54f8992d3f52,
     type: 2}
   m_PrefabInternal: {fileID: 324699299}
 --- !u!1 &338164502
@@ -2368,6 +2428,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 846644575}
   m_GameObject: {fileID: 818262605}
   m_Mesh: {fileID: 4300014, guid: 81e3106b027344af18359ebb943e0501, type: 3}
+--- !u!21 &823401106
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'fissureMaterial
+
+    19154'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 594360bf18e64d08b954d31e3bd3070c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1001 &846644575
 Prefab:
   m_ObjectHideFlags: 0
@@ -3405,33 +3492,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!21 &1282337513
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'fissureMaterial
-
-    16206'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 594360bf18e64d08b954d31e3bd3070c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1364697552
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,8 +4565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gem: {fileID: 1541660836}
   animation: {fileID: 0}
-  baseParticle: {fileID: 0}
-  particles: {fileID: 0}
+  baseParticle: {fileID: 324699302}
+  particles: {fileID: 324699301}
 --- !u!4 &2107109026
 Transform:
   m_ObjectHideFlags: 0
