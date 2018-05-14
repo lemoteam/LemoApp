@@ -28,8 +28,8 @@ public class GetScene : MonoBehaviour {
 				createObj (moodName);
 				break;
 			case "2":
-				Debug.Log ("jui loufoque");
-				moodName = "loufoque";
+				Debug.Log ("jui extraordinaire");
+				moodName = "extraordinaire";
 				createObj (moodName);
 				break;
 			case "3":
