@@ -351,12 +351,12 @@ GameObject:
   m_Component:
   - component: {fileID: 176387663}
   m_Layer: 0
-  m_Name: Cloner
+  m_Name: flottants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &176387663
 Transform:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197131013}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3097,6 +3097,18 @@ Prefab:
     - target: {fileID: 4317412074829924, guid: 5d90371d1d9d24f10b1ef275bcc7c2f7, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756956658490558, guid: 5d90371d1d9d24f10b1ef275bcc7c2f7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756956658490558, guid: 5d90371d1d9d24f10b1ef275bcc7c2f7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297862824502822, guid: 5d90371d1d9d24f10b1ef275bcc7c2f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d90371d1d9d24f10b1ef275bcc7c2f7, type: 2}
