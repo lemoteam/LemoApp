@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="ground-btn" size="165.000000 452.514984" />
+    <ImageTarget name="fissure-btn" size="165.000000 452.514984" />
+    <ImageTarget name="astronaut-btn" size="165.000000 455.000000" />
     <ImageTarget name="oxygen-btn" size="165.000000 455.000000" />
     <ImageTarget name="drone-btn" size="275.000000 761.867676" />
-    <ImageTarget name="drone" size="550.000000 950.000000" />
-    <ImageTarget name="fissure" size="550.000000 950.000000" />
-    <ImageTarget name="oxgen" size="550.000000 950.000000" />
-    <ImageTarget name="astronaut" size="550.000000 950.000000" />
-    <ImageTarget name="M2" size="277.000000 472.000000" />
+    <ImageTarget name="bo" size="277.000000 472.000000" />
     <ImageTarget name="image" size="550.000000 385.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
