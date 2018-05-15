@@ -57,7 +57,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "fissure" :
+			case "drone-btn" :
 				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
 				MessageManager.ShowMessage("scanAfter", 4f);
@@ -66,7 +66,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			//case "intensity1" :
 			//case "intensity2" :
 			//case "l1" :
-			case "astronaut" :
+			case "astronaut-btn" :
 				/*if (GlobalManager.instance.isActiveIntensity)
 				{
 					LaunchMessage("scanChoice2");
