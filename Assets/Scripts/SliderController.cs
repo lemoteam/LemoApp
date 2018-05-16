@@ -19,20 +19,20 @@ public class SliderController : MonoBehaviour {
         var distance = max.position.x - this.transform.position.x;
         if (firstDistance != distance)
         {
-            var scaleMultiplier = Map(6.0f,-1.5f,150.0f,290.0f,distance);
+            var scaleMultiplier = Map(6.0f,-1.5f,140.0f,370.0f,distance);
             dynamicObj.transform.localScale = new Vector3(dynamicObj.transform.localScale.x, scaleMultiplier, dynamicObj.transform.localScale.z);
-            if (distance > 290 || distance < 150)
+            if (distance > 370 || distance < 140)
             {
                 GlobalManager.instance.dynamicHasChanded = true;
             }
 
-            if (distance > 290)
+            if (distance > 370)
             {
                 var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
                 if (prop != null) prop.SetValue(GlobalManager.instance.reader, 1, null);
             }
 
-            if (distance < 150)
+            if (distance < 140)
             {
                 var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
                 if (prop != null) prop.SetValue(GlobalManager.instance.reader, 2, null);  
