@@ -1,23 +1,27 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GetGem : MonoBehaviour
 {
-
     private string currentSettingInt;
     private string currentParameter;
     private string currentSettingName;
     public string stringPreviousSetting; // Previous settings mood or intensity 'cause dynamic is the last setting
     public ReaderManager readerManager;
-	
+    private List<GameObject> targetChoice = new List<GameObject>();
 
-    private void Awake()
+    public void launchAnimation()
     {
         var previousSetting = stringPreviousSetting.ToLower();
-        
+        Debug.Log("<color=green>Le SWWWAAAG</color>");
         
         switch (previousSetting)
         {
+            case "start":
+                currentSettingInt = "0";
+                currentParameter = "mood";
+                break;
             case "mood":
                 currentSettingInt = readerManager.GetReaderSetting("mood");
                 currentParameter = "intensity";
@@ -29,15 +33,29 @@ public class GetGem : MonoBehaviour
         }
 
         setCurrentSettingName(currentSettingInt);
-        getCurrentGems(currentParameter.ToLower(), currentSettingName.ToLower());
+        
+        var cloneObjList = GameObject.FindGameObjectsWithTag("cloneGem");
+
+        if (cloneObjList.Length > 0)
+        {
+            foreach (var cloneObj in cloneObjList)
+            {
+                cloneObj.SetActive(false);
+                DestroyImmediate(cloneObj, true);
+            }  
+        }
+        
+        StartCoroutine (getCurrentGems("Prefabs/" + currentSettingName.ToLower() + "/gem/" + currentParameter.ToLower()));
     }
-		
     
     // Set Names
     void setCurrentSettingName(string currentSetting)
     {
         switch (currentSetting)
         {
+            case "0":
+                currentSettingName = "common";
+                break;
             case "1":
                 currentSettingName = "paisible";
                 break;
@@ -51,56 +69,91 @@ public class GetGem : MonoBehaviour
     }
     
     
-    // Get gem -> currentParameter (mood,    intensity) / currentSettingName(mysterieux,...)
+    // Get gem -> currentParameter (mood, intensity) / currentSettingName(mysterieux,...)
 
-    void getCurrentGems(string currentParameter, string currentSettingName) {
+    private IEnumerator getCurrentGems(string loadUrl) {
         
         // Variables
-        var loadUrl = "Prefabs/" + currentSettingName + "/gem/" + currentParameter;
-        var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
+        for (var i = 0; i < transform.parent.childCount; i++)
+        {
+            var gameObj = transform.parent.GetChild(i).gameObject;
+            
+            if (gameObj.CompareTag("targetChoice"))
+            {
+                targetChoice.Add(gameObj);
+            }
+        }
+        
         var index = 1;
-        
-        Debug.Log(loadUrl);
-        
-        
-        foreach (GameObject imgTarget in targetChoice) {
+
+
+        foreach (var imgTarget in targetChoice) {
             
             // Load
-            var obj = Resources.Load(loadUrl + index) as GameObject;
+            var operation = Resources.LoadAsync(loadUrl + index, typeof(GameObject));
             
+            GlobalManager.instance.sceneLoader.progressText.text = "";
+            
+            while (!operation.isDone) {
+                Debug.Log (operation.progress);
+                var progress = Mathf.Clamp01 (operation.progress / .9f);
+                GlobalManager.instance.sceneLoader.progressText.text = progress * 100f + "%";;
+                yield return operation;
+            }
+		
+            // Get the reference to the loaded object
+            GameObject obj = operation.asset as GameObject;
+
             // Instance
-            var cloneObj = Instantiate (obj);
+            if (obj) {
+                var cloneObj = Instantiate (obj);
+                cloneObj.gameObject.tag = "cloneGem"; 
+                cloneObj.SetActive(false);
             
-            // Btn Script
-            var selectBbtn = imgTarget.transform.GetChild(0);
-            var btnScript = cloneObj.GetComponent<ButtonChoice>();
-            btnScript.parameter = index;
-            btnScript.readerManager = readerManager;
-            btnScript.virtualButton = selectBbtn.gameObject;
+                // Btn Script
+                var selectBbtn = imgTarget.transform.GetChild(0);
+                var btnScript = cloneObj.GetComponent<ButtonChoice>();
+                btnScript.parameter = index;
+                btnScript.readerManager = readerManager;
+                btnScript.virtualButton = selectBbtn.gameObject;
+                
+                // Gem Manager
+                
+                var gemManagerObj = imgTarget.transform.GetChild(1);
+                var gemManager = gemManagerObj.GetComponent<GemManager>();
+                gemManager.Gem = cloneObj;
+                
+                // Attach gem manager to cloneObj
+                btnScript.gemManager = gemManager;
+                
+                // Gembase  
+                for (var i = 0; i < cloneObj.transform.childCount; i++)
+                {
+                    var gameObj = cloneObj.transform.GetChild(i).gameObject;
             
-            // Gem Manager
-            var gemManagerObj = imgTarget.transform.GetChild(1);
-            var gemManager = gemManagerObj.GetComponent<GemManager>();
-            gemManager.Gem = cloneObj;
-            
-            // Attach gem manager to cloneObj
-            btnScript.gemManager = gemManager;
-            
-            // Position cloneObj
-            cloneObj.transform.parent = imgTarget.transform;
-            cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
-			
-            StartCoroutine(SetPosition(cloneObj));
+                    if (gameObj.CompareTag("gemBase"))
+                    {
+                        var gembase = gameObj;
+                        var gembaseParticles = gembase.transform.GetChild(0).GetComponent<ParticleSystem>(); // GembaseParticles first
+                        var gembaseBase = gembase.transform.GetChild(1).GetComponent<ParticleSystem>(); // Then GembaseBase
+                        gemManager.baseParticle = gembaseBase;
+                        gemManager.particles = gembaseParticles;
+                    }
+                }
+                
+                
+                // Position cloneObj
+                cloneObj.transform.parent = imgTarget.transform;
+                cloneObj.transform.localScale = new Vector3(4.7f,4.7f,4.7f);
+                
+                cloneObj.transform.localPosition = new Vector3(0f, 0.52f, 0.18f);
+                cloneObj.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
+                cloneObj.SetActive(true);
+            }
             
             // Increment
             index++;
         }
-
-    }
-	
-    private static IEnumerator SetPosition(GameObject cloneObj)
-    {
-        yield return new WaitForSeconds(1.5f);
-        cloneObj.transform.localPosition = new Vector3(0f, 0.52f, 0.18f);
     }
 }
+

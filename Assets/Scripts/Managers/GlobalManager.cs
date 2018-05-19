@@ -10,6 +10,7 @@ public class GlobalManager : MonoBehaviour {
 	public DatabaseManager database;     
 	public SceneLoader sceneLoader;
 	public MessageManager messageManager;
+	public GameObject prefabContainer;
 	
 	protected internal Reader reader = null;
 	protected internal bool dynamicHasChanded = false;
@@ -18,6 +19,7 @@ public class GlobalManager : MonoBehaviour {
 	protected internal bool isActiveDynamism = false;
 	protected internal string currentReaderUid = null;
 	protected internal bool isLoggin = false;
+	protected internal string currentScene = "";
 	protected internal List<Message> messageList = new List<Message>();
 	protected internal List<GemManager> gemManagerList = new List<GemManager>();
 
@@ -55,8 +57,15 @@ public class GlobalManager : MonoBehaviour {
 	}
 
 	private static void GetNewGameObject() {
-		var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
-		foreach (var item in obj) {
+		//var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
+		var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
+		var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
+		
+		foreach (var item in targetChoice) {
+			item.gameObject.AddComponent<TrackerManager> ();
+		}
+		
+		foreach (var item in targetImage) {
 			item.gameObject.AddComponent<TrackerManager> ();
 		}
 	}
@@ -75,6 +84,6 @@ public class GlobalManager : MonoBehaviour {
 	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);
-		sceneLoader.LoadScene ("Main");
+		//sceneLoader.LoadScene ("Main");
 	}
 }

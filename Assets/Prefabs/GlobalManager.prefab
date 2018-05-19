@@ -89,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063968226693188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1262.583, y: 883.6692, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224644699166385656}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942bd5a67de0a487b9d20dbbaea3f499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScene: {fileID: 1860060883910192}
+  prefab: {fileID: 0}
   progressText: {fileID: 114496889193196296}
 --- !u!114 &114399465772180408
 MonoBehaviour:
@@ -161,7 +161,7 @@ MonoBehaviour:
   database: {fileID: 0}
   sceneLoader: {fileID: 0}
   messageManager: {fileID: 0}
-  camera: {fileID: 0}
+  prefabContainer: {fileID: 0}
 --- !u!114 &114496889193196296
 MonoBehaviour:
   m_ObjectHideFlags: 1

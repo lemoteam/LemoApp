@@ -7,9 +7,13 @@ TagManager:
   - scan
   - text
   - readerManager
-  - targetChoice3
   - sceneMarker
   - targetChoice
+  - SceneContainer
+  - targetChoice3
+  - targetImage
+  - cloneGem
+  - gemBase
   layers:
   - Default
   - TransparentFX

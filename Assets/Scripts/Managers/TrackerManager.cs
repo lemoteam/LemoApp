@@ -129,12 +129,14 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	
 	// Scenes
 	private void GetActiveSceneName() {
-		var scene = SceneManager.GetActiveScene();
-		currentScene = scene.name;
+		currentScene = GlobalManager.instance.currentScene;
+		Debug.Log("<color=yellow>LA scene courante est : "+ currentScene +"</color>");
 	}
 
 	private void ChangeScene(string sceneName) {
+		Debug.Log("<color=purple>"+ sceneName +"</color>");
 		if (GlobalManager.instance.isLoggin && currentScene != sceneName) {
+			Debug.Log("<color=purple>"+ "LOAD SCENE" +"</color>");
 			GlobalManager.instance.sceneLoader.LoadScene (sceneName);
 		}
 	}

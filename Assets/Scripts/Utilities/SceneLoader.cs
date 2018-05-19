@@ -5,26 +5,48 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour {
 
-	public GameObject loadingScene;
+	public GameObject sceneContainer;
+	public string previousScene;
+	public GameObject prefab;
 	public Text progressText;
 
-	public void LoadScene (string sceneName) {
-		
-		StartCoroutine (LoadAsynchronously (sceneName));
+	private void Awake()
+	{
+		sceneContainer = GameObject.FindGameObjectWithTag("SceneContainer");
 	}
 
-	private IEnumerator LoadAsynchronously(string sceneName){
-		var operation = SceneManager.LoadSceneAsync (sceneName);
+	public void LoadScene (string sceneName)
+	{
+		previousScene = GlobalManager.instance.currentScene;
+		GlobalManager.instance.currentScene = sceneName;
+		
+		Debug.Log("<color=blue>"+ "Function loadScene " + sceneContainer.transform.childCount +"</color>");
+		
+		// Active
+		for (var i = 0; i < sceneContainer.transform.childCount; i++)
+		{			
+			var scene = sceneContainer.transform.GetChild(i);
+			
+			if (scene.name == sceneName)
+			{
+				var test = scene.transform.childCount;
 
-		progressText.text = "";
-		//loadingScene.SetActive(true);
-
-		while (!operation.isDone) {
-			Debug.Log (operation.progress);
-			var progress = Mathf.Clamp01 (operation.progress / .9f);
-			progressText.text = progress * 100f + "%";
-			yield return null;
-			//loadingScene.SetActive(false);
+				for (var j = 0; j < scene.transform.childCount; j++)
+				{
+					var sceneChild = scene.transform.GetChild(j);
+					
+					if (sceneChild.name == "GetGem")
+					{
+						var lol = sceneChild.gameObject;
+						lol.GetComponent<GetGem>().launchAnimation();
+						Debug.Log(lol);
+					}
+					Debug.Log("OJOJOJ");
+				}			
+			}
+			
 		}
-	} 
+		
+	}
+
 }
