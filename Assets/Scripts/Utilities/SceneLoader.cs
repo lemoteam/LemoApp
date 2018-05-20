@@ -39,14 +39,9 @@ public class SceneLoader : MonoBehaviour {
 					{
 						var lol = sceneChild.gameObject;
 						lol.GetComponent<GetGem>().launchAnimation();
-						Debug.Log(lol);
 					}
-					Debug.Log("OJOJOJ");
 				}			
 			}
-			
-		}
-		
+		}		
 	}
-
 }

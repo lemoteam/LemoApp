@@ -14,6 +14,8 @@ TagManager:
   - targetImage
   - cloneGem
   - gemBase
+  - sliderRef
+  - sliderMarker
   layers:
   - Default
   - TransparentFX

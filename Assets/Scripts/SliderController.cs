@@ -6,43 +6,55 @@ public class SliderController : MonoBehaviour {
     // private float distance;
     public ReaderManager readerManager;
     private GameObject dynamicObj;
+    private GameObject sliderMarker;
     private float firstDistance;
-    // Use this for initialization
-    void Start () {
-        max = GameObject.Find ("Max").transform;
-        dynamicObj = GameObject.Find("dynamic(Clone)");
-        firstDistance =  max.position.x - this.transform.position.x;
-    }
+    private bool isReady = false;
 	
     // Update is called once per frame
     void Update () {
-        var distance = max.position.x - this.transform.position.x;
-        if (firstDistance != distance)
+
+        if (!isReady)
         {
-            var scaleMultiplier = Map(6.0f,-1.5f,140.0f,370.0f,distance);
-            dynamicObj.transform.localScale = new Vector3(dynamicObj.transform.localScale.x, scaleMultiplier, dynamicObj.transform.localScale.z);
-            if (distance > 370 || distance < 140)
-            {
-                GlobalManager.instance.dynamicHasChanded = true;
-            }
+            max = GameObject.FindWithTag("sliderRef").transform;
+            sliderMarker = GameObject.FindWithTag("sliderMarker");
 
-            if (distance > 370)
+            if (max && sliderMarker)
             {
-                var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
-                if (prop != null) prop.SetValue(GlobalManager.instance.reader, 1, null);
+                firstDistance =  max.position.x - sliderMarker.transform.position.x;
+                isReady = true;
             }
-
-            if (distance < 140)
-            {
-                var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
-                if (prop != null) prop.SetValue(GlobalManager.instance.reader, 2, null);  
-            } 
-            // Debug.Log("position max :"+distance);
-            // Debug.Log("position image target:"+this.transform.position);
-            Debug.Log("distance : "+ distance);
-            // readerManager.UpdateReaderSettings(parameter); 
         }
- 
+        else
+        {
+            if (sliderMarker.GetComponent<MeshRenderer>().enabled) {
+                var distance = max.position.x - sliderMarker.transform.position.x;
+                if (firstDistance != distance)
+                {
+                    var scaleMultiplier = Map(6.0f,-1.5f,140.0f,370.0f,distance);
+                    transform.localScale = new Vector3(transform.localScale.x, scaleMultiplier, transform.localScale.z);
+                    if (distance > 370 || distance < 140)
+                    {
+                        GlobalManager.instance.dynamicHasChanded = true;
+                    }
+    
+                    if (distance > 370)
+                    {
+                        var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
+                        if (prop != null) prop.SetValue(GlobalManager.instance.reader, 1, null);
+                    }
+    
+                    if (distance < 140)
+                    {
+                        var prop = GlobalManager.instance.reader.GetType().GetProperty("dynamic");
+                        if (prop != null) prop.SetValue(GlobalManager.instance.reader, 2, null);  
+                    } 
+                    // Debug.Log("position max :"+distance);
+                    // Debug.Log("position image target:"+this.transform.position);
+                    Debug.Log("distance : "+ distance);
+                    // readerManager.UpdateReaderSettings(parameter); 
+                }
+            }
+        }
     }
     
     public float Map(float from, float to, float from2, float to2, float value) {

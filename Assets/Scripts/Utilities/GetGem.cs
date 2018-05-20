@@ -14,7 +14,6 @@ public class GetGem : MonoBehaviour
     public void launchAnimation()
     {
         var previousSetting = stringPreviousSetting.ToLower();
-        Debug.Log("<color=green>Le SWWWAAAG</color>");
         
         switch (previousSetting)
         {
@@ -27,7 +26,7 @@ public class GetGem : MonoBehaviour
                 currentParameter = "intensity";
                 break;
             case "intensity":
-                currentSettingInt = readerManager.GetReaderSetting("intensity");
+                currentSettingInt = readerManager.GetReaderSetting("mood");
                 currentParameter = "dynamic";
                 break;
         }
@@ -44,8 +43,10 @@ public class GetGem : MonoBehaviour
                 DestroyImmediate(cloneObj, true);
             }  
         }
-        
-        StartCoroutine (getCurrentGems("Prefabs/" + currentSettingName.ToLower() + "/gem/" + currentParameter.ToLower()));
+
+        StartCoroutine(currentParameter.ToLower() == "dynamic"
+            ? getCurrentGems("Prefabs/" + currentSettingName.ToLower() + "/gem/" + currentParameter.ToLower(), true)
+            : getCurrentGems("Prefabs/" + currentSettingName.ToLower() + "/gem/" + currentParameter.ToLower(), false));
     }
     
     // Set Names
@@ -71,7 +72,7 @@ public class GetGem : MonoBehaviour
     
     // Get gem -> currentParameter (mood, intensity) / currentSettingName(mysterieux,...)
 
-    private IEnumerator getCurrentGems(string loadUrl) {
+    private IEnumerator getCurrentGems(string loadUrl, bool isDynamic) {
         
         // Variables
         for (var i = 0; i < transform.parent.childCount; i++)
@@ -86,12 +87,24 @@ public class GetGem : MonoBehaviour
         
         var index = 1;
 
-
         foreach (var imgTarget in targetChoice) {
             
             // Load
-            var operation = Resources.LoadAsync(loadUrl + index, typeof(GameObject));
+            var operation = isDynamic 
+                ? Resources.LoadAsync(loadUrl, typeof(GameObject)) 
+                : Resources.LoadAsync(loadUrl + index, typeof(GameObject)) ;
+
             
+            if (isDynamic)
+            {
+                Debug.Log("<color=green>"+loadUrl+"</color>");
+            }
+            else
+            {
+                Debug.Log("<color=green>"+loadUrl + index+"</color>");
+            }
+            
+                
             GlobalManager.instance.sceneLoader.progressText.text = "";
             
             while (!operation.isDone) {
@@ -109,22 +122,25 @@ public class GetGem : MonoBehaviour
                 var cloneObj = Instantiate (obj);
                 cloneObj.gameObject.tag = "cloneGem"; 
                 cloneObj.SetActive(false);
-            
-                // Btn Script
-                var selectBbtn = imgTarget.transform.GetChild(0);
-                var btnScript = cloneObj.GetComponent<ButtonChoice>();
-                btnScript.parameter = index;
-                btnScript.readerManager = readerManager;
-                btnScript.virtualButton = selectBbtn.gameObject;
-                
+                            
                 // Gem Manager
-                
                 var gemManagerObj = imgTarget.transform.GetChild(1);
                 var gemManager = gemManagerObj.GetComponent<GemManager>();
                 gemManager.Gem = cloneObj;
                 
-                // Attach gem manager to cloneObj
-                btnScript.gemManager = gemManager;
+                // Btn Script
+                var selectBbtn = imgTarget.transform.GetChild(0);
+                if (selectBbtn.gameObject.name == "selectBtn") {
+                    var btnScript = cloneObj.GetComponent<ButtonChoice>();
+                    btnScript.parameter = index;
+                    btnScript.readerManager = readerManager;
+                    btnScript.virtualButton = selectBbtn.gameObject;
+                    
+                    // Attach gem manager to cloneObj
+                    btnScript.gemManager = gemManager;
+                }
+                
+                
                 
                 // Gembase  
                 for (var i = 0; i < cloneObj.transform.childCount; i++)
