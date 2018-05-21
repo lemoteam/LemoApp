@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GetScene : MonoBehaviour {
+	
 	private string mood; 
 	private string moodName;
 	private int intensity;
 	private GameObject obj;
 	private GameObject cloneObj;
 	private GameObject targetChoice;
+
+	public int IDScene;
 	public ReaderManager readerManager;
 
-	private void Awake()
+	public void launchAnimation()
 	{
 		mood = readerManager.GetReaderSetting("mood");
 		intensity = int.Parse(readerManager.GetReaderSetting("intensity"));
@@ -23,31 +26,54 @@ public class GetScene : MonoBehaviour {
 		switch (mood)
 		{
 			case "1":
-				Debug.Log ("mytique");
-				moodName = "mysterieux";
-				createObj (moodName);
+				moodName ="paisible";
+				StartCoroutine(createObj(moodName));
 				break;
 			case "2":
-				Debug.Log ("jui extraordinaire");
 				moodName = "extraordinaire";
-				createObj (moodName);
+				StartCoroutine(createObj(moodName));
 				break;
 			case "3":
-				Debug.Log ("jui paisible");
-				moodName = "paisible";
-				createObj(moodName);
+				moodName = "mysterieux";
+				StartCoroutine(createObj(moodName));
 				break;
 		}
 	}
 
-	void createObj(string moodName)
+	private IEnumerator createObj(string moodName)
 	{
-		targetChoice = GameObject.FindWithTag("sceneMarker");
-		obj = Resources.Load("Prefabs/"+moodName+"/scene/scene"+intensity) as GameObject;
-		cloneObj = Instantiate (obj);
-		// Destroy(cloneObj.GetComponent("ButtonChoice"));
-		cloneObj.transform.parent = targetChoice.transform;
-		cloneObj.transform.localScale = new Vector3(1f,1f,1f);
-		cloneObj.transform.localPosition = new Vector3(.4f,0.04f,0f);
+		 // Load
+		var operation = Resources.LoadAsync("Prefabs/"+moodName+"/scene/scene"+IDScene+"/scene"+IDScene+ "-" + intensity, typeof(GameObject));
+					 
+		targetChoice = GameObject.FindWithTag("targetImage");
+		
+		GlobalManager.instance.sceneLoader.progressText.text = "";
+		
+		while (!operation.isDone) {
+			Debug.Log (operation.progress);
+			var progress = Mathf.Clamp01 (operation.progress / .9f);
+			GlobalManager.instance.sceneLoader.progressText.text = progress * 100f + "%";;
+			yield return operation;
+		}
+	
+		// Get the reference to the loaded object
+		GameObject obj = operation.asset as GameObject;
+
+		// Instance
+		if (obj) {
+			var cloneObj = Instantiate (obj);
+			cloneObj.gameObject.tag = "cloneGem"; 
+			cloneObj.SetActive(false);
+						
+			
+			// Position cloneObj
+			cloneObj.transform.parent = targetChoice.transform;
+			cloneObj.transform.localScale = new Vector3(1f,1f,1f);
+			cloneObj.transform.localPosition = new Vector3(.4f,0.04f,0f);
+			cloneObj.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
+			cloneObj.SetActive(true);
+		}
+		
 	}
+	
 }

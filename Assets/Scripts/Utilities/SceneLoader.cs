@@ -40,6 +40,12 @@ public class SceneLoader : MonoBehaviour {
 						var lol = sceneChild.gameObject;
 						lol.GetComponent<GetGem>().launchAnimation();
 					}
+
+					if (sceneChild.name == "GetScene")
+					{
+						var lol = sceneChild.gameObject;
+						lol.GetComponent<GetScene>().launchAnimation();
+					}
 				}			
 			}
 		}		

@@ -92,19 +92,8 @@ public class GetGem : MonoBehaviour
             // Load
             var operation = isDynamic 
                 ? Resources.LoadAsync(loadUrl, typeof(GameObject)) 
-                : Resources.LoadAsync(loadUrl + index, typeof(GameObject)) ;
-
-            
-            if (isDynamic)
-            {
-                Debug.Log("<color=green>"+loadUrl+"</color>");
-            }
-            else
-            {
-                Debug.Log("<color=green>"+loadUrl + index+"</color>");
-            }
-            
-                
+                : Resources.LoadAsync(loadUrl + index, typeof(GameObject));
+                         
             GlobalManager.instance.sceneLoader.progressText.text = "";
             
             while (!operation.isDone) {

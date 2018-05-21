@@ -50,7 +50,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			Router.CurrentReader().Child("dynamic").SetValueAsync(GlobalManager.instance.reader.dynamic);
 			GlobalManager.instance.dynamicHasChanded = false;
 		}
-		
+				
 		switch (mTrackableBehaviour.TrackableName) {
 			case "qrcode":
 				if (GlobalManager.instance.isLoggin) return;
@@ -63,14 +63,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
-			//case "intensity1" :
-			//case "intensity2" :
-			//case "l1" :
 			case "astronaut-btn" :
-				/*if (GlobalManager.instance.isActiveIntensity)
-				{
-					LaunchMessage("scanChoice2");
-				}*/
 				ChangeScene("Choice2");
 				break;
 			
@@ -79,7 +72,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice3");
 				break;
 			
-			case "motifs" :
+			case "galet" :
 				MessageManager.ShowMessage("scanScene1", 3f);
 				ChangeScene("Scene1");
 				break;
@@ -135,10 +128,9 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 
 	private void ChangeScene(string sceneName) {
 		Debug.Log("<color=purple>"+ sceneName +"</color>");
-		if (GlobalManager.instance.isLoggin && currentScene != sceneName) {
-			Debug.Log("<color=purple>"+ "LOAD SCENE" +"</color>");
-			GlobalManager.instance.sceneLoader.LoadScene (sceneName);
-		}
+		if (!GlobalManager.instance.isLoggin || currentScene == sceneName) return;
+		Debug.Log("<color=purple>"+ "LOAD SCENE" +"</color>");
+		GlobalManager.instance.sceneLoader.LoadScene (sceneName);
 	}
 	
 }
