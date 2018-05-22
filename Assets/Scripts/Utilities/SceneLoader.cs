@@ -32,6 +32,10 @@ public class SceneLoader : MonoBehaviour {
 			yield return null;
 			//loadingScene.SetActive(false);
 		}
+		
+		// Attach camera
+		var globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");
+		globalManagerCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
 	} 
 }
 
