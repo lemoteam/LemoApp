@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IDScene: 1
-  readerManager: {fileID: 0}
+  readerManager: {fileID: 114877842218201630}
 --- !u!114 &114409945024866920
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -46,6 +46,9 @@ public class GlobalManager : MonoBehaviour {
 		
 		//Clear Message List
 		messageList.Clear();
+
+		// Set active camera on canvas
+		GetComponentInChildren<Canvas>().worldCamera = Camera.main;
 		
 		//Call the InitGame function to initialize the database
 		InitDatabase ();
@@ -57,7 +60,7 @@ public class GlobalManager : MonoBehaviour {
 	}
 
 	private static void GetNewGameObject() {
-		//var obj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
+		var vuforiaObj = GameObject.FindObjectsOfType<Transform>().Where(go => go.name == "New Game Object").ToList();
 		var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
 		var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
 		
@@ -66,6 +69,10 @@ public class GlobalManager : MonoBehaviour {
 		}
 		
 		foreach (var item in targetImage) {
+			item.gameObject.AddComponent<TrackerManager> ();
+		}
+		
+		foreach (var item in vuforiaObj) {
 			item.gameObject.AddComponent<TrackerManager> ();
 		}
 	}

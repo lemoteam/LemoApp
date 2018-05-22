@@ -10,44 +10,28 @@ public class SceneLoader : MonoBehaviour {
 	public GameObject prefab;
 	public Text progressText;
 
-	private void Awake()
-	{
-		sceneContainer = GameObject.FindGameObjectWithTag("SceneContainer");
-	}
-
 	public void LoadScene (string sceneName)
 	{
 		previousScene = GlobalManager.instance.currentScene;
 		GlobalManager.instance.currentScene = sceneName;
 		
-		Debug.Log("<color=blue>"+ "Function loadScene " + sceneContainer.transform.childCount +"</color>");
-		
-		// Active
-		for (var i = 0; i < sceneContainer.transform.childCount; i++)
-		{			
-			var scene = sceneContainer.transform.GetChild(i);
-			
-			if (scene.name == sceneName)
-			{
-				var test = scene.transform.childCount;
-
-				for (var j = 0; j < scene.transform.childCount; j++)
-				{
-					var sceneChild = scene.transform.GetChild(j);
-					
-					if (sceneChild.name == "GetGem")
-					{
-						var lol = sceneChild.gameObject;
-						lol.GetComponent<GetGem>().launchAnimation();
-					}
-
-					if (sceneChild.name == "GetScene")
-					{
-						var lol = sceneChild.gameObject;
-						lol.GetComponent<GetScene>().launchAnimation();
-					}
-				}			
-			}
-		}		
+		StartCoroutine (LoadAsynchronously (sceneName));
 	}
+
+
+	private IEnumerator LoadAsynchronously(string sceneName){
+		var operation = SceneManager.LoadSceneAsync (sceneName);
+
+		progressText.text = "";
+		//loadingScene.SetActive(true);
+
+		while (!operation.isDone) {
+			Debug.Log (operation.progress);
+			var progress = Mathf.Clamp01 (operation.progress / .9f);
+			progressText.text = progress * 100f + "%";
+			yield return null;
+			//loadingScene.SetActive(false);
+		}
+	} 
 }
+

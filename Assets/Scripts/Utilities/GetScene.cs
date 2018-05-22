@@ -14,7 +14,7 @@ public class GetScene : MonoBehaviour {
 	public int IDScene;
 	public ReaderManager readerManager;
 
-	public void launchAnimation()
+	public void Start()
 	{
 		mood = readerManager.GetReaderSetting("mood");
 		intensity = int.Parse(readerManager.GetReaderSetting("intensity"));

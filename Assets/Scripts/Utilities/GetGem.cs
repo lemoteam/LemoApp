@@ -11,7 +11,7 @@ public class GetGem : MonoBehaviour
     public ReaderManager readerManager;
     private List<GameObject> targetChoice = new List<GameObject>();
 
-    public void launchAnimation()
+    public void Start()
     {
         var previousSetting = stringPreviousSetting.ToLower();
         

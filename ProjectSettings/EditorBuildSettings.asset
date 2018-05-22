@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Preload.unity
     guid: 6aa051180af7c489a967e793fbfb2421
-  - enabled: 0
-    path: Assets/Scenes/test-scene.unity
-    guid: f323ed2fbc6794e74a65893bc7c997a3
-  - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: ed0801ceb47dd415fb94ff17d00b47ad
   - enabled: 1
     path: Assets/Scenes/Choice1.unity
     guid: bf842404a19c2473c812b3459dac93f8
