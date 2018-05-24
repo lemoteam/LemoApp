@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: f74a806cbc1ea4321841e95546d4a6e5
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base
+    100002: CINEMA_4D_Editor
+    100004: Couple_Blanc
+    100006: Coupole_or
+    100008: Coupole_Verte
+    100010: //RootNode
+    100012: "Sph\xE8re_3"
+    100014: "Sph\xE8re_4"
+    100016: "Sph\xE8re_5"
+    100018: "Sph\xE8re_6"
+    100020: "Sph\xE8re_7"
+    100022: "Sph\xE8res_centrales"
+    400000: Base
+    400002: CINEMA_4D_Editor
+    400004: Couple_Blanc
+    400006: Coupole_or
+    400008: Coupole_Verte
+    400010: //RootNode
+    400012: "Sph\xE8re_3"
+    400014: "Sph\xE8re_4"
+    400016: "Sph\xE8re_5"
+    400018: "Sph\xE8re_6"
+    400020: "Sph\xE8re_7"
+    400022: "Sph\xE8res_centrales"
+    2000000: CINEMA_4D_Editor
+    2100000: Blanc
+    2100002: Rose
+    2100004: Or
+    2100006: Green
+    2300000: Base
+    2300002: Couple_Blanc
+    2300004: Coupole_or
+    2300006: Coupole_Verte
+    2300008: "Sph\xE8re_3"
+    2300010: "Sph\xE8re_4"
+    2300012: "Sph\xE8re_5"
+    2300014: "Sph\xE8re_6"
+    2300016: "Sph\xE8re_7"
+    3300000: Base
+    3300002: Couple_Blanc
+    3300004: Coupole_or
+    3300006: Coupole_Verte
+    3300008: "Sph\xE8re_3"
+    3300010: "Sph\xE8re_4"
+    3300012: "Sph\xE8re_5"
+    3300014: "Sph\xE8re_6"
+    3300016: "Sph\xE8re_7"
+    4300000: "Sph\xE8re_7"
+    4300002: "Sph\xE8re_6"
+    4300004: "Sph\xE8re_5"
+    4300006: "Sph\xE8re_4"
+    4300008: "Sph\xE8re_3"
+    4300010: Couple_Blanc
+    4300012: Base
+    4300014: Coupole_or
+    4300016: Coupole_Verte
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blanc
+    second: {fileID: 2100000, guid: 9e95fa00b901549cc9bf5eacda160930, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 8f298f8e2c6d24df3b8a6eb5c4a14258, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Or
+    second: {fileID: 2100000, guid: 121fee6631f5e47eba8cc22a337ae6e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose
+    second: {fileID: 2100000, guid: aee9aed701c2d49d88460aea12996c11, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
