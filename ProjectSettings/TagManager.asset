@@ -16,6 +16,8 @@ TagManager:
   - gemBase
   - sliderRef
   - sliderMarker
+  - index
+  - indicator
   layers:
   - Default
   - TransparentFX
