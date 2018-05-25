@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: f5c457198277a461c8f2c36d186b8b31
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: capuchon_choix_3
+    100004: recipient_choix_3
+    100006: recipient_interne_choix_3
+    100008: "Sph\xE8re"
+    100010: "Sph\xE8re_1"
+    100012: "Sph\xE8re_1_2"
+    100014: "Sph\xE8re_2"
+    100016: "Sph\xE8re_2_2"
+    100018: "Sph\xE8re_2_3"
+    100020: "Sph\xE8re_3"
+    100022: "Sph\xE8re_4"
+    100024: "Sph\xE8re_5"
+    100026: "Sph\xE8re_6"
+    100028: "Sph\xE8re_7"
+    100030: "sph\xE8res_centrales"
+    100032: Surface_de_Subdivision
+    400000: //RootNode
+    400002: capuchon_choix_3
+    400004: recipient_choix_3
+    400006: recipient_interne_choix_3
+    400008: "Sph\xE8re"
+    400010: "Sph\xE8re_1"
+    400012: "Sph\xE8re_1_2"
+    400014: "Sph\xE8re_2"
+    400016: "Sph\xE8re_2_2"
+    400018: "Sph\xE8re_2_3"
+    400020: "Sph\xE8re_3"
+    400022: "Sph\xE8re_4"
+    400024: "Sph\xE8re_5"
+    400026: "Sph\xE8re_6"
+    400028: "Sph\xE8re_7"
+    400030: "sph\xE8res_centrales"
+    400032: Surface_de_Subdivision
+    2100000: Mat.2
+    2100002: Red Slush
+    2100004: Colored Metal
+    2100006: Green Simple
+    2300000: "Sph\xE8re_1_2"
+    2300002: "Sph\xE8re_2_2"
+    2300004: "Sph\xE8re_2_3"
+    2300006: "Sph\xE8re_3"
+    2300008: "Sph\xE8re_4"
+    2300010: "Sph\xE8re_5"
+    2300012: "Sph\xE8re_6"
+    2300014: "Sph\xE8re_7"
+    3300000: "Sph\xE8re_1_2"
+    3300002: "Sph\xE8re_2_2"
+    3300004: "Sph\xE8re_2_3"
+    3300006: "Sph\xE8re_3"
+    3300008: "Sph\xE8re_4"
+    3300010: "Sph\xE8re_5"
+    3300012: "Sph\xE8re_6"
+    3300014: "Sph\xE8re_7"
+    4300000: "Sph\xE8re_7"
+    4300002: "Sph\xE8re_6"
+    4300004: "Sph\xE8re_5"
+    4300006: "Sph\xE8re_4"
+    4300008: "Sph\xE8re_3"
+    4300010: "Sph\xE8re_2_2"
+    4300012: "Sph\xE8re_1_2"
+    4300014: "Sph\xE8re_2_3"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Colored Metal
+    second: {fileID: 2100000, guid: 121fee6631f5e47eba8cc22a337ae6e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green Simple
+    second: {fileID: 2100000, guid: 8f298f8e2c6d24df3b8a6eb5c4a14258, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: 9e95fa00b901549cc9bf5eacda160930, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Slush
+    second: {fileID: 2100000, guid: aee9aed701c2d49d88460aea12996c11, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

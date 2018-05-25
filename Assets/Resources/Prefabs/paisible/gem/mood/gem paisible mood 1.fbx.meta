@@ -1,45 +1,43 @@
 fileFormatVersion: 2
-guid: 723f476ce4ab24b20a9c95ee316ed3d0
+guid: 3b38089451b084d09af1cccd24a1f3d4
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: gem_phase_1
-    100004: "Sph\xE8re"
-    100006: "Sph\xE8re_1"
-    100008: "Sph\xE8re_2"
-    100010: "Sph\xE8re_3"
-    100012: "Sph\xE8re_4"
-    100014: "Sph\xE8re_5"
-    100016: "Sph\xE8re_6"
-    100018: "Sph\xE8re_7"
-    100020: "sph\xE8res_centrales"
-    100022: Surface_de_Subdivision
-    100024: Surface_de_Subdivision_1
-    100026: Surface_de_Subdivision_1_2
-    100028: Surface_de_Subdivision_1_3
-    100030: Tore
-    100032: "\xC9diteur_Cinema_4D"
+    100002: "Sph\xE8re"
+    100004: "Sph\xE8re_1"
+    100006: "Sph\xE8re_2"
+    100008: "Sph\xE8re_3"
+    100010: "Sph\xE8re_4"
+    100012: "Sph\xE8re_5"
+    100014: "Sph\xE8re_6"
+    100016: "Sph\xE8re_7"
+    100018: "sph\xE8res_centrales"
+    100020: Surface_de_Subdivision
+    100022: Surface_de_Subdivision_1
+    100024: Surface_de_Subdivision_1_2
+    100026: Surface_de_Subdivision_1_3
+    100028: Tore
     400000: //RootNode
-    400002: gem_phase_1
-    400004: "Sph\xE8re"
-    400006: "Sph\xE8re_1"
-    400008: "Sph\xE8re_2"
-    400010: "Sph\xE8re_3"
-    400012: "Sph\xE8re_4"
-    400014: "Sph\xE8re_5"
-    400016: "Sph\xE8re_6"
-    400018: "Sph\xE8re_7"
-    400020: "sph\xE8res_centrales"
-    400022: Surface_de_Subdivision
-    400024: Surface_de_Subdivision_1
-    400026: Surface_de_Subdivision_1_2
-    400028: Surface_de_Subdivision_1_3
-    400030: Tore
-    400032: "\xC9diteur_Cinema_4D"
-    2000000: "\xC9diteur_Cinema_4D"
-    2100000: lambert1
-    2100002: Metal 06
+    400002: "Sph\xE8re"
+    400004: "Sph\xE8re_1"
+    400006: "Sph\xE8re_2"
+    400008: "Sph\xE8re_3"
+    400010: "Sph\xE8re_4"
+    400012: "Sph\xE8re_5"
+    400014: "Sph\xE8re_6"
+    400016: "Sph\xE8re_7"
+    400018: "sph\xE8res_centrales"
+    400020: Surface_de_Subdivision
+    400022: Surface_de_Subdivision_1
+    400024: Surface_de_Subdivision_1_2
+    400026: Surface_de_Subdivision_1_3
+    400028: Tore
+    2100000: Mat.2
+    2100002: Red Slush
+    2100004: Blue
+    2100006: Colored Metal
+    2100008: Green Simple
     2300000: "Sph\xE8re"
     2300002: "Sph\xE8re_1"
     2300004: "Sph\xE8re_2"
@@ -67,24 +65,32 @@ ModelImporter:
     4300012: "Sph\xE8re_2"
     4300014: "Sph\xE8re_1"
     4300016: "Sph\xE8re"
-    11100000: //RootNode
-    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal 06
-    second: {fileID: 2100000, guid: 979914f5ede2347cc992c4a2b762446a, type: 2}
+      name: Blue
+    second: {fileID: 2100000, guid: 9e95fa00b901549cc9bf5eacda160930, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: ec7868c7ea7574fa7896da359ca3d553, type: 2}
+      name: Colored Metal
+    second: {fileID: 2100000, guid: 121fee6631f5e47eba8cc22a337ae6e5, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal (6)
-    second: {fileID: 2800000, guid: 8ba1f01e3cadc437f9d475ee7d9dae66, type: 3}
+      name: Green Simple
+    second: {fileID: 2100000, guid: 8f298f8e2c6d24df3b8a6eb5c4a14258, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: 9e95fa00b901549cc9bf5eacda160930, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Slush
+    second: {fileID: 2100000, guid: aee9aed701c2d49d88460aea12996c11, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -116,7 +122,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
@@ -156,10 +162,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
