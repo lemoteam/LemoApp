@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 4322013840383972}
   - component: {fileID: 114795592474217898}
   m_Layer: 0
-  m_Name: "gem-myst\xE9rieuse"
+  m_Name: "gem-myste\u0301rieuse"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
