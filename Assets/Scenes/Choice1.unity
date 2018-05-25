@@ -537,7 +537,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1687808949}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &470968959
 MonoBehaviour:
@@ -29204,8 +29204,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4098342936817014, guid: e5edb363d980d49908f3704340d840ae, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114129035537014872, guid: e5edb363d980d49908f3704340d840ae,
+        type: 2}
+      propertyPath: gemManager
+      value: 
+      objectReference: {fileID: 470968959}
+    - target: {fileID: 114129035537014872, guid: e5edb363d980d49908f3704340d840ae,
+        type: 2}
+      propertyPath: virtualButton
+      value: 
+      objectReference: {fileID: 1514769372}
+    - target: {fileID: 114129035537014872, guid: e5edb363d980d49908f3704340d840ae,
+        type: 2}
+      propertyPath: readerManager
+      value: 
+      objectReference: {fileID: 344928276}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5edb363d980d49908f3704340d840ae, type: 2}
   m_IsPrefabParent: 0
@@ -29904,7 +29919,7 @@ Transform:
   m_Children:
   - {fileID: 1491215834}
   m_Father: {fileID: 1687808949}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1514769374
 MeshFilter:
@@ -34654,9 +34669,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 520039137}
+  - {fileID: 1197498934}
   - {fileID: 470968958}
   - {fileID: 1514769373}
-  - {fileID: 1197498934}
   m_Father: {fileID: 392617763}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
