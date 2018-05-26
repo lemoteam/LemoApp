@@ -2447,7 +2447,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: bb3d6b78466c043c096212565a5e3d1c, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &114785490036664086
@@ -2463,5 +2463,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 0}
   readerManager: {fileID: 0}
-  parameter: 0
+  parameter: 1
   gemManager: {fileID: 0}
