@@ -2463,5 +2463,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualButton: {fileID: 0}
   readerManager: {fileID: 0}
-  parameter: 0
+  parameter: 1
   gemManager: {fileID: 0}
