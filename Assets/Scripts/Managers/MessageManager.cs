@@ -11,7 +11,7 @@ public class MessageManager : MonoBehaviour
     public class Popup
     {
         public string messageSlug;
-        public float time = 20f;
+        public float time = 5f;
         public bool onScan; // 0 => On scene load / 1 => On scan
     }
 
@@ -50,13 +50,47 @@ public class MessageManager : MonoBehaviour
     }
     
     
+    public void OnScan()
+    {
+        var filteredPopup = new List<Popup>();
+        
+        // Filter message on scene load
+        foreach (var popup in popups)
+        {
+            if (popup.onScan) {
+                filteredPopup.Add(popup);
+            }
+        }
+
+        
+        // Hide prev messages
+        var globalMessagesWrapper = GameObject.FindGameObjectsWithTag("message");
+        if (globalMessagesWrapper != null)
+        {
+            foreach (var message in globalMessagesWrapper)
+            {
+                var popupPanelImage = message.GetComponentsInChildren<Image>()[1];
+                var popupPanelText = message.GetComponentInChildren<Text>();
+                Hide(message, popupPanelImage, popupPanelText);
+            }
+        }
+        
+        
+        // If a message exist show it
+        if (filteredPopup.Count > 0) {
+            var message = filteredPopup[0];
+            ShowMessage(message.messageSlug, message.time);
+        }
+    }
+    
+    
     public static void ShowMessage(string key, float time) { 
         var list = GlobalManager.instance.messageList; 
         
         foreach (var item in list) {
             if (item.key == key) {
                ActivePopup(item, time);
-            } 
+            }
         }
     }
 
@@ -120,7 +154,6 @@ public class MessageManager : MonoBehaviour
         popupPanelImage.CrossFadeAlpha(0.0f, 1.0f, false);
         popupPanelText.CrossFadeAlpha(0.0f, 1.0f, false);
                 		
-        
         cloneWrapper.SetActive(false);
 
         popupList.Remove(cloneWrapper);

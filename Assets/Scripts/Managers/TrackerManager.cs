@@ -106,7 +106,13 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
-		//text.SetActive(false);
+		// Show Loaded Message
+		var messageManager = GameObject.FindGameObjectWithTag("messageManager");
+		if (messageManager != null)
+		{	
+			// Show message
+			messageManager.GetComponent<MessageManager>().OnScan();
+		}
 	}
 
 	private void OffScan() {
