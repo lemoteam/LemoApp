@@ -18,6 +18,8 @@ TagManager:
   - sliderMarker
   - index
   - indicator
+  - baseHealing
+  - particulesHealing
   layers:
   - Default
   - TransparentFX
