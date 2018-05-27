@@ -6,7 +6,7 @@ public class Reader {
 	// Class properties
 	public string email;
 	public int mood { get; private set; }
-	public int dynamic { get; private set; }
+	public float dynamic { get; private set;}
 	public int intensity { get; private set; }
 	public bool isReady;
 
@@ -21,7 +21,7 @@ public class Reader {
 	public Reader(IDictionary<string, object> dict) {
 		this.email = dict["email"].ToString();
 		this.mood = Convert.ToInt32(dict["mood"]);
-		this.dynamic = Convert.ToInt32(dict["dynamic"]);
+		this.dynamic = Convert.ToSingle(dict["dynamic"]);
 		this.intensity = Convert.ToInt32(dict["intensity"]);
 		this.isReady = Convert.ToBoolean(dict["isReady"]);
 	}
