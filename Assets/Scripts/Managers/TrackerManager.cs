@@ -58,9 +58,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				break;
 			
 			case "drone-btn" :
-				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
-				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
 			case "astronaut-btn" :
@@ -68,12 +66,10 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				break;
 			
 			case "image" :
-				MessageManager.ShowMessage("scanChoice3", 3f);
 				ChangeScene("Choice3");
 				break;
 			
 			case "galet" :
-				MessageManager.ShowMessage("scanScene1", 3f);
 				ChangeScene("Scene1");
 				break;
 			
@@ -111,8 +107,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
 		//text.SetActive(false);
-
-		MessageManager.ShowMessage("scan", 2f);
 	}
 
 	private void OffScan() {

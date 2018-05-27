@@ -5,10 +5,20 @@ using UnityEngine.UI;
 
 public class MessageManager : MonoBehaviour
 {
+    
+    [System.Serializable]
+    public class Pool
+    {
+        public string tag;
+        public GameObject prefab;
+        public int radius;
+        public int size; 
+    }
+
+    public List<Pool> pools;
+    
     private static MessageManager instance;
-    
     private static GameObject globalManagerCanvas;
-    
     private static List<GameObject> popupList = new List<GameObject>();
         
 

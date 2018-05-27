@@ -9,7 +9,6 @@ public class GlobalManager : MonoBehaviour {
 	public static GlobalManager instance = null;
 	public DatabaseManager database;     
 	public SceneLoader sceneLoader;
-	public MessageManager messageManager;
 	public GameObject prefabContainer;
 	
 	protected internal Reader reader = null;
@@ -42,7 +41,7 @@ public class GlobalManager : MonoBehaviour {
 		//Get a component reference to the attached DatabaseManager
 		database = GetComponent<DatabaseManager>();
 		sceneLoader = GetComponent<SceneLoader> ();
-		messageManager = GetComponent<MessageManager> ();
+		//messageManager = GetComponent<MessageManager> ();
 		
 		//Clear Message List
 		messageList.Clear();
@@ -91,6 +90,6 @@ public class GlobalManager : MonoBehaviour {
 	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);
-		//sceneLoader.LoadScene ("Main");
+		sceneLoader.LoadScene ("Main");
 	}
 }
