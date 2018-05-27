@@ -11,7 +11,7 @@ public class MessageManager : MonoBehaviour
     public class Popup
     {
         public string messageSlug;
-        public float time = 2f;
+        public float time = 20f;
         public bool onScan; // 0 => On scene load / 1 => On scan
     }
 
@@ -20,6 +20,7 @@ public class MessageManager : MonoBehaviour
     private static MessageManager instance;
     private static GameObject globalManagerCanvas;
     private static List<GameObject> popupList = new List<GameObject>();
+    private static List<GameObject> imageTargetList = new List<GameObject>();
         
 
     private void Awake() {
@@ -94,13 +95,39 @@ public class MessageManager : MonoBehaviour
         cloneWrapper.SetActive(true);
         popupPanelImage.CrossFadeAlpha(1.0f, 1.0f, false);
         popupPanelText.CrossFadeAlpha(1.0f, 1.0f, false);
+        
+        // Image targets to hide
+        var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
+        var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
+		
+        foreach (var item in targetChoice) {
+            item.SetActive(false);
+            imageTargetList.Add(item);
+        }
+		
+        foreach (var item in targetImage) {
+            item.SetActive(false);
+            imageTargetList.Add(item);
+        }
+
     }
 
     
     private static void Hide(GameObject cloneWrapper, Image popupPanelImage, Text popupPanelText)
     {    
+        
+        foreach (var item in imageTargetList) {
+            if (item != null) {
+                item.SetActive(true);
+            }
+        }
+        
         popupPanelImage.CrossFadeAlpha(0.0f, 1.0f, false);
         popupPanelText.CrossFadeAlpha(0.0f, 1.0f, false);
+                		
+        
+        cloneWrapper.SetActive(false);
+
         popupList.Remove(cloneWrapper);
     }
 

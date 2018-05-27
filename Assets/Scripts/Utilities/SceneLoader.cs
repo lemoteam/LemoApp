@@ -23,25 +23,23 @@ public class SceneLoader : MonoBehaviour {
 		var operation = SceneManager.LoadSceneAsync (sceneName);
 
 		progressText.text = "";
-		//loadingScene.SetActive(true);
 
 		while (!operation.isDone) {
 			Debug.Log (operation.progress);
 			var progress = Mathf.Clamp01 (operation.progress / .9f);
 			progressText.text = progress * 100f + "%";
 			yield return null;
-			//loadingScene.SetActive(false);
 		}
 		
 		// Attach camera
 		var globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");
 		globalManagerCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
-	
 		
 		// Show Loaded Message
 		var messageManager = GameObject.FindGameObjectWithTag("messageManager").GetComponent<MessageManager>();
-		if (messageManager)
-		{
+		if (messageManager != null)
+		{	
+			// Show message
 			messageManager.OnLoadScene();
 		}
 	} 
