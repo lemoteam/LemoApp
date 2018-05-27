@@ -116,7 +116,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	}
 
 	private void OffScan() {
-		scan.GetComponent<Image>().color = new Color32(255,255,255,100);
+		scan.GetComponent<Image>().color = new Color32(80,220,100,100);
 	}
 	
 	

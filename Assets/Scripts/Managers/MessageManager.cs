@@ -72,7 +72,7 @@ public class MessageManager : MonoBehaviour
         cloneText.text = item.value;
         Show(cloneWrapper, popupPanelImage, popupPanelText);
         yield return new WaitForSeconds(time);
-        Hide(cloneWrapper, popupPanelImage, popupPanelText);
+        //Hide(cloneWrapper, popupPanelImage, popupPanelText);
     }
 
     
