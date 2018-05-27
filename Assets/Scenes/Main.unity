@@ -331,11 +331,6 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 550
   mHeight: 385
---- !u!224 &92533205 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-    type: 2}
-  m_PrefabInternal: {fileID: 1483613718}
 --- !u!1 &114619822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +3637,7 @@ RectTransform:
   - {fileID: 323364823}
   - {fileID: 1738349761}
   m_Father: {fileID: 1603300772}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4274,141 +4269,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &1483613718
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1603300772}
-    m_Modifications:
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224887683687895704, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224814220520781102, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224485851842890832, guid: 46ce1b5c631384330905baa0f8852c46,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 46ce1b5c631384330905baa0f8852c46, type: 2}
-  m_IsPrefabParent: 0
 --- !u!21 &1518297284
 Material:
   serializedVersion: 6
@@ -4657,7 +4517,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 92533205}
   - {fileID: 1348985854}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -4949,10 +4808,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popups:
   - messageSlug: scanBefore
-    time: 2
+    time: 6
     onScan: 0
   - messageSlug: scanAfter
-    time: 2
+    time: 6
     onScan: 1
 --- !u!4 &1647173034
 Transform:

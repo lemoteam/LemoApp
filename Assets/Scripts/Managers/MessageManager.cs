@@ -92,6 +92,8 @@ public class MessageManager : MonoBehaviour
     private static void Show(GameObject cloneWrapper, Image popupPanelImage, Text popupPanelText)
     {    
         popupList.Add(cloneWrapper);
+        cloneWrapper.transform.localPosition = Vector3.zero;
+        cloneWrapper.transform.localScale = Vector3.one;
         cloneWrapper.SetActive(true);
         popupPanelImage.CrossFadeAlpha(1.0f, 1.0f, false);
         popupPanelText.CrossFadeAlpha(1.0f, 1.0f, false);
