@@ -36,11 +36,11 @@ public class SceneLoader : MonoBehaviour {
 		globalManagerCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
 		
 		// Show Loaded Message
-		var messageManager = GameObject.FindGameObjectWithTag("messageManager").GetComponent<MessageManager>();
+		var messageManager = GameObject.FindGameObjectWithTag("messageManager");
 		if (messageManager != null)
 		{	
 			// Show message
-			messageManager.OnLoadScene();
+			messageManager.GetComponent<MessageManager>().OnLoadScene();
 		}
 	} 
 }

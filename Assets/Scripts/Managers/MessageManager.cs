@@ -115,13 +115,6 @@ public class MessageManager : MonoBehaviour
     
     private static void Hide(GameObject cloneWrapper, Image popupPanelImage, Text popupPanelText)
     {    
-        
-        foreach (var item in imageTargetList) {
-            if (item != null) {
-                item.SetActive(true);
-            }
-        }
-        
         popupPanelImage.CrossFadeAlpha(0.0f, 1.0f, false);
         popupPanelText.CrossFadeAlpha(0.0f, 1.0f, false);
                 		
@@ -129,6 +122,18 @@ public class MessageManager : MonoBehaviour
         cloneWrapper.SetActive(false);
 
         popupList.Remove(cloneWrapper);
+        
+        instance.StartCoroutine(Show3D());
+    }
+    
+    private static IEnumerator Show3D()
+    {
+        yield return new WaitForSeconds(1f);
+        foreach (var item in imageTargetList) {
+            if (item != null) {
+                item.SetActive(true);
+            }
+        }
     }
 
 }
