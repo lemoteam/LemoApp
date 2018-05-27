@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,15 +8,14 @@ public class MessageManager : MonoBehaviour
 {
     
     [System.Serializable]
-    public class Pool
+    public class Popup
     {
-        public string tag;
-        public GameObject prefab;
-        public int radius;
-        public int size; 
+        public string messageSlug;
+        public float time = 2f;
+        public bool onScan; // 0 => On scene load / 1 => On scan
     }
 
-    public List<Pool> pools;
+    public List<Popup> popups;
     
     private static MessageManager instance;
     private static GameObject globalManagerCanvas;
@@ -27,6 +27,27 @@ public class MessageManager : MonoBehaviour
         globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");
     }
 
+    public void OnLoadScene()
+    {
+        var filteredPopup = new List<Popup>();
+        
+        // Filter message on scene load
+        foreach (var popup in popups)
+        {
+            if (!popup.onScan)
+            {
+                filteredPopup.Add(popup);
+            }
+        }
+
+        // If a message exist show it
+        if (filteredPopup.Count > 0)
+        {
+            var message = filteredPopup[0];
+            ShowMessage(message.messageSlug, message.time);
+        }
+    }
+    
     
     public static void ShowMessage(string key, float time) { 
         var list = GlobalManager.instance.messageList; 
@@ -47,29 +68,10 @@ public class MessageManager : MonoBehaviour
     
         var cloneText = cloneWrapper.GetComponentInChildren<Text>();
         
-        instance.StartCoroutine(MinWaitForGetSize(cloneWrapper, cloneText, item, time));
-    }
-
-    
-    private static IEnumerator MinWaitForGetSize(GameObject cloneWrapper, Text cloneText, Message item, float time)
-    {
-        
-        yield return new WaitForSeconds(1.5f);
-        
-        var height = cloneText.GetComponent<RectTransform>().rect.height;
-        var totalHeight = height + 60f + 60f; // Padding
-
-        foreach (var popup in popupList)
-        {
-            var position = popup.transform.position;
-            popup.transform.position = new Vector3(position.x, position.y + totalHeight + 120f, position.z);
-        }
-        
         instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneText, item, time));
     }
 
 
-    
     private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneText,  Message item, float time)
     {
 
@@ -82,7 +84,7 @@ public class MessageManager : MonoBehaviour
         cloneText.text = item.value;
         Show(cloneWrapper, popupPanelImage, popupPanelText);
         yield return new WaitForSeconds(time);
-        //Hide(cloneWrapper, popupPanelImage, popupPanelText);
+        Hide(cloneWrapper, popupPanelImage, popupPanelText);
     }
 
     

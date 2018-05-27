@@ -18,6 +18,7 @@ TagManager:
   - sliderMarker
   - index
   - indicator
+  - messageManager
   layers:
   - Default
   - TransparentFX

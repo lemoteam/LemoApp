@@ -36,6 +36,14 @@ public class SceneLoader : MonoBehaviour {
 		// Attach camera
 		var globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");
 		globalManagerCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
+	
+		
+		// Show Loaded Message
+		var messageManager = GameObject.FindGameObjectWithTag("messageManager").GetComponent<MessageManager>();
+		if (messageManager)
+		{
+			messageManager.OnLoadScene();
+		}
 	} 
 }
 
