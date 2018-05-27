@@ -19,6 +19,7 @@ TagManager:
   - index
   - indicator
   - messageManager
+  - message
   layers:
   - Default
   - TransparentFX
