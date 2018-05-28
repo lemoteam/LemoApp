@@ -177,34 +177,34 @@ Prefab:
     - target: {fileID: 114833447728005412, guid: 6bd8d16d0f471408f981112954734b62,
         type: 2}
       propertyPath: mTrackableName
-      value: image
+      value: galet
       objectReference: {fileID: 0}
     - target: {fileID: 114833447728005412, guid: 6bd8d16d0f471408f981112954734b62,
         type: 2}
       propertyPath: mAspectRatio
-      value: 0.7
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114833447728005412, guid: 6bd8d16d0f471408f981112954734b62,
         type: 2}
       propertyPath: mWidth
-      value: 550
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 114833447728005412, guid: 6bd8d16d0f471408f981112954734b62,
         type: 2}
       propertyPath: mHeight
-      value: 385
+      value: 684
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.x
-      value: 550
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.y
-      value: 550
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.z
-      value: 550
+      value: 912
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
@@ -320,18 +320,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ecd451ad931402ca96521dfd403806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1241853478 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62,
-    type: 2}
-  m_PrefabInternal: {fileID: 1241853474}
 --- !u!21 &1407778044
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'imageMaterial
+  m_Name: 'galetMaterial
 
     -77482'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -346,7 +341,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f0602eb8f6264cb5986fa62479fb2346, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7baa6bb5928e4cb5b06166d4b78b91d7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -369,7 +364,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.35}
+      m_Extent: {x: 0.5, y: 0, z: 0.375}
   m_Shapes:
     vertices: []
     shapes: []
@@ -438,7 +433,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000003333b3be000000000000803f000000000000000000000000000000bf000000003333b33e000000000000803f00000000000000000000803f0000003f000000003333b3be000000000000803f000000000000803f000000000000003f000000003333b33e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf000000000000c0be000000000000803f000000000000000000000000000000bf000000000000c03e000000000000803f00000000000000000000803f0000003f000000000000c0be000000000000803f000000000000803f000000000000003f000000000000c03e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -498,60 +493,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1001 &1624784935
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1241853478}
-    m_Modifications:
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.092
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.052
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077725254701402, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e8e8a7c16fb7744ddba1db318615aa38, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1742863694
 GameObject:
   m_ObjectHideFlags: 0
