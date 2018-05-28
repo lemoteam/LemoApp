@@ -8,7 +8,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 {
 	private TrackableBehaviour mTrackableBehaviour;
 	private GameObject scan;
-	private GameObject text;
 	private string currentScene;
 
 	void Start() {
@@ -31,7 +30,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			OnTrackingFound();
 		}
 		
-		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND) {
+		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NO_POSE) {
 			
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 			OnTrackingLost();
@@ -102,7 +101,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private void OnScan() {
 		
 		scan = GameObject.FindWithTag("scan");
-		text = GameObject.FindWithTag("text");
 		
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);

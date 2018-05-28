@@ -83,13 +83,14 @@ public class GlobalManager : MonoBehaviour {
 		// Init Vuforia
 		vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
 		// Get Messages
-		DatabaseManager.GetMessages(result => { messageList = result; });
-		StartCoroutine(MinWaitForLogoAnimation());
+		DatabaseManager.GetMessages();
+        // Start coroutine
+        StartCoroutine(MinWaitForLogoAnimation());
 	}
 
 	private IEnumerator MinWaitForLogoAnimation()
 	{
 		yield return new WaitForSeconds(1.5f);
-		sceneLoader.LoadScene ("Main");
+        sceneLoader.LoadScene("Main");
 	}
 }

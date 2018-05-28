@@ -7,7 +7,7 @@ public class Router : MonoBehaviour
 	private static readonly DatabaseReference baseRef = FirebaseDatabase.DefaultInstance.RootReference;
 
 	public static DatabaseReference Messages() {
-		return baseRef.Child("messages");
+		return baseRef.Child("message");
 	}
 
 	public static DatabaseReference ReaderWithUID(string uid) {

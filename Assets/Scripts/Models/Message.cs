@@ -1,11 +1,20 @@
+using System.Collections.Generic;
+using System;
+
 public class Message {
 
 	// Class properties
-	public string key { get; private set; }
-	public string value { get; private set; }
+    public string id { get; private set; }
+    public string content { get; private set; }
+    public string imageSlug { get; private set; }
+    public string title { get; private set; }
 
-	public Message(string key, string value) {
-		this.key = key;
-		this.value = value;
-	}
+    public Message(string id, string content, string imageSlug, string title)
+    {
+        this.id = id;
+        this.content = content;
+        this.imageSlug = imageSlug;
+        this.title = title;
+    }
 }
+

@@ -28,16 +28,40 @@ public class DatabaseManager : MonoBehaviour {
 		});
 	}
 
-	public static void GetMessages(Action<List<Message>> completionBlock)
-	{
-		var tmpList = new List<Message>();
+	public static void GetMessages() 
+	{   
+        var tmpList = new List<Message>();
 
 		Router.Messages().GetValueAsync().ContinueWith(task =>
 		{
 			var messages = task.Result;
+            foreach(var item in messages.Children) {
+                var test = (Dictionary<string, object>)item.Value;
+                //var message = new Message(
+                //    test["id"].ToString(), 
+                //    test["content"].ToString(), 
+                //    test["imageSlugh"].ToString(), 
+                //    test["title"].ToString()
+                //);
+                var message = test["id"].ToString();
+                Debug.Log(message);
+            }
 
-			tmpList.AddRange(from item in messages.Children let key = item.Key let value = item.Value.ToString() select new Message(key, value));
-			completionBlock(tmpList);
+            //Debug.Log("<color=red>COUCOU LOG TOI STP</color>");
+
+            //tmpList.AddRange(
+            //    from item in messages.Children
+            //    select new Message((IDictionary<string, object>)item.Value)
+            //);
+
+            //Debug.Log("<color=red>COUCOU LOG TOI STP</color>");
+
+            //GlobalManager.instance.messageList = tmpList;
+
+            //Debug.Log("<color=red>COUCOU LOG TOI STP</color>");
+            //foreach(var yo in tmpList) {
+            //    Debug.Log(yo);
+            //}
 		});
 	}
 }

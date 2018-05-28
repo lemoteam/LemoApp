@@ -88,7 +88,7 @@ public class MessageManager : MonoBehaviour
         var list = GlobalManager.instance.messageList; 
         
         foreach (var item in list) {
-            if (item.key == key) {
+            if (item.id == key) {
                ActivePopup(item, time);
             }
         }
@@ -116,7 +116,7 @@ public class MessageManager : MonoBehaviour
         popupPanelImage.canvasRenderer.SetAlpha(0f);
         popupPanelText.canvasRenderer.SetAlpha(0f);
         
-        cloneText.text = item.value;
+        cloneText.text = item.content;
         Show(cloneWrapper, popupPanelImage, popupPanelText);
         yield return new WaitForSeconds(time);
         Hide(cloneWrapper, popupPanelImage, popupPanelText);
