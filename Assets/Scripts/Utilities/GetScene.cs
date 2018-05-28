@@ -10,12 +10,13 @@ public class GetScene : MonoBehaviour {
 	private GameObject obj;
 	private GameObject cloneObj;
 	private GameObject targetChoice;
-
+	private GameObject directionnalLight;
 	public int IDScene;
 	public ReaderManager readerManager;
 
 	public void Start()
 	{
+		directionnalLight = GameObject.FindWithTag("dLight"); 
 		mood = readerManager.GetReaderSetting("mood");
 		intensity = int.Parse(readerManager.GetReaderSetting("intensity"));
 		createScene();
@@ -42,6 +43,13 @@ public class GetScene : MonoBehaviour {
 
 	private IEnumerator createObj(string moodName)
 	{
+		
+		//Disable light and skybox for specific scene
+		if (moodName == "mysterieux" && intensity == 1)
+		{
+			RenderSettings.skybox = (null);
+			directionnalLight.SetActive(false);
+		}
 		 // Load
 		var operation = Resources.LoadAsync("Prefabs/"+moodName+"/scene/scene"+IDScene+"/scene"+IDScene+ "-" + intensity, typeof(GameObject));
 					 

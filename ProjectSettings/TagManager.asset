@@ -21,6 +21,7 @@ TagManager:
   - baseHealing
   - particulesHealing
   - tree
+  - dLight
   layers:
   - Default
   - TransparentFX
