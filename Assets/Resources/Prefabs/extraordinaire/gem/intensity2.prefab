@@ -70,8 +70,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4866147080575228}
-  - component: {fileID: 111591953722318222}
   - component: {fileID: 114249528137683616}
+  - component: {fileID: 95153437906321144}
   m_Layer: 0
   m_Name: intensity2
   m_TagString: Untagged
@@ -1165,21 +1165,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1889144531362786}
   m_Mesh: {fileID: 4300002, guid: 9f71928b5624b4b658a96e8eed2789e3, type: 3}
---- !u!111 &111591953722318222
-Animation:
+--- !u!95 &95153437906321144
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425589036871368}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 2a668dd3d258b4980bc37d1e42d5577a, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 2a668dd3d258b4980bc37d1e42d5577a, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36feab27231742a484b04d62217a1b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114249528137683616
 MonoBehaviour:
   m_ObjectHideFlags: 1

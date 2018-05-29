@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44523734, g: 0.49486423, b: 0.57389015, a: 1}
+  m_IndirectSpecularColor: {r: 0.44525248, g: 0.49487883, b: 0.573898, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -113,33 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &144743909
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'fissure-btnMaterial
-
-    28210'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 932a8d9553b94f7490149013b285b41c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &196514496
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gem: {fileID: 0}
-  animation: {fileID: 0}
+  Gem: {fileID: 873343198}
+  animator: {fileID: 0}
   baseParticle: {fileID: 1551686700}
   particles: {fileID: 612375946}
 --- !u!1 &220481464
@@ -577,8 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gem: {fileID: 0}
-  animation: {fileID: 0}
+  Gem: {fileID: 1197498935}
+  animator: {fileID: 0}
   baseParticle: {fileID: 2006073406}
   particles: {fileID: 1050113756}
 --- !u!43 &481997890
@@ -5463,6 +5436,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc4dcfa8cde54441e9c24654802d4f3f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &579749383 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1099036757468864, guid: fc4dcfa8cde54441e9c24654802d4f3f,
+    type: 2}
+  m_PrefabInternal: {fileID: 579749382}
 --- !u!198 &612375946 stripped
 ParticleSystem:
   m_PrefabParentObject: {fileID: 198516589955986930, guid: 56c6a913bd0db4d2f807aa5bcf0474eb,
@@ -5883,7 +5861,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2095049113}
+  - {fileID: 1038383392}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5948,6 +5926,33 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 0.36095506
   mHeight: 1
+--- !u!21 &1038383392
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'drone-btnMaterial
+
+    52510'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a6c36dd5601946ed8ce9c0e3b2400c49, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1050113755
 GameObject:
   m_ObjectHideFlags: 0
@@ -20094,6 +20099,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4098342936817014, guid: e5edb363d980d49908f3704340d840ae,
     type: 2}
   m_PrefabInternal: {fileID: 1197498933}
+--- !u!1 &1197498935 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1400102123783328, guid: e5edb363d980d49908f3704340d840ae,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197498933}
 --- !u!43 &1222839152
 Mesh:
   m_ObjectHideFlags: 0
@@ -21097,8 +21107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d5a332132394018a858bdd2a57a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gem: {fileID: 0}
-  animation: {fileID: 0}
+  Gem: {fileID: 579749383}
+  animator: {fileID: 0}
   baseParticle: {fileID: 1193868692}
   particles: {fileID: 545867105}
 --- !u!1 &1867659494
@@ -21229,7 +21239,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 144743909}
+  - {fileID: 1916128874}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21387,6 +21397,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1913830040}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1916128874
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'fissure-btnMaterial
+
+    52662'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 932a8d9553b94f7490149013b285b41c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &2006073405
 GameObject:
   m_ObjectHideFlags: 0
@@ -26008,33 +26045,6 @@ Transform:
   m_Father: {fileID: 520039137}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!21 &2095049113
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'drone-btnMaterial
-
-    37616'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a6c36dd5601946ed8ce9c0e3b2400c49, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &2118632871
 GameObject:
   m_ObjectHideFlags: 0

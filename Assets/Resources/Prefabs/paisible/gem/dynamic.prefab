@@ -198,7 +198,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827387903425384}
-  - component: {fileID: 111095979044349206}
   - component: {fileID: 114233770796664806}
   - component: {fileID: 114325057730980788}
   m_Layer: 0
@@ -931,20 +930,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220255155459910}
   m_Mesh: {fileID: 4300004, guid: 9b732f04a7066403b8118877f05860dd, type: 3}
---- !u!111 &111095979044349206
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1753415461449244}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &114233770796664806
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿        using UnityEngine;
 using UnityEngine.Playables;
 using Vuforia;
 
@@ -13,7 +13,6 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 	void Start () {
 		Debug.Log("Btn ready");
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
-		gemManager.animation = this.GetComponent<Animation>();
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
@@ -30,8 +29,6 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 			// Play Animation
 			gemManager.PlayAnimation();
 		}
-		
-		
 		
 		Debug.Log("Btn pressed"+ parameter);
 	}

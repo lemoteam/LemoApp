@@ -5,7 +5,8 @@ using UnityEngine;
 public class GemManager : MonoBehaviour {
 
 	public GameObject Gem;
-	public Animation animation;
+	public Animator animator;
+	public string animatorSlug;
 	public ParticleSystem baseParticle, particles;
 	
 	// Lifecycle
@@ -36,8 +37,9 @@ public class GemManager : MonoBehaviour {
 	// Methods
 	public void PlayAnimation()
 	{	
-		if (animation) {
-			animation.Play();
+		if (animator)
+		{
+			animator.Play(animatorSlug);
 		}
 
 		if (baseParticle && particles && !baseParticle.isPlaying)
@@ -49,8 +51,9 @@ public class GemManager : MonoBehaviour {
 
 	public void StopAnimation()
 	{
-		if (animation) {
-			animation.Stop();
+		if (animator)
+		{
+			animator.Play("none");
 		}
 		
 		if (baseParticle && particles && baseParticle.isPlaying)

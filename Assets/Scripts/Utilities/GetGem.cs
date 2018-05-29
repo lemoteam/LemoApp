@@ -116,6 +116,8 @@ public class GetGem : MonoBehaviour
                 var gemManagerObj = imgTarget.transform.GetChild(1);
                 var gemManager = gemManagerObj.GetComponent<GemManager>();
                 gemManager.Gem = cloneObj;
+                gemManager.animator = gemManager.Gem.GetComponent<Animator>();
+                gemManager.animatorSlug = gemManager.animator.runtimeAnimatorController.name;
                 
                 // Btn Script
                 var selectBbtn = imgTarget.transform.GetChild(0);
@@ -128,7 +130,6 @@ public class GetGem : MonoBehaviour
                     // Attach gem manager to cloneObj
                     btnScript.gemManager = gemManager;
                 }
-                
                 
                 
                 // Gembase  
