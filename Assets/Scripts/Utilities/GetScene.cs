@@ -53,7 +53,7 @@ public class GetScene : MonoBehaviour {
 		 // Load
 		var operation = Resources.LoadAsync("Prefabs/"+moodName+"/scene/scene"+IDScene+"/scene"+IDScene+ "-" + intensity, typeof(GameObject));
 					 
-		targetChoice = GameObject.FindWithTag("targetImage");
+		targetChoice = GameObject.FindWithTag("sceneMarker");
 		
 		GlobalManager.instance.sceneLoader.progressText.text = "";
 		

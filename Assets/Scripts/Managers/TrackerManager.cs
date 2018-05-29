@@ -57,13 +57,14 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "drone-btn" :
+			case "oxygen-btn" :
+			case "fissure-btn" :
 				MessageManager.ShowMessage("scanChoice1", 4f);
 				ChangeScene("Choice1");
 				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
-			case "astronaut-btn" :
+			case "ground-btn" :
 				ChangeScene("Choice2");
 				break;
 			
