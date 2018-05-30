@@ -116,8 +116,11 @@ public class GetGem : MonoBehaviour
                 var gemManagerObj = imgTarget.transform.GetChild(1);
                 var gemManager = gemManagerObj.GetComponent<GemManager>();
                 gemManager.Gem = cloneObj;
-                gemManager.animator = gemManager.Gem.GetComponent<Animator>();
-                gemManager.animatorSlug = gemManager.animator.runtimeAnimatorController.name;
+                
+                if(gemManager.Gem.GetComponent<Animator>()){
+                    gemManager.animator = gemManager.Gem.GetComponent<Animator>();
+                    gemManager.animatorSlug = gemManager.animator.runtimeAnimatorController.name;
+                }
                 
                 // Btn Script
                 var selectBbtn = imgTarget.transform.GetChild(0);

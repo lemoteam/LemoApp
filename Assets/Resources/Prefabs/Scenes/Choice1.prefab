@@ -8639,7 +8639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 1717588616588610}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 198375602777350752}
   particles: {fileID: 198190909892542498}
 --- !u!114 &114449236495150834
@@ -8711,7 +8712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 1971970068243914}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 198302801882511676}
   particles: {fileID: 198197137499489858}
 --- !u!114 &114527366226100864
@@ -8787,7 +8789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 1846094275138150}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 198228887807531078}
   particles: {fileID: 198111614982206030}
 --- !u!114 &114895078350458524
