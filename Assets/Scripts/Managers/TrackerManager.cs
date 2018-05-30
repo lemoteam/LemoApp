@@ -8,7 +8,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 {
 	private TrackableBehaviour mTrackableBehaviour;
 	private GameObject scan;
-	private GameObject text;
 	private string currentScene;
 
 	void Start() {
@@ -31,7 +30,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			OnTrackingFound();
 		}
 		
-		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND) {
+		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NO_POSE) {
 			
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 			OnTrackingLost();
@@ -57,24 +56,19 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "oxygen-btn" :
-			case "fissure-btn" :
-				MessageManager.ShowMessage("scanChoice1", 4f);
+			case "drone-btn" :
 				ChangeScene("Choice1");
-				MessageManager.ShowMessage("scanAfter", 4f);
 				break;
 			
-			case "ground-btn" :
+			case "astronaut-btn" :
 				ChangeScene("Choice2");
 				break;
 			
 			case "image" :
-				MessageManager.ShowMessage("scanChoice3", 3f);
 				ChangeScene("Choice3");
 				break;
 			
 			case "galet" :
-				MessageManager.ShowMessage("scanScene1", 3f);
 				ChangeScene("Scene1");
 				break;
 			
@@ -107,17 +101,20 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private void OnScan() {
 		
 		scan = GameObject.FindWithTag("scan");
-		text = GameObject.FindWithTag("text");
 		
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
 		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
-		//text.SetActive(false);
-
-		MessageManager.ShowMessage("scan", 2f);
+		// Show Loaded Message
+		var messageManager = GameObject.FindGameObjectWithTag("messageManager");
+		if (messageManager != null)
+		{	
+			// Show message
+			messageManager.GetComponent<MessageManager>().OnScan();
+		}
 	}
 
 	private void OffScan() {
-		scan.GetComponent<Image>().color = new Color32(255,255,255,100);
+		scan.GetComponent<Image>().color = new Color32(80,220,100,100);
 	}
 	
 	

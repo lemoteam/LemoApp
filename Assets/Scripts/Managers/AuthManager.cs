@@ -20,9 +20,6 @@ public class AuthManager : MonoBehaviour {
 	public delegate IEnumerator AuthCallback(Task<Firebase.Auth.FirebaseUser> task, string operation);
 	public event AuthCallback authCallback;
 
-	// UI objects linked from the inspector
-	public Text statusText;
-
 	// Prepare values
 	private string markerId;
 
@@ -74,12 +71,9 @@ public class AuthManager : MonoBehaviour {
 
 	// HandleCallback
 	private IEnumerator HandleAuthCallback (Task<Firebase.Auth.FirebaseUser> task, string operation) {
-		if (task.IsCanceled) {
-			UpdateStatus ("La création a été annulée.");
-		}
+		if (task.IsCanceled) {}
 
 		if (task.IsFaulted) {
-			UpdateStatus ("Nous te créons un compte.");
 
 			// If there is no account create
 			if (operation == "login") {
@@ -98,13 +92,10 @@ public class AuthManager : MonoBehaviour {
 			var reader = new Reader(newUser.Email);
 			DatabaseManager.CreateNewReader(reader, newUser.UserId);
 		}
-
-		UpdateStatus ("Nous chargeons ton expérience");
 		
 		SetGlobalReader();
 
 		yield return new WaitForSeconds (1.5f);
-		UpdateStatus ("Allez va faire tes choix mané");
 		GlobalManager.instance.isLoggin = true;
 	}
 
@@ -121,12 +112,5 @@ public class AuthManager : MonoBehaviour {
 	private void OnDestroy() {
 		// Auth Delegate Subscription
 		authCallback -= HandleAuthCallback;
-	}
-
-
-
-	// Utilities
-	private void UpdateStatus(string message) {
-		statusText.text = message;
 	}
 }

@@ -11,7 +11,7 @@ public class DatabaseManager : MonoBehaviour {
 	public static void InitDatabase() {
 		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://unity-firebase-78a2d.firebaseio.com/");
 		Debug.Log ("Database Ready");
-	}
+	}	
 	
 	public static void CreateNewReader(Reader reader, string uid) {
 		Debug.Log ("readerJSON readerJSON readerJSON");
@@ -28,16 +28,32 @@ public class DatabaseManager : MonoBehaviour {
 		});
 	}
 
-	public static void GetMessages(Action<List<Message>> completionBlock)
-	{
-		var tmpList = new List<Message>();
+	public static void GetMessages() 
+	{   
+        var tmpList = new List<Message>();
 
 		Router.Messages().GetValueAsync().ContinueWith(task =>
 		{
 			var messages = task.Result;
-
-			tmpList.AddRange(from item in messages.Children let key = item.Key let value = item.Value.ToString() select new Message(key, value));
-			completionBlock(tmpList);
+			foreach(var item in messages.Children) {
+				var test = (Dictionary<string, object>)item.Value;
+				
+				var id = test.ContainsKey("id") ? test["id"].ToString() : "";
+				var content = test.ContainsKey("content") ? test["content"].ToString() : "";
+				var imageSlug = test.ContainsKey("imageSlug") ? test["imageSlug"].ToString() : "";
+				var title = test.ContainsKey("title") ? test["title"].ToString() : "";
+				
+				var message = new Message(
+					id, 
+					content, 
+					imageSlug, 
+					title
+				);
+				
+				tmpList.Add(message);
+			}
+			
+			GlobalManager.instance.messageList = tmpList;
 		});
 	}
 }

@@ -18,10 +18,8 @@ TagManager:
   - sliderMarker
   - index
   - indicator
-  - baseHealing
-  - particulesHealing
-  - tree
-  - dLight
+  - messageManager
+  - message
   layers:
   - Default
   - TransparentFX
