@@ -1516,7 +1516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!43 &481111155
@@ -4410,7 +4411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1603300771
@@ -4917,7 +4919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1806109127
@@ -4964,7 +4967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1813292513
@@ -5011,7 +5015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1814134260
@@ -5575,7 +5580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &2074179654
