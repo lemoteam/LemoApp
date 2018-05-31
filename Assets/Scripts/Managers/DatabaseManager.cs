@@ -56,4 +56,26 @@ public class DatabaseManager : MonoBehaviour {
 			GlobalManager.instance.messageList = tmpList;
 		});
 	}
+
+	public static void GetTexts()
+	{
+		var tmpList = new List<Page>();
+
+		Router.TextPage().GetValueAsync().ContinueWith(task =>
+			{
+				var pages = task.Result;
+				Debug.Log(pages);
+				foreach (var page in pages.Children)
+				{
+					var result = (Dictionary<string, object>)page.Value;
+					var pageID = result["pageID"].ToString();
+					// var versions = result["versions"].ToString();
+
+					Debug.Log("debug "+pageID);
+				}
+
+			}
+		);
+	}
+	
 }

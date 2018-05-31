@@ -21,5 +21,4 @@ public class ChangeNoise : MonoBehaviour
         no.quality = ParticleSystemNoiseQuality.High;
         no.frequency = noiseFrequency;
     }
-	
 }
