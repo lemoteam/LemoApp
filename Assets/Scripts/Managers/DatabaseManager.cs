@@ -3,6 +3,7 @@ using UnityEngine;
 using Firebase;
 using Firebase.Unity.Editor;
 using System;
+using System.Collections;
 
 public class DatabaseManager : MonoBehaviour {
 
@@ -68,17 +69,28 @@ public class DatabaseManager : MonoBehaviour {
 				//Debug.Log(page);
 				var result = (Dictionary<string, object>)page.Value;
 				var pageId = result["pageID"].ToString();
-				// Debug.Log(pageId); 
+				// Debug.Log(pageId);
 				var versions = result["versions"];
+				var versionsList = (IEnumerable)versions;
+				var savedVersionsList = new List<Version>();
+				
+				foreach (var version in versionsList)
+				{
+					var item = (Dictionary<string, object>)version;
+					var code = item.ContainsKey("code") ? item["code"].ToString() : "";
+					var text = item.ContainsKey("text") ? item["text"].ToString() : "";
+					var newVersion = new Version(code, text);
+					savedVersionsList.Add(newVersion);
+				}
 				// Debug.Log(versions);
 				// var versionsArr = versions.ToArray();	
-				var pageM = new Page(pageId, versions);
+				var pageM = new Page(pageId, savedVersionsList);
 
 				tmpList.Add(pageM);
 			}
 
 			GlobalManager.instance.pageList = tmpList;
-			// Debug.Log(tmpList);
+			Debug.Log(tmpList);
 		});
 	}
 }
