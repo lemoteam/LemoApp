@@ -24,7 +24,6 @@ public class GlobalManager : MonoBehaviour {
 	protected internal List<GemManager> gemManagerList = new List<GemManager>();
 
 	public void Awake() {
-
 		//Check if instance already exists
 		if (instance == null) {
 			//if not, set instance to this

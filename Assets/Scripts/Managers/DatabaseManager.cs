@@ -62,29 +62,24 @@ public class DatabaseManager : MonoBehaviour {
 		Router.TextPage().GetValueAsync().ContinueWith(task =>
 		{
 			var pages = task.Result;
-			//Debug.Log(pages);
-			//Debug.Log(pages.Children);
 
 			foreach (var page in pages.Children)
 			{
-					Debug.Log(page);
-					var result = (Dictionary<string, object>)page.Value;
-					Debug.Log(result);
-					Debug.Log(result["pageID"]);
-					var data = result.Values;
+				//Debug.Log(page);
+				var result = (Dictionary<string, object>)page.Value;
+				var pageId = result["pageID"].ToString();
+				// Debug.Log(pageId); 
+				var versions = result["versions"];
+				// Debug.Log(versions);
+				// var versionsArr = versions.ToArray();	
+				var pageM = new Page(pageId, versions);
 
-					 //var pageID = data["pageID"];
-					//Debug.Log(pageID);
-
-					 //var version = result["versions"].ToArray();
-				
-					//var pageM = new Page(pageID, version);
-				
-					//tmpList.Add(pageM);
+				tmpList.Add(pageM);
 			}
 
-			//GlobalManager.instance.pageList = tmpList;
+			GlobalManager.instance.pageList = tmpList;
+			// Debug.Log(tmpList);
 		});
-		}
 	}
+}
 	
