@@ -3,8 +3,6 @@ using UnityEngine;
 using Firebase;
 using Firebase.Unity.Editor;
 using System;
-using System.Linq;
-using Firebase.Database;
 
 public class DatabaseManager : MonoBehaviour {
 
@@ -62,20 +60,31 @@ public class DatabaseManager : MonoBehaviour {
 		var tmpList = new List<Page>();
 
 		Router.TextPage().GetValueAsync().ContinueWith(task =>
+		{
+			var pages = task.Result;
+			//Debug.Log(pages);
+			//Debug.Log(pages.Children);
+
+			foreach (var page in pages.Children)
 			{
-				var pages = task.Result;
-				Debug.Log(pages);
-				foreach (var page in pages.Children)
-				{
+					Debug.Log(page);
 					var result = (Dictionary<string, object>)page.Value;
-					var pageID = result["pageID"].ToString();
-					// var versions = result["versions"].ToString();
+					Debug.Log(result);
+					Debug.Log(result["pageID"]);
+					var data = result.Values;
 
-					Debug.Log("debug "+pageID);
-				}
+					 //var pageID = data["pageID"];
+					//Debug.Log(pageID);
 
+					 //var version = result["versions"].ToArray();
+				
+					//var pageM = new Page(pageID, version);
+				
+					//tmpList.Add(pageM);
 			}
-		);
+
+			//GlobalManager.instance.pageList = tmpList;
+		});
+		}
 	}
 	
-}

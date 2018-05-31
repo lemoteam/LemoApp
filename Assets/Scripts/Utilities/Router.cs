@@ -11,7 +11,7 @@ public class Router : MonoBehaviour
 	}
 	
 	public static DatabaseReference TextPage() {
-		return baseRef.Child("page");
+		return baseRef.Child("page").Child("datas");
 	}
 
 	public static DatabaseReference ReaderWithUID(string uid) {
