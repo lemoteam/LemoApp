@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TextManager : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class TextManager : MonoBehaviour
     private string textScene;
     private GameObject textSceneMarker;
 
-    private void Start()
+    private void Awake()
     {
         textSceneMarker = GameObject.FindWithTag("textSceneMarker");
     }
@@ -40,6 +40,7 @@ public class TextManager : MonoBehaviour
             if (version.code == code)
             {
                 textScene = version.text;
+                textSceneMarker.GetComponent<TextMeshPro>().SetText(textScene);
                 //Debug.Log(version.text);
             }
         }

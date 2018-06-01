@@ -21,6 +21,7 @@ TagManager:
   - messageManager
   - message
   - textManager
+  - textSceneMarker
   layers:
   - Default
   - TransparentFX
