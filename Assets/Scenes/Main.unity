@@ -1516,7 +1516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!43 &481111155
@@ -3903,6 +3904,48 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1415167272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1415167274}
+  - component: {fileID: 1415167273}
+  m_Layer: 0
+  m_Name: TextManager
+  m_TagString: textManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1415167273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415167272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ffa78e57a04f1f8a14b84b61ae741e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageId: 1
+  code: 11
+--- !u!4 &1415167274
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415167272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17354712, y: 0.57875156, z: 0.21558774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &1433899824
 Material:
   serializedVersion: 6
@@ -4410,7 +4453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1603300771
@@ -4917,7 +4961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1806109127
@@ -4964,7 +5009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1813292513
@@ -5011,7 +5057,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &1814134260
@@ -5575,7 +5622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gem: {fileID: 0}
-  animation: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSlug: 
   baseParticle: {fileID: 0}
   particles: {fileID: 0}
 --- !u!1 &2074179654
