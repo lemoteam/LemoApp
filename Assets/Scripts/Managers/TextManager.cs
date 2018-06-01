@@ -7,17 +7,26 @@ public class TextManager : MonoBehaviour
     private static TextManager instance;
     public string pageId;
     public string code;
+    private string mood;
+    private string intensity;
     private string textScene;
     private GameObject textSceneMarker;
+    public ReaderManager readerManager;
 
     private void Awake()
     {
         textSceneMarker = GameObject.FindWithTag("textSceneMarker");
+        var mood = readerManager.GetReaderSetting("mood");
+        var intensity = readerManager.GetReaderSetting("intensity");
+        code = mood + intensity;
     }
 
     public void OnLoadScene()
     {
-        GetText();
+        if (mood != null && intensity != null)
+        {
+            GetText();
+        }
     }
     
     private void GetText() { 
