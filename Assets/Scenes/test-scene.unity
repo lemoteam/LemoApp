@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -637,6 +637,48 @@ Transform:
   m_Father: {fileID: 329192591}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &87422790
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4477372
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.0817294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.0725883
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561899228709468, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f1e9723cf01924df9b8739e7e0aadfe2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &87706555
 GameObject:
   m_ObjectHideFlags: 0
@@ -9246,7 +9288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1501121822041826, guid: b8f3110d2e450402b84ec2d81e896986, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4537625118669548, guid: b8f3110d2e450402b84ec2d81e896986, type: 2}
       propertyPath: m_RootOrder
