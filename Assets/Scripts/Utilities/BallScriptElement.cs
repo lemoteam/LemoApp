@@ -19,13 +19,6 @@ public class BallScriptElement : MonoBehaviour
 		StartCoroutine(addGravity());
 	}
 	
-	// Update is called once per frame
-	private void FixedUpdate()
-	{
-		if (isReady) {
-			//elRigidbody.AddForce(NewGravitySettings * elRigidbody.mass);
-		}
-	}
 
 	private IEnumerator addGravity()
 	{
