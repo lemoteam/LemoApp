@@ -37,10 +37,11 @@ public class DistanceCameraVolume : MonoBehaviour {
 		else
 		{
 			Vector3 distance = arCamera.transform.position - sceneMarker.transform.position;
-			float Len = (float) distance.magnitude;
-			// Debug.Log ("dist :" + Len);
+			var Len = distance.magnitude;
+			//Debug.Log ("dist :" + distance);
+			//Debug.Log ("len :" + Len);
 			//float volumeMap = Map(1.0f,0.02f,900.0f,1200.0f,Len);
-			float volumeMap = Map(1.0f,0.02f,2.3f,3.8f,Len);
+			float volumeMap = Map(1.0f,0.02f,1200f,2200f,Len);
 			soundTarget.volume = volumeMap;
 		}
 	
