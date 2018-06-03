@@ -20,6 +20,9 @@ TagManager:
   - indicator
   - messageManager
   - message
+  - tree
+  - character
+  - characterSpawn
   layers:
   - Default
   - TransparentFX
