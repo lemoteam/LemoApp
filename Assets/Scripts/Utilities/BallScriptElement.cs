@@ -8,18 +8,30 @@ public class BallScriptElement : MonoBehaviour
 	public GameObject plane;
 	public GameObject spawnPoint;
 	private Rigidbody elRigidbody;
-	private Vector3 NewGravitySettings; 
+	private Vector3 NewGravitySettings;
+	private bool isReady = false;
 
 	// Use this for initialization
 	void Start ()
 	{
 		elRigidbody = transform.GetComponent<Rigidbody>();
-		NewGravitySettings = new Vector3(0f, -100f, 0f); // Physics.gravity
+		elRigidbody.isKinematic = true;
+		StartCoroutine(addGravity());
 	}
 	
 	// Update is called once per frame
 	private void FixedUpdate()
 	{
-		elRigidbody.AddForce(NewGravitySettings * elRigidbody.mass);
+		if (isReady) {
+			//elRigidbody.AddForce(NewGravitySettings * elRigidbody.mass);
+		}
+	}
+
+	private IEnumerator addGravity()
+	{
+		yield return new WaitForSeconds(1.5f);
+		elRigidbody.isKinematic = false;
+		NewGravitySettings = new Vector3(0f, -30f, 0f); // Physics.gravity
+		isReady = true;
 	}
 }
