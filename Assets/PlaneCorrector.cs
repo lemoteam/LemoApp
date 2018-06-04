@@ -16,7 +16,7 @@ public class PlaneCorrector : MonoBehaviour {
 	void Update () {
 		if (Plane.GetComponent<MeshRenderer>().enabled)
 		{
-			GetColorFromScreen(0, 0, Screen.width / 2, Screen.height / 2);
+			GetColorFromScreen(Screen.width - Screen.width / 2 , Screen.height / 2, Screen.width / 10, Screen.height / 10);
 		}
 	}
 
@@ -38,6 +38,8 @@ public class PlaneCorrector : MonoBehaviour {
 		g /= pix.Length;
 		b /= pix.Length;
 		a /= pix.Length;
-		RenderSettings.ambientLight = new Color (r, g, b, a);
+		//Plane.GetComponent<MeshRenderer>().material.color = new Color (r, g, b, a);
+		Plane.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor",  new Color (r, g, b, a));
+		// RenderSettings.ambientLight = new Color (r, g, b, a);
 	}
 }
