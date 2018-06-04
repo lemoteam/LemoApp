@@ -11,16 +11,27 @@ public class CharacterForest : MonoBehaviour
 	public GameObject forestElementsContainer;
 	public GameObject forestTreesContainer;
 
+	public GameObject destination;
+	public Light destinationLight;
+
 	private List<Transform> nodes;
 	private List<Transform> forestElNodes;
 	private List<Transform> forestTrNodes;
 	private int currentNode = 0;
 	private bool move = true;
-
+	private bool animatedLight = false;
+	private Light lt;
+	
+	private float replaceFraction = 0;
+	private float replaceSpeed = .2f;
+	
+	
 	private void Start()
 	{
 		var forestElements = forestElementsContainer;
 		var forestTrees = forestTreesContainer;
+
+		lt = destinationLight.GetComponent<Light>();
 		
 		forestElNodes = new List<Transform>();
 		forestTrNodes = new List<Transform>();
@@ -34,6 +45,12 @@ public class CharacterForest : MonoBehaviour
 		{			
 			forestTrNodes.Add(forestTrees.transform.GetChild(i));
 		}
+		
+		
+		// Launch Animation
+		var destinationPosition = destination.transform.position;
+		Move(destinationPosition);
+
 	}
 
 	private void FixedUpdate()
@@ -84,21 +101,21 @@ public class CharacterForest : MonoBehaviour
 			} 
 		}
 	}
+
+	private void Move(Vector3 destinationPos)
+	{
+		agent.SetDestination(destinationPos);
+		isAnimated = true;
+	}
+
+
+	private void Stop()
+	{
+		animatedLight = true;
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
-		{
-			var ray = cam.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-	
-			if (Physics.Raycast(ray, out hit))
-			{
-				agent.SetDestination(hit.point);
-				isAnimated = true;
-				Debug.Log(agent.pathPending);
-			}
-		}
 		
 		if (!agent.pathPending && isAnimated)
 		{
@@ -108,8 +125,26 @@ public class CharacterForest : MonoBehaviour
 				{
 					Debug.Log("Je suis arrivé");
 					isAnimated = false;
+					Stop();
 				}
 			}
 		}
+
+
+		if (animatedLight)
+		{	
+			if (!(replaceFraction < 1));
+			replaceFraction += Time.deltaTime * replaceSpeed;
+			lt.intensity = Mathf.SmoothStep(0, 10, CubicEaseOut(replaceFraction));
+		}
 	}
+	
+	
+	static public float CubicEaseOut(float p)
+	{
+		float f = (p - 1);
+		return f * f * f + 1;
+	}
+
 }
+
