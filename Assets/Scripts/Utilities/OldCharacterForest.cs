@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterForest : MonoBehaviour
+public class OldCharacterForest : MonoBehaviour
 {
 	public Transform path;
 	public GameObject forestElementsContainer;
