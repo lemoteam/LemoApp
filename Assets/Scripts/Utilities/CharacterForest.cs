@@ -65,8 +65,8 @@ public class CharacterForest : MonoBehaviour
 
 	private void Move()
 	{
-		wheelL.motorTorque = 5f;
-		wheelR.motorTorque = 5f;
+		wheelL.motorTorque = 2f;
+		wheelR.motorTorque = 2f;
 	}
 	
 	private void Stop()
@@ -86,7 +86,7 @@ public class CharacterForest : MonoBehaviour
 
 	private void CheckWaypointDistance()
 	{
-		if (Vector3.Distance(transform.position, nodes[currentNode].position) < 0.8f)
+		if (Vector3.Distance(transform.position, nodes[currentNode].position) < 0.2f)
 		{
 			if (currentNode == nodes.Count - 1)
 			{
@@ -110,7 +110,7 @@ public class CharacterForest : MonoBehaviour
 		{
 			var elementForest = node.GetComponent<ElementForest>();
 
-			if (Vector3.Distance(transform.position, node.position) < 1f)
+			if (Vector3.Distance(transform.position, node.position) < 0.1f)
 			{
 				if (!elementForest.isActive)
 				{
@@ -136,7 +136,7 @@ public class CharacterForest : MonoBehaviour
 			Debug.Log(Vector3.Distance(transform.position, node.position));
 
 			
-			if (Vector3.Distance(transform.position, node.position) < 1.6f)
+			if (Vector3.Distance(transform.position, node.position) < 0.16f)
 			{
 				
 				if (!elementForest.isActive)

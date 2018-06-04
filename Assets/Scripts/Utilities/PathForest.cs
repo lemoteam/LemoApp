@@ -38,7 +38,7 @@ public class PathForest : MonoBehaviour
 			}
 			
 			Gizmos.DrawLine(previousNode, currentNode);
-			Gizmos.DrawWireSphere(currentNode, .1f);
+			Gizmos.DrawWireSphere(currentNode, .01f);
 		}
 	}
 }
