@@ -113,39 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &204598200
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'galetMaterial
-
-    -123906'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7baa6bb5928e4cb5b06166d4b78b91d7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
---- !u!43 &242880255
+--- !u!43 &1146352266
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ImageTargetMesh26536
+  m_Name: ImageTargetMesh166332
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -281,7 +254,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0, z: 0.375}
+    m_Extent: {x: 0.5, y: 0, z: 0.5}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -329,12 +302,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 204598200}
+      objectReference: {fileID: 1902968388}
     - target: {fileID: 33766564596235386, guid: 6bd8d16d0f471408f981112954734b62,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 242880255}
+      objectReference: {fileID: 1146352266}
     - target: {fileID: 4841016380382082, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_RootOrder
       value: 0
@@ -369,15 +342,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 4489299573187284, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 912
+      objectReference: {fileID: 0}
+    - target: {fileID: 114833447728005412, guid: 6bd8d16d0f471408f981112954734b62,
+        type: 2}
+      propertyPath: mDataSetPath
+      value: Vuforia/lemo.xml
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bd8d16d0f471408f981112954734b62, type: 2}
@@ -670,3 +648,30 @@ Transform:
   m_Father: {fileID: 1742863699}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!21 &1902968388
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'galetMaterial
+
+    -4531644'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 30fce69ddf9945db87a5045849db71ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
