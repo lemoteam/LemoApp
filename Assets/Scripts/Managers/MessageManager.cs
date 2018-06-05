@@ -73,7 +73,7 @@ public class MessageManager : MonoBehaviour
                 var popupPanelImage = message.GetComponentsInChildren<Image>()[2];
                 var popupPanelIllu = message.GetComponentsInChildren<Image>()[3];
                 var popupPanelTitle = message.GetComponentsInChildren<Text>()[0];
-                var popupPanelText = message.GetComponentsInChildren<Text>()[1];
+                var popupPanelText = message.GetComponentsInChildren<Text>()[1];    
                 Hide(message, popupPanelImage, popupPanelTitle, popupPanelText, popupPanelIllu);
             }
         }
