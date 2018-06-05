@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="text" size="1272.000000 836.987000" />
     <ImageTarget name="C1b" size="245.000000 246.000000" />
     <ImageTarget name="C1" size="895.000000 488.000000" />
     <ImageTarget name="B2" size="478.000000 1389.000000" />
@@ -12,6 +11,7 @@
     <ImageTarget name="textscene1" size="1744.000000 2413.000000" />
     <ImageTarget name="galet" size="912.000000 684.000000" />
     <ImageTarget name="connexion" size="322.000000 320.000000" />
+    <ImageTarget name="oxgen" size="550.000000 950.000000" />
     <ImageTarget name="image" size="550.000000 385.000000" />
     <ImageTarget name="qrcode" size="174.000000 174.000000" />
   </Tracking>
