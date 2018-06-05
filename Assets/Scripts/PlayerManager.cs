@@ -9,10 +9,11 @@ public class PlayerManager : MonoBehaviour
 	private PlayerManager instance;
 	public GameObject player;
 	public GameObject pursuer;
-	private bool animatedLight = false;
-	private float replaceFraction = 0;
+	private float replaceFraction = 1;
 	private float replaceSpeed = .2f;
+	private float lightIntensity = 10f;
 	public int index = 0;
+	private int prevIndex = -2;
 	public int nbPursuer;
 	public int radiusPursuer;
 	private List<GameObject> pursuerList;
@@ -37,10 +38,6 @@ public class PlayerManager : MonoBehaviour
 		
 		// Create Pursuer
 		createPursuer();
-	}
-	private void Stop()
-	{
-		animatedLight = true;
 	}
 
 	
@@ -79,28 +76,59 @@ public class PlayerManager : MonoBehaviour
 	}
 	
 	
-	
 	// Update is called once per frame
 	private void Update ()
-	{
-
+	{	
+		// On click
 		if (Input.GetMouseButtonDown(0))
 		{
+			// Destination
+			goToCheckpoint(index);
 			
-			goToCheckpoint(this.index);
-			if (this.index < this.checkpoints.Length - 1)
+			if (index < checkpoints.Length - 1)
 			{
-				this.index++;
+				prevIndex = index;
+				index++;
 			}
 			else
 			{
-				this.index = 0;
+				prevIndex = checkpoints.Length - 1;
+				index = 0;
 			}
 		}
-
+		
+		// If animated
+		if (replaceFraction < 1)
+		{
+			replaceFraction += Time.deltaTime * replaceSpeed;
+			
+			// Light On
+			var indexL = index - 1 == -1 ? checkpoints.Length - 1 : index - 1;
+			var indexPrev = prevIndex - 1 == -1 ? checkpoints.Length - 1 : prevIndex - 1;
+			
+			var light = checkpoints[indexL].GetComponent<Light>();
+			light.intensity = Mathf.SmoothStep(0, lightIntensity, CubicEaseOut(replaceFraction));
+			
+			if (indexPrev != indexL) {
+				var prevlight = checkpoints[indexPrev].GetComponent<Light>();
+				prevlight.intensity = Mathf.SmoothStep(lightIntensity, 0, CubicEaseOut(replaceFraction));
+			}
+		
+			// Light Off
+			/*if (prevIndex != -2)
+			{
+				var indexPL = prevIndex - 1 == -1 ? checkpoints.Length - 1 : index - 1;
+				var prevlight = checkpoints[indexPL].GetComponent<Light>();
+				prevlight.intensity = Mathf.SmoothStep(lightIntensity, 0, CubicEaseOut(replaceFraction));
+			}*/
+			
+		}
+		
+		
 	}
 
-	private void LookAtemmi(List<GameObject> pursuerList)
+	
+	private void LookAtemmi(IEnumerable<GameObject> pursuerList)
 	{
 		foreach (var pursuer in pursuerList)
 		{
@@ -108,8 +136,10 @@ public class PlayerManager : MonoBehaviour
 		}
 	}
 
+	
 	public void goToCheckpoint(int index)
 	{
+		replaceFraction = 0;
 		var playerController = player.GetComponent<PlayerController>();
 		playerController.displaceAgent(checkpointPositions[index]);
 		setCheckpointActive(index);
@@ -127,19 +157,18 @@ public class PlayerManager : MonoBehaviour
 			if (i != index) 
 			{
 				//setCheckpointColor(checkpoint, Color.white, Color.white);
-				setLightIntensity(checkpoint, 0);
+				//setLightIntensity(checkpoint, 0);
 			}
 			else
 			{
 				//setCheckpointColor(checkpoint, Color.blue, Color.blue);
-				setLightIntensity(checkpoint, 15f);
+				//setLightIntensity(checkpoint, 15f);
 				LookAtemmi(pursuerList);
 				// setCheckpointColor(checkpoint, Color.blue, Color.blue);
 			}
 			
 			i++;
 		}
-		
 	}
 
 
@@ -156,6 +185,7 @@ public class PlayerManager : MonoBehaviour
 		rend.material.shader = Shader.Find("Specular");
 		rend.material.SetColor("_SpecColor", specular);
 	}
+	
 	
 	private void setLightIntensity(GameObject checkpoint, float intensity)
 	{
@@ -176,6 +206,8 @@ public class PlayerManager : MonoBehaviour
 			playerController.displaceAgent(position);
 		}
 	}
+	
+	
 	static public float CubicEaseOut(float p)
 	{
 		float f = (p - 1);
