@@ -56,15 +56,15 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				OnScan();
 				break;
 			
-			case "drone-btn" :
+			case "A1" :
 				ChangeScene("Choice1");
 				break;
 			
-			case "astronaut-btn" :
+			case "B1" :
 				ChangeScene("Choice2");
 				break;
 			
-			case "image" :
+			case "C1" :
 				ChangeScene("Choice3");
 				break;
 			

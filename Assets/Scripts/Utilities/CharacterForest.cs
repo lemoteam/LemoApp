@@ -1,38 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CharacterForest : MonoBehaviour
 {
-	public Transform path;
+	public Camera cam;
+	public NavMeshAgent agent;
+	public bool isAnimated = false;
+	
 	public GameObject forestElementsContainer;
 	public GameObject forestTreesContainer;
-	public float maxSteerAngle = 45f; 
-	public WheelCollider wheelL;
-	public WheelCollider wheelR;
+
+	public GameObject destination;
+	public Light destinationLight;
+
 	private List<Transform> nodes;
 	private List<Transform> forestElNodes;
 	private List<Transform> forestTrNodes;
 	private int currentNode = 0;
 	private bool move = true;
-
+	private bool animatedLight = false;
+	private Light lt;
+	
+	private float replaceFraction = 0;
+	private float replaceSpeed = .2f;
+	
+	
 	private void Start()
 	{
-		var pathTransforms = path.GetComponentsInChildren<Transform>();
 		var forestElements = forestElementsContainer;
 		var forestTrees = forestTreesContainer;
+
+		lt = destinationLight.GetComponent<Light>();
 		
-		nodes = new List<Transform>();
 		forestElNodes = new List<Transform>();
 		forestTrNodes = new List<Transform>();
-
-		for (var i = 0; i < pathTransforms.Length; i++)
-		{
-			if (pathTransforms[i] != path.transform)
-			{
-				nodes.Add(pathTransforms[i]);
-			}
-		}
 
 		for (var i = 0; i < forestElements.transform.childCount; i++)
 		{			
@@ -43,66 +45,19 @@ public class CharacterForest : MonoBehaviour
 		{			
 			forestTrNodes.Add(forestTrees.transform.GetChild(i));
 		}
+		
+		
+		// Launch Animation
+		var destinationPosition = destination.transform.position;
+		Move(destinationPosition);
+
 	}
 
 	private void FixedUpdate()
 	{
-		ApplySteer();
-
-		if (move)
-		{
-			Move();
-		}
-		else
-		{
-			Stop();
-		}
-		
-		CheckWaypointDistance();
 		CheckForestElementsDistance();
 		CheckForestTreesDistance();
 	}
-
-	private void Move()
-	{
-		wheelL.motorTorque = 5f;
-		wheelR.motorTorque = 5f;
-	}
-	
-	private void Stop()
-	{
-		wheelL.motorTorque = 0f;
-		wheelR.motorTorque = 0f;
-		Debug.Log("STOOOOOOP");
-	}
-
-	private void ApplySteer()
-	{
-		var relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
-		var wheelAngle = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
-		wheelL.steerAngle = wheelAngle;
-		wheelR.steerAngle = wheelAngle;
-	}
-
-	private void CheckWaypointDistance()
-	{
-		if (Vector3.Distance(transform.position, nodes[currentNode].position) < 0.8f)
-		{
-			if (currentNode == nodes.Count - 1)
-			{
-				currentNode = 0;
-				move = false;
-				//Debug.Log("STOOOOP PLEASE");
-				Debug.Log(currentNode);
-			}
-			else
-			{
-				currentNode++;
-				Debug.Log(currentNode);
-			}
-		}
-	}
-
 
 	private void CheckForestElementsDistance()
 	{
@@ -146,4 +101,50 @@ public class CharacterForest : MonoBehaviour
 			} 
 		}
 	}
+
+	private void Move(Vector3 destinationPos)
+	{
+		agent.SetDestination(destinationPos);
+		isAnimated = true;
+	}
+
+
+	private void Stop()
+	{
+		animatedLight = true;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+		if (!agent.pathPending && isAnimated)
+		{
+			if (agent.remainingDistance <= agent.stoppingDistance)
+			{
+				if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+				{
+					Debug.Log("Je suis arrivé");
+					isAnimated = false;
+					Stop();
+				}
+			}
+		}
+
+
+		if (animatedLight)
+		{	
+			if (!(replaceFraction < 1));
+			replaceFraction += Time.deltaTime * replaceSpeed;
+			lt.intensity = Mathf.SmoothStep(0, 10, CubicEaseOut(replaceFraction));
+		}
+	}
+	
+	
+	static public float CubicEaseOut(float p)
+	{
+		float f = (p - 1);
+		return f * f * f + 1;
+	}
+
 }
+
