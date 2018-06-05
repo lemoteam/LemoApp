@@ -25,6 +25,7 @@ TagManager:
   - characterSpawn
   - particulesHealing
   - baseHealing
+  - buisson
   layers:
   - Default
   - TransparentFX
