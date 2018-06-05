@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -94,10 +95,11 @@ public class MessageManager : MonoBehaviour
         }
     }
 
-    private static void ActivePopup(Message item, float time)
+    private static void ActivePopup(Message item, float time) 
     {
         var obj = Resources.Load("Prefabs/ui/modalDialoguePanelWrapper") as GameObject;
         var cloneWrapper = Instantiate (obj);
+        
         cloneWrapper.SetActive(false);
         cloneWrapper.transform.parent = globalManagerCanvas.transform;
         cloneWrapper.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
@@ -116,6 +118,11 @@ public class MessageManager : MonoBehaviour
         cloneText.text = item.content;
         cloneTitle.text = item.title;
         cloneIllu.sprite = !string.IsNullOrEmpty(item.imageSlug) ? Resources.Load<Sprite>("Sprites/" + item.imageSlug) : null;
+
+        if (cloneIllu.sprite == null)
+        {
+            cloneIllu.gameObject.SetActive(false);
+        }
         
         Show(cloneWrapper);
         yield return new WaitForSeconds(time);
@@ -125,11 +132,20 @@ public class MessageManager : MonoBehaviour
     
     private static void Show(GameObject cloneWrapper)
     {    
+        var cloneWrapperRect = cloneWrapper.GetComponent<RectTransform>();
+        animator = cloneWrapper.GetComponent<Animator>();
         popupList.Add(cloneWrapper);
         cloneWrapper.transform.localPosition = Vector3.zero;
         cloneWrapper.transform.localScale = Vector3.one;
+        cloneWrapperRect.offsetMin = new Vector2(0, 0); 
+        cloneWrapperRect.offsetMax = new Vector2(0, 0);
+        cloneWrapperRect.anchorMin = new Vector2(0, 0);
+        cloneWrapperRect.anchorMax = new Vector2(1, 1);
+        cloneWrapperRect.pivot = new Vector2(0.5f, 0.5f);
         cloneWrapper.SetActive(true);
         
+        animator.Play("show");
+            
         // Image targets to hide
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
@@ -148,7 +164,9 @@ public class MessageManager : MonoBehaviour
 
     
     private static void Hide(GameObject cloneWrapper)
-    {         	
+    {     
+        
+        animator.Play("hide");
         cloneWrapper.SetActive(false);
 
         popupList.Remove(cloneWrapper);
