@@ -81,7 +81,9 @@ public class PlayerManager : MonoBehaviour
 	
 	
 	// Update is called once per frame
-	private void Update () {
+	private void Update ()
+	{
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			
@@ -94,6 +96,15 @@ public class PlayerManager : MonoBehaviour
 			{
 				this.index = 0;
 			}
+		}
+
+	}
+
+	private void LookAtemmi(List<GameObject> pursuerList)
+	{
+		foreach (var pursuer in pursuerList)
+		{
+			pursuer.transform.LookAt(player.transform);
 		}
 	}
 
@@ -122,6 +133,7 @@ public class PlayerManager : MonoBehaviour
 			{
 				//setCheckpointColor(checkpoint, Color.blue, Color.blue);
 				setLightIntensity(checkpoint, 15f);
+				LookAtemmi(pursuerList);
 				// setCheckpointColor(checkpoint, Color.blue, Color.blue);
 			}
 			

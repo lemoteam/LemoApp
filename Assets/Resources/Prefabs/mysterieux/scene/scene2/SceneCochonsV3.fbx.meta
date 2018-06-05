@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 86cc797ec50af4930acb1d89a2fbb0f8
+guid: 34f4128ba44154077ad9ccd8b7591dc2
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -554,7 +554,42 @@ ModelImporter:
     6400158: "Sph\xE8re_26_8"
     6400160: "Sph\xE8re_26_9"
     6400162: Tronc_2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: d264711897409434788d443c2cc8eeac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir
+    second: {fileID: 2100000, guid: 9c8ec45b53a1b4f67a1a7397cc0823c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir 2
+    second: {fileID: 2100000, guid: 59867205b50ca42e2b58361e36d73b6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood 04
+    second: {fileID: 2100000, guid: a367a702a581f4daa8e435510f08e202, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gris 2
+    second: {fileID: 2100000, guid: 66e62fd2d28ae4f15802f777efcc38c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lumineux violet
+    second: {fileID: 2100000, guid: 51540c93a7434413ba643b91bb074344, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marron
+    second: {fileID: 2100000, guid: 61f51f3802c074746a8fabeec7cea7c7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
