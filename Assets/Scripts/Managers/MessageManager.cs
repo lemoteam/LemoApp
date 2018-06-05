@@ -70,8 +70,8 @@ public class MessageManager : MonoBehaviour
         {
             foreach (var message in globalMessagesWrapper)
             {
-                var popupPanelImage = message.GetComponentsInChildren<Image>()[1];
-                var popupPanelIllu = message.GetComponentsInChildren<Image>()[2];
+                var popupPanelImage = message.GetComponentsInChildren<Image>()[2];
+                var popupPanelIllu = message.GetComponentsInChildren<Image>()[3];
                 var popupPanelTitle = message.GetComponentsInChildren<Text>()[0];
                 var popupPanelText = message.GetComponentsInChildren<Text>()[1];
                 Hide(message, popupPanelImage, popupPanelTitle, popupPanelText, popupPanelIllu);
@@ -107,7 +107,7 @@ public class MessageManager : MonoBehaviour
         
         var cloneTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
         var cloneText = cloneWrapper.GetComponentsInChildren<Text>()[1];
-        var cloneIllu = cloneWrapper.GetComponentsInChildren<Image>()[2];
+        var cloneIllu = cloneWrapper.GetComponentsInChildren<Image>()[3];
         
         instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, cloneIllu, item, time));
     }
@@ -116,10 +116,10 @@ public class MessageManager : MonoBehaviour
     private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Image cloneIllu, Message item, float time)
     {
 
-        var popupPanelImage = cloneWrapper.GetComponentsInChildren<Image>()[1];
+        var popupPanelImage = cloneWrapper.GetComponentsInChildren<Image>()[2];
         var popupPanelTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
         var popupPanelText = cloneWrapper.GetComponentsInChildren<Text>()[1];
-        var popupPanelIllu = cloneWrapper.GetComponentsInChildren<Image>()[2];
+        var popupPanelIllu = cloneWrapper.GetComponentsInChildren<Image>()[3];
 
 
         popupPanelImage.canvasRenderer.SetAlpha(0f);
