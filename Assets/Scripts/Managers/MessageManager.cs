@@ -22,6 +22,7 @@ public class MessageManager : MonoBehaviour
     private static GameObject globalManagerCanvas;
     private static List<GameObject> popupList = new List<GameObject>();
     private static List<GameObject> imageTargetList = new List<GameObject>();
+    private static Animator animator;
         
 
     private void Awake() {
@@ -70,11 +71,7 @@ public class MessageManager : MonoBehaviour
         {
             foreach (var message in globalMessagesWrapper)
             {
-                var popupPanelImage = message.GetComponentsInChildren<Image>()[2];
-                var popupPanelIllu = message.GetComponentsInChildren<Image>()[3];
-                var popupPanelTitle = message.GetComponentsInChildren<Text>()[0];
-                var popupPanelText = message.GetComponentsInChildren<Text>()[1];    
-                Hide(message, popupPanelImage, popupPanelTitle, popupPanelText, popupPanelIllu);
+                Hide(message);
             }
         }
         
@@ -115,39 +112,23 @@ public class MessageManager : MonoBehaviour
 
     private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Image cloneIllu, Message item, float time)
     {
-
-        var popupPanelImage = cloneWrapper.GetComponentsInChildren<Image>()[2];
-        var popupPanelTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
-        var popupPanelText = cloneWrapper.GetComponentsInChildren<Text>()[1];
-        var popupPanelIllu = cloneWrapper.GetComponentsInChildren<Image>()[3];
-
-
-        popupPanelImage.canvasRenderer.SetAlpha(0f);
-        popupPanelIllu.canvasRenderer.SetAlpha(0f);
-        popupPanelTitle.canvasRenderer.SetAlpha(0f);
-        popupPanelText.canvasRenderer.SetAlpha(0f);
         
         cloneText.text = item.content;
         cloneTitle.text = item.title;
         cloneIllu.sprite = !string.IsNullOrEmpty(item.imageSlug) ? Resources.Load<Sprite>("Sprites/" + item.imageSlug) : null;
         
-        Show(cloneWrapper, popupPanelImage, popupPanelTitle, popupPanelText, popupPanelIllu);
+        Show(cloneWrapper);
         yield return new WaitForSeconds(time);
-        Hide(cloneWrapper, popupPanelImage, popupPanelTitle, popupPanelText, popupPanelIllu);
+        Hide(cloneWrapper);
     }
 
     
-    private static void Show(GameObject cloneWrapper, Image popupPanelImage, Text popupPanelTitle, Text popupPanelText, Image popupPanelIllu)
+    private static void Show(GameObject cloneWrapper)
     {    
         popupList.Add(cloneWrapper);
         cloneWrapper.transform.localPosition = Vector3.zero;
         cloneWrapper.transform.localScale = Vector3.one;
         cloneWrapper.SetActive(true);
-        
-        popupPanelImage.CrossFadeAlpha(1.0f, 1.0f, false);
-        popupPanelIllu.CrossFadeAlpha(1.0f, 1.0f, false);
-        popupPanelTitle.CrossFadeAlpha(1.0f, 1.0f, false);
-        popupPanelText.CrossFadeAlpha(1.0f, 1.0f, false);
         
         // Image targets to hide
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
@@ -166,14 +147,8 @@ public class MessageManager : MonoBehaviour
     }
 
     
-    private static void Hide(GameObject cloneWrapper, Image popupPanelImage, Text popupPanelTitle, Text popupPanelText, Image popupPanelIllu)
-    {    
-        popupPanelImage.CrossFadeAlpha(0.0f, 1.0f, false);
-        popupPanelIllu.CrossFadeAlpha(0.0f, 1.0f, false);
-        popupPanelText.CrossFadeAlpha(0.0f, 1.0f, false);
-        popupPanelTitle.CrossFadeAlpha(0.0f, 1.0f, false);
-
-                		
+    private static void Hide(GameObject cloneWrapper)
+    {         	
         cloneWrapper.SetActive(false);
 
         popupList.Remove(cloneWrapper);
