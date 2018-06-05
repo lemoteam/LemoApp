@@ -113,11 +113,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &928828893 stripped
+--- !u!21 &444050173
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'qrcodeMaterial
+
+    89716'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a692ef52f322442baf473ef1a8143824, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+--- !u!1001 &1210350679
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1912092683}
+    m_Modifications:
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4477372
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.0817294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.0725883
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d28757768ba974408a2a6d7666a85bbc, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1210350680 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622,
+  m_PrefabParentObject: {fileID: 4063780294495286, guid: d28757768ba974408a2a6d7666a85bbc,
     type: 2}
-  m_PrefabInternal: {fileID: 1947577131}
+  m_PrefabInternal: {fileID: 1210350679}
 --- !u!43 &1544157011
 Mesh:
   m_ObjectHideFlags: 0
@@ -264,33 +333,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!21 &1607548195
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'qrcodeMaterial
-
-    69268'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a692ef52f322442baf473ef1a8143824, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1912092677
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +378,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 1607548195}
+  - {fileID: 444050173}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -408,7 +450,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 928828893}
+  - {fileID: 1210350680}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -529,48 +571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ca50096d4245718dab535274a9a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1947577131
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1912092683}
-    m_Modifications:
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882081348267586, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4b511cfafdca14821b67a9cddf1ad622, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2026722393
 GameObject:
   m_ObjectHideFlags: 0
