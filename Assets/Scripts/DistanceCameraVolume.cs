@@ -35,7 +35,7 @@ public class DistanceCameraVolume : MonoBehaviour {
 			tree = GameObject.FindWithTag("tree");
 		}
 		else
-		{
+		{ 
 			Vector3 distance = arCamera.transform.position - sceneMarker.transform.position;
 			var Len = distance.magnitude;
 			//Debug.Log ("dist :" + distance);
