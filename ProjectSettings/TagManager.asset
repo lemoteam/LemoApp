@@ -28,6 +28,10 @@ TagManager:
   - buisson
   - textManager
   - textSceneMarker
+  - indicatorS
+  - Checkpoint
+  - dLight
+  - characterBase
   layers:
   - Default
   - TransparentFX
