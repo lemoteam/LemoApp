@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4476942118659766, guid: 56c6a913bd0db4d2f807aa5bcf0474eb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4476942118659766, guid: 56c6a913bd0db4d2f807aa5bcf0474eb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -152,16 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 198405581323240722, guid: 56c6a913bd0db4d2f807aa5bcf0474eb,
-        type: 2}
-      propertyPath: lengthInSec
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 198405581323240722, guid: 56c6a913bd0db4d2f807aa5bcf0474eb,
-        type: 2}
-      propertyPath: prewarm
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56c6a913bd0db4d2f807aa5bcf0474eb, type: 2}
   m_IsPrefabParent: 0
@@ -175,33 +165,6 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 198516589955986930, guid: 56c6a913bd0db4d2f807aa5bcf0474eb,
     type: 2}
   m_PrefabInternal: {fileID: 232355168}
---- !u!21 &925485234
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'B2Material
-
-    -23650'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7b8511e51312497aac60c7d44a0746a6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1029273456
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +284,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 925485234}
+      objectReference: {fileID: 1679633624}
     - target: {fileID: 114608473253805650, guid: c3541835595f24602bc801fbda38a964,
         type: 2}
       propertyPath: baseParticle
@@ -445,6 +408,18 @@ Prefab:
     - target: {fileID: 4564350482654400, guid: c3541835595f24602bc801fbda38a964, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387450572908198, guid: c3541835595f24602bc801fbda38a964, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874696278562750, guid: c3541835595f24602bc801fbda38a964, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609577530122072, guid: c3541835595f24602bc801fbda38a964, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3541835595f24602bc801fbda38a964, type: 2}
@@ -921,7 +896,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4476942118659766, guid: 56c6a913bd0db4d2f807aa5bcf0474eb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4476942118659766, guid: 56c6a913bd0db4d2f807aa5bcf0474eb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -970,6 +945,33 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 198516589955986930, guid: 56c6a913bd0db4d2f807aa5bcf0474eb,
     type: 2}
   m_PrefabInternal: {fileID: 1619017238}
+--- !u!21 &1679633624
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'B2Material
+
+    -3496816'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 504632a7b9a94a2787356d6cee235412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!21 &1718705703
 Material:
   serializedVersion: 6
