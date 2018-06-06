@@ -20,10 +20,10 @@ public class GlobalManager : MonoBehaviour {
 	protected internal bool isLoggin = false;
 	protected internal string currentScene = "";
 	protected internal List<Message> messageList = new List<Message>();
+	protected internal List<Page> pageList = new List<Page>();
 	protected internal List<GemManager> gemManagerList = new List<GemManager>();
 
 	public void Awake() {
-
 		//Check if instance already exists
 		if (instance == null) {
 			//if not, set instance to this
@@ -84,6 +84,8 @@ public class GlobalManager : MonoBehaviour {
 		vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
 		// Get Messages
 		DatabaseManager.GetMessages();
+		// Get Messages
+		DatabaseManager.GetTexts();
         // Start coroutine
         StartCoroutine(MinWaitForLogoAnimation());
 	}
