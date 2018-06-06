@@ -64,4 +64,11 @@ public class BallScriptElement :  MonoBehaviour, ITrackableEventHandler
 		elRigidbody.isKinematic = true;
 		character.transform.position = spawn.transform.position;
 	}
+
+	
+	// Update
+	private void FixedUpdate()
+	{
+		character.transform.rotation = new Quaternion(0, 0, 0, 0);
+	}
 }
