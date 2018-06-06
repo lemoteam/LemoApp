@@ -18,14 +18,12 @@ public class MessageManager : MonoBehaviour
     }
 
     public List<Popup> popups;
-    
     private static MessageManager instance;
     private static GameObject globalManagerCanvas;
     private static List<GameObject> popupList = new List<GameObject>();
     private static List<GameObject> imageTargetList = new List<GameObject>();
     private static Animator animator;
         
-
     private void Awake() {
         instance = this;
         globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");

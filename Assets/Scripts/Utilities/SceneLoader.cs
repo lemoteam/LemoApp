@@ -43,6 +43,14 @@ public class SceneLoader : MonoBehaviour {
 			// Show message
 			messageManager.GetComponent<MessageManager>().OnLoadScene();
 		}
+		
+		// Get Scene Text
+		var textManager = GameObject.FindGameObjectWithTag("textManager");
+		if (textManager != null)
+		{	
+			// Show message
+			textManager.GetComponent<TextManager>().OnLoadScene();
+		}
 	} 
 }
 

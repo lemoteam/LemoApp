@@ -26,6 +26,8 @@ TagManager:
   - particulesHealing
   - baseHealing
   - buisson
+  - textManager
+  - textSceneMarker
   layers:
   - Default
   - TransparentFX
