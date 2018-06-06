@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a88dbe17e720443fb709b8eb2c87177
+guid: a617afb97efd74a33804a4bcd20f2734
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -29,9 +29,9 @@ ModelImporter:
     400020: Surface_de_Subdivision_2
     400022: "Sym\xE9trie"
     400024: yeux
-    2100000: Noir
-    2100002: Cloth Business
-    2100004: Mat.2
+    2100000: lumineux violet
+    2100002: bleu
+    2100004: Noir
     2300000: "C\xF4ne"
     2300002: "C\xF4ne_2"
     2300004: pSphere10
@@ -53,17 +53,7 @@ ModelImporter:
     4300008: "Sph\xE8re"
     4300010: "C\xF4ne_2"
     4300012: "Sph\xE8re_2"
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cloth Business
-    second: {fileID: 2100000, guid: 1635a9e8d7cea4da5869ae2ae65c756f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mat.2
-    second: {fileID: 2100004, guid: 8b4307f29404e4c82bf89633cc72e2bd, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
