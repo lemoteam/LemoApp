@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b2d012616d43fcb7169dddf96698a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popups: []
 --- !u!114 &114285826153944444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 0}
   sceneLoader: {fileID: 0}
-  messageManager: {fileID: 0}
   prefabContainer: {fileID: 0}
 --- !u!114 &114496889193196296
 MonoBehaviour:
