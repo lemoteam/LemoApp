@@ -54,34 +54,6 @@ public class DistanceSongCam : MonoBehaviour
 				}
 			
 			}
-/*			for (int i = 0; i < players.Length; i++)
-			{
-				var distance = Vector3.Distance(camera.transform.position, players[i].transform.position);
-				if (distance < minimum)
-				{
-					minimum = distance;	
-					var currentIndex = i;
-					//Debug.Log("<color=pink> min distance : "+ minimum +"</color>");
-
-					if (previousIndex != currentIndex)
-					{
-						Debug.Log("<color=green> Coucou : "+ players[i].name +"</color>");
-						if (players[i].name == "catiche")
-						{
-							audioSource.Play();
-						}
-						else
-						{
-							audioSource.Stop();
-						}
-						previousIndex = currentIndex;
-					}
-				}
-			}*/
-
-
-			//Debug.Log("<color=white> distance emmi : "+ Vector3.Distance(camera.transform.position,emmi.transform.position) +"</color>");
-			//		Debug.Log("<color=yellow> distance catiche : "+ Vector3.Distance(camera.transform.position,catiche.transform.position) +"</color>");
 		}
 	}
 }
