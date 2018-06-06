@@ -14,6 +14,8 @@ public class DistanceSongCam : MonoBehaviour
 	private AudioSource audioSource;
 	private AudioClip audioClip;
 	private bool isPlayin;
+	private bool isLerpin;
+	static float t = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -36,23 +38,38 @@ public class DistanceSongCam : MonoBehaviour
 			if (emmiDist < caticheDist)
 			{
 				
-				if (audioSource.volume == 1f)
+				if (audioSource.volume == 1f && !isLerpin)
 				{
 					Debug.Log("<color=green> Coucou : emmi "+"</color>");
-					audioSource.volume = 0.06f;
+					audioSource.volume = 0.003f;
 					isPlayin = false;
-				}
+					/*isLerpin = true;
+					audioSource.volume = Mathf.Lerp(1f, 0.003f, t);
+					t += 0.5f * Time.deltaTime;
 
+					if (t > 1.0f)
+					{
+						isLerpin = false;
+						t = 0.0f;
+					}*/
+				}
 			}
 			else
 			{
-				if (audioSource.volume == 0.06f)
+				if (audioSource.volume == 0.003f && !isLerpin)
 				{
 					Debug.Log("<color=green> Coucou : catiche "+"</color>");
 					audioSource.volume = 1f;
-					isPlayin = true;
+					/*audioSource.volume = Mathf.Lerp(0.003f, 1f, t);
+					t += 0.5f * Time.deltaTime;
+
+					if (t > 1.0f)
+					{
+						isLerpin = false;
+						t = 0.0f;
+					}
+					isPlayin = true;*/
 				}
-			
 			}
 		}
 	}
