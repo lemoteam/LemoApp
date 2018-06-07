@@ -23,13 +23,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Choice3.unity
     guid: 46f7f4b4738464a39b30c3270f3380dc
-  - enabled: 0
-    path: Assets/Scenes/Scene1.unity
-    guid: a12d562f1263f49e88b8a253665acb6f
-  - enabled: 0
-    path: Assets/Scenes/Scene2.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/Scene5.unity
-    guid: aa4c4edb6e3c549c9b22e6ede2c05763
   m_configObjects: {}

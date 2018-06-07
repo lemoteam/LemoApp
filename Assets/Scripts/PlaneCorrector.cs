@@ -4,16 +4,26 @@ public class PlaneCorrector : MonoBehaviour {
 
 	public GameObject Plane;
 	private WebCamTexture wc;
-
+	private GameObject backgroundPlane; 
 	// Use this for initialization
 	void Start ()
 	{
-		wc = new WebCamTexture();
-		wc.Play ();
+
+		var camera = GetComponent<Camera>();
+		// var test = camera.Instance.GetBackgroundTexture();
+		// camera.Web
+		/*Texture2D t = (Texture2D)GetComponent().material.mainTexture;
+
+		Debug.Log(t.GetPixel(100, 100));*/
+		// backgroundPlane = null;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		/*if (!backgroundPlane)
+		{
+			
+		}*/
 		if (Plane.GetComponent<MeshRenderer>().enabled)
 		{
 			GetColorFromScreen(Screen.width - Screen.width / 2 , Screen.height / 2, Screen.width / 10, Screen.height / 10);

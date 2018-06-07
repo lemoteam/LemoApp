@@ -259,12 +259,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4133037981294602, guid: 4203e5ea5c81e411d845d1b06630fb6c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938774422399768, guid: 4203e5ea5c81e411d845d1b06630fb6c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660020685672012, guid: 4203e5ea5c81e411d845d1b06630fb6c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935517315176374, guid: 4203e5ea5c81e411d845d1b06630fb6c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4203e5ea5c81e411d845d1b06630fb6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &423314947 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4095694234804234, guid: 4203e5ea5c81e411d845d1b06630fb6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 423314946}
+--- !u!4 &423314948 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4487357534762286, guid: 4203e5ea5c81e411d845d1b06630fb6c,
     type: 2}
   m_PrefabInternal: {fileID: 423314946}
 --- !u!43 &1108958064
@@ -413,6 +434,64 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1001 &1282279944
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 423314948}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.0099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7621602
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.6473886
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -260.69
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8f75ab1eea4c745389e661d289d09ab6, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1499019317
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +730,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.05
-  far clip plane: 2000
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5
