@@ -7,18 +7,15 @@ public class LightingDistance : MonoBehaviour
 {
 	public GameObject emmi;
 	public GameObject catiche;
-	public GameObject charBase;
 	public GameObject lightGameobject;
 	private Light light;
 
-	private Vector3 originPosition;
 	private Vector3 destinationPosition;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		light = lightGameobject.GetComponent<Light>();
-		originPosition = charBase.transform.position;
 		destinationPosition = catiche.transform.position;
 	}
 	
