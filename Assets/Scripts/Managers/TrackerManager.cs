@@ -51,12 +51,12 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 		}
 				
 		switch (mTrackableBehaviour.TrackableName) {
-			case "qrcode":
+			case "connexion":
 				if (GlobalManager.instance.isLoggin) return;
 				OnScan();
 				break;
 			
-			case "A1" :
+			case "A2" :
 				ChangeScene("Choice1");
 				break;
 			
@@ -68,8 +68,24 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Choice3");
 				break;
 			
-			case "galet" :
+			case "S1" :
 				ChangeScene("Scene1");
+				break;
+			
+			case "S2" :
+				ChangeScene("Scene2");
+				break;
+			
+			case "S3a" :
+				ChangeScene("Scene3");
+				break;
+			
+			case "S4" :
+				ChangeScene("Scene4");
+				break;
+			
+			case "S5" :
+				ChangeScene("Scene5");
 				break;
 			
 			default:
@@ -82,7 +98,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	// Tracking Lost
 	private void OnTrackingLost() {
 		switch (mTrackableBehaviour.TrackableName) {
-			case "qrcode":
+			case "connexion":
 				OffScan();
 				break;
 			
