@@ -1,0 +1,1155 @@
+fileFormatVersion: 2
+guid: f32edd88c9d7a4bd5ae5b60f221dc2b8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SliderObjetGrossit00
+    21300002: SliderObjetGrossit01
+    21300004: SliderObjetGrossit02
+    21300006: SliderObjetGrossit03
+    21300008: SliderObjetGrossit04
+    21300010: SliderObjetGrossit05
+    21300012: SliderObjetGrossit06
+    21300014: SliderObjetGrossit07
+    21300016: SliderObjetGrossit08
+    21300018: SliderObjetGrossit09
+    21300020: SliderObjetGrossit10
+    21300022: SliderObjetGrossit11
+    21300024: SliderObjetGrossit12
+    21300026: SliderObjetGrossit13
+    21300028: SliderObjetGrossit14
+    21300030: SliderObjetGrossit15
+    21300032: SliderObjetGrossit16
+    21300034: SliderObjetGrossit17
+    21300036: SliderObjetGrossit18
+    21300038: SliderObjetGrossit19
+    21300040: SliderObjetGrossit20
+    21300042: SliderObjetGrossit21
+    21300044: SliderObjetGrossit22
+    21300046: SliderObjetGrossit23
+    21300048: SliderObjetGrossit24
+    21300050: SliderObjetGrossit25
+    21300052: SliderObjetGrossit26
+    21300054: SliderObjetGrossit27
+    21300056: SliderObjetGrossit28
+    21300058: SliderObjetGrossit29
+    21300060: SliderObjetGrossit30
+    21300062: SliderObjetGrossit31
+    21300064: SliderObjetGrossit32
+    21300066: SliderObjetGrossit33
+    21300068: SliderObjetGrossit34
+    21300070: SliderObjetGrossit35
+    21300072: SliderObjetGrossit36
+    21300074: SliderObjetGrossit37
+    21300076: SliderObjetGrossit38
+    21300078: SliderObjetGrossit39
+    21300080: SliderObjetGrossit40
+    21300082: SliderObjetGrossit41
+    21300084: SliderObjetGrossit42
+    21300086: SliderObjetGrossit43
+    21300088: SliderObjetGrossit44
+    21300090: SliderObjetGrossit45
+    21300092: SliderObjetGrossit46
+    21300094: SliderObjetGrossit47
+    21300096: SliderObjetGrossit48
+    21300098: SliderObjetGrossit49
+    21300100: SliderObjetGrossit50
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SliderObjetGrossit00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb86c093ccbd45389d653604975625e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef6f12e40e064efc8d71ca165445188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit02
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960435a548b2f45d988251e5a9a9b188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit03
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1cacdba96a844563808b46e18ed3052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit04
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825f46470c4664d26bcfcadd817fd734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit05
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d113f5980ae94f58b60d12b62858684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit06
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d7e9ab55e4c4121a9f7a00d3722bb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit07
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332978285bdd246c28ab825556ccaf2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit08
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43a0740adbe74b218e4e3d88fffa6c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit09
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57345d77d19e24934940f087d63bfc10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit10
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99729ba30538f45a2b220186bdf0366a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit11
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad15f5dea2e24db7b996b8eef489053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit12
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345f1d76440964f88a3f4e66fd5eb364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit13
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88bb51bb5c54e45ee90965e9dd058c7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit14
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1747
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df922ba17ef8462abc8b3479f56f8f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c19292eb3f0b408b8736248a00467af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0e3f5717c5342c487716c07eb91fa1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit17
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967c69e9c2f2c49e5aa795c18e86e8b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit18
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90eceb7b20f5f47a9bb10eacd1a1fecf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit19
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1abd46753a14be59869b086b4215cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f39f248030fc4b51acf457fb0370f52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit21
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20a19a9235634374a6021d866ddaa85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit22
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8411fc77cd54f3b97b64b8ffa157b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit23
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f7f7897fd5e4410b12eb57dc957f55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit24
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c257dbc95eb9a4916a3bfc1221886f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit25
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ff79ff694514e13b99929383d67734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit26
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafdc3356d55f4b36b06fff308768698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit27
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d63696204a14bafb6aebd3be64da13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit28
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e83ddfdf136447caa986d704569b07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit29
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92149667dc21f45b183e49c3b554dd7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit30
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0363e8d14a24f42119226dccc6ee60cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit31
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1445
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc72036a9134420e96d8dc744644c29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit32
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a649feb489d0c4c668bc34e9eec2ad24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit33
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6aaa3c4d53f44bb8b656f7c3910ca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit34
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff87d4cda0814437a26043e18365b9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit35
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3924c75ea2ce74b2a804850fbd6495cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit36
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab8cd5f363864ad4b8af7c8d6bd3dc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit37
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b839dd4d58046c38fc76df27a2c5ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit38
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf4ad5d166724013b4e206ac07d9915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit39
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54e286e6e43741c09318f5edd08e03b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit40
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd90af57847dc47c986d883f55120446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit41
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1143
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdeae9295f4948588c6110d2da3c0d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit42
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2403aa0bab370495ba4f7dd720457ffa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit43
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873426922e20f40db8f6e129f0e8e502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit44
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabf9ba458d814fe29b5db067cb50a6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit45
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 841
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e85519a674d48a5a9596489662b8dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit46
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1dae139a50444289d9f49ea781e201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit47
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 539
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c64d32e3e78b4edbaf9c8286492b1b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit48
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722bb2f9b435044ce9792c0d20851660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit49
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17efb1537bbfc4fc8944a6617cbc1afe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SliderObjetGrossit50
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 237
+        width: 200
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 50, y: 75, z: 50, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00a54b10c7054a13a688eba90ddc39b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ba199473b663e4a6bb649e776c2c407f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

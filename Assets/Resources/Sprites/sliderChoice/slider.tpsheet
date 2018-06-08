@@ -1,0 +1,65 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:7fa4302fc888b2703ddec9d68653d332:1cf1519c11835ac46fe6eec272e592b3:74ff40f6decbdda5eb3e8f3ce72d36e7$
+#
+:format=40300
+:texture=slider.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=enabled
+
+SliderObjetGrossit00;1;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit01;1;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit02;1;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit03;1;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit04;1;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit05;1;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit06;203;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit07;405;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit08;607;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit09;809;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit10;1011;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit11;1213;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit12;1415;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit13;1617;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit14;1819;1747;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit15;203;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit16;203;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit17;203;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit18;203;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit19;203;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit20;405;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit21;405;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit22;405;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit23;405;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit24;405;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit25;607;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit26;809;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit27;1011;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit28;1213;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit29;1415;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit30;1617;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit31;1819;1445;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit32;607;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit33;607;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit34;607;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit35;607;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit36;809;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit37;1011;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit38;1213;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit39;1415;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit40;1617;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit41;1819;1143;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit42;809;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit43;809;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit44;809;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit45;1011;841;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit46;1011;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit47;1011;539;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit48;1011;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit49;1011;237;200;300; 0.5;0.5; 50;50;75;75
+SliderObjetGrossit50;1011;237;200;300; 0.5;0.5; 50;50;75;75
