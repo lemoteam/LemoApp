@@ -1,0 +1,1261 @@
+fileFormatVersion: 2
+guid: 920eb8b7bb712434689bd964a0347a69
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sprite_logo
+    21300002: AnimationLogo_00010
+    21300004: AnimationLogo_00011
+    21300006: AnimationLogo_00012
+    21300008: AnimationLogo_00013
+    21300010: AnimationLogo_00014
+    21300012: AnimationLogo_00015
+    21300014: AnimationLogo_00016
+    21300016: AnimationLogo_00017
+    21300018: AnimationLogo_00018
+    21300020: AnimationLogo_00019
+    21300022: AnimationLogo_00020
+    21300024: AnimationLogo_00021
+    21300026: AnimationLogo_00022
+    21300028: AnimationLogo_00023
+    21300030: AnimationLogo_00024
+    21300032: AnimationLogo_00025
+    21300034: AnimationLogo_00026
+    21300036: AnimationLogo_00027
+    21300038: AnimationLogo_00028
+    21300040: AnimationLogo_00029
+    21300042: AnimationLogo_00030
+    21300044: AnimationLogo_00031
+    21300046: AnimationLogo_00032
+    21300048: AnimationLogo_00033
+    21300050: AnimationLogo_00034
+    21300052: AnimationLogo_00035
+    21300054: AnimationLogo_00036
+    21300056: AnimationLogo_00037
+    21300058: AnimationLogo_00038
+    21300060: AnimationLogo_00039
+    21300062: AnimationLogo_00040
+    21300064: AnimationLogo_00041
+    21300066: AnimationLogo_00042
+    21300068: AnimationLogo_00043
+    21300070: AnimationLogo_00044
+    21300072: AnimationLogo_00045
+    21300074: AnimationLogo_00046
+    21300076: AnimationLogo_00047
+    21300078: AnimationLogo_00048
+    21300080: AnimationLogo_00049
+    21300082: AnimationLogo_00050
+    21300084: AnimationLogo_00051
+    21300086: AnimationLogo_00052
+    21300088: AnimationLogo_00053
+    21300090: AnimationLogo_00054
+    21300092: AnimationLogo_00055
+    21300094: AnimationLogo_00056
+    21300096: AnimationLogo_00057
+    21300098: AnimationLogo_00058
+    21300100: AnimationLogo_00059
+    21300102: AnimationLogo_00060
+    21300104: AnimationLogo_00061
+    21300106: AnimationLogo_00062
+    21300108: AnimationLogo_00063
+    21300110: AnimationLogo_00064
+    21300112: AnimationLogo_00065
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnimationLogo_00010
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e9dc01729ab4db1a95b6be3ca93883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00011
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6e1fe2d607840b0b383c7bf1b700a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00012
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57eebd20930a94c869a1fe59ff299588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00013
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecafdfb9e1a104792b38fda051b5cb38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00014
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b518b6d5c023485a90e1a37ec09bcfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00015
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1847
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33a466c002694e3d8510bab3c7f1933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00016
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 018fa9f90892c44e1b70fb442c8eb5ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00017
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d694c70764ca445b98cade81334190f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00018
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb9d078f5fc64b459184388a0cc2473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00019
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd11aa3108be4652959a8c1253965b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00020
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551c43c4f81904ddca5e8bd8004880d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00021
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500d06d0af30a4a69a51a9f47afe9538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00022
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 433
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe982ca4eef8f464b898c759d85d02b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00023
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 231
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b22e0bd961c4eae804fe20c7e1f9d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00024
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 29
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a493dde4be34697830965af986bd08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00025
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a746124475ac14c069c04a6e2e780d97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00026
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec09331d0e3b48bc924a83da3f78356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00027
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69202621247154cc18fc86c8c4c57a69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00028
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2bcd0bb0f25471cb726ea4f2d0e56c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00029
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1645
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c82c907969ce4f018518ff687ddce31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00030
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d81463f558b4dd3a6b4d09ac5547c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00031
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe50efc22b59a41589861231e909d820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00032
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03c3bee629a1404891ae117b97f8eca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00033
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5a01135ec1c418688ed403a13a2c3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00034
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1443
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a40e71caa55743b9bc5d8ae0309f699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00035
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7272b834c3db44ad28511a8a3fb4a447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00036
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ffab9ecb0b04317aca3f761bd19c5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00037
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe13537505874f4196c46a7acd9c149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00038
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf432bd5033749028feacbd395a5ece
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00039
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 433
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f24d8a89989942649e403ee8e397ada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00040
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 231
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab8b082b65dd472fb3e1155bc17c7ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00041
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 29
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448d7b1ba88484e489206c93432cc155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00042
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7570e33ef8548328f1099cf865bbc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00043
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9515f5425acd640239d8722d9a4a36d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00044
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996eed0f99502485b90f26181c41056e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00045
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1241
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ba98f4a37b043f0bc906a6e9206fb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00046
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42790371c5e1c4a128b735ee30e2ca60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00047
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e458c2789177d4737b0d37163525cb81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00048
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3b96fa68de049c69d6ff2b37229428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00049
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 433
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3910b738d2b8e49d39ecfb232b080192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00050
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 231
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d04a420acfd5454c82d258803be8cb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00051
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 29
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829b8e5f40f764798bbfe2556366bb96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00052
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ecc9809203644fe8c77569e4765fcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00053
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c543e97ca99aa4a3dac1dfdab9bf9953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00054
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1039
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccf4967d4ee144b0a28bbee03349a0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00055
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bd6608c9b5646758a62b72c1d26209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00056
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7d99fdc72844c35b2ca9984bb19a16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00057
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 837
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3305d14fe54f0459ea56878c20ce7b0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00058
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b5d4948be614addb69b21d366d079f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00059
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 433
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cf66291b7ad4c7ea0010b24464f166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00060
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 231
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39f3823a5a0140868d8a3bdd3f25f22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00061
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 29
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6393f57529f5c43a68045ec03e7ccfad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00062
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9674c9c13b27408fafd9ec8b49be4ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00063
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 635
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5023daec3f3bc4473988d9115ee36470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00064
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 433
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cb6a285b4e74b329446e6f5fec33fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationLogo_00065
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 231
+        width: 300
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 50, z: 75, w: 50}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f466af33319c43e992ee64ba409d096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ae1e77d437ebb47c7be8e86962eabc9a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

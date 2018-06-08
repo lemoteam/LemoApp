@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SceneLoader : MonoBehaviour {
 
 	public GameObject sceneContainer;
+	private GameObject cFade;
+	private Animator ani;
 	public string previousScene;
 	public GameObject prefab;
 	public Text progressText;
@@ -14,12 +16,35 @@ public class SceneLoader : MonoBehaviour {
 	{
 		previousScene = GlobalManager.instance.currentScene;
 		GlobalManager.instance.currentScene = sceneName;
+		cFade = GameObject.FindWithTag("cFade");
+		ani = cFade.GetComponent<Animator>();
 		
 		StartCoroutine (LoadAsynchronously (sceneName));
 	}
 
 
-	private IEnumerator LoadAsynchronously(string sceneName){
+	private IEnumerator LoadAsynchronously(string sceneName)
+	{
+		
+		ani.Play("sceneShow");
+		yield return StartCoroutine (WaitBeforeLoadScene (sceneName));
+		
+	}
+	
+	
+	private IEnumerator WaitBeforeLoadScene(string sceneName)
+	{
+		
+		yield return new WaitForSeconds(1.5f);
+		
+		StartCoroutine (NowLoadScene (sceneName));
+	}
+	
+
+	
+	private IEnumerator NowLoadScene(string sceneName)
+	{
+		
 		var operation = SceneManager.LoadSceneAsync (sceneName);
 
 		progressText.text = "";
@@ -31,10 +56,12 @@ public class SceneLoader : MonoBehaviour {
 			yield return null;
 		}
 		
+		Debug.Log("<color=purple>Jui charge</color>");
+
+		
 		// Attach camera
 		var globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");
 		globalManagerCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
-		
 		
 		// Show Loaded Message
 		var messageManager = GameObject.FindGameObjectWithTag("messageManager");
@@ -51,6 +78,18 @@ public class SceneLoader : MonoBehaviour {
 			// Show message
 			textManager.GetComponent<TextManager>().OnLoadScene();
 		}
-	} 
+		
+		
+		StartCoroutine (ApplyScene());
+	}
+	
+	
+	private IEnumerator ApplyScene()
+	{
+		ani.Play("sceneHide");
+		yield return null;
+
+	}
+
 }
 

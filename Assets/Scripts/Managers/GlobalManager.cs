@@ -92,7 +92,7 @@ public class GlobalManager : MonoBehaviour {
 
 	private IEnumerator MinWaitForLogoAnimation()
 	{
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(3f);
         sceneLoader.LoadScene("Main");
 	}
 }
