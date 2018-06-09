@@ -113,8 +113,8 @@ public class MessageManager : MonoBehaviour
     private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Image cloneIllu, Message item, float time)
     {
         
-        cloneText.text = item.content;
-        cloneTitle.text = item.title;
+        cloneText.text = item.content ;
+        cloneTitle.text = !string.IsNullOrEmpty(item.title) ? item.title : null;
         cloneIllu.sprite = !string.IsNullOrEmpty(item.imageSlug) ? Resources.Load<Sprite>("Sprites/" + item.imageSlug) : null;
 
         if (cloneIllu.sprite == null)
@@ -165,16 +165,16 @@ public class MessageManager : MonoBehaviour
     {     
         
         animator.Play("hide");
-        cloneWrapper.SetActive(false);
 
         popupList.Remove(cloneWrapper);
         
-        instance.StartCoroutine(Show3D());
+        instance.StartCoroutine(Show3D(cloneWrapper));
     }
     
-    private static IEnumerator Show3D()
+    private static IEnumerator Show3D(GameObject cloneWrapper)
     {
         yield return new WaitForSeconds(1f);
+        cloneWrapper.SetActive(false);
         foreach (var item in imageTargetList) {
             if (item != null) {
                 item.SetActive(true);
