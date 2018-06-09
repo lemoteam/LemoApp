@@ -23,10 +23,7 @@ public class TextManager : MonoBehaviour
 
     public void OnLoadScene()
     {
-        if (mood != null && intensity != null)
-        {
-            GetText();
-        }
+        GetText();
     }
     
     private void GetText() { 
