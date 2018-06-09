@@ -42,7 +42,12 @@ ModelImporter:
     4300004: pSphere11
     4300006: pSphere10
     4300008: casquette
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir
+    second: {fileID: 2100000, guid: 3d5cc33379c7e4829838933dc877e66d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
