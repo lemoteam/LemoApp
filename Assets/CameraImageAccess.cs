@@ -119,8 +119,8 @@ public class CameraImageAccess : MonoBehaviour
                 Texture2D texture = new Texture2D (640, 360);
                 image.CopyToTexture (texture);
                 texture.Apply();
-                Color [] pix = texture.GetPixels(640 - 640/ 2 , 360 / 2, 640 / 10, 360 / 10);
-                //Plane.GetComponent<Renderer> ().material.mainTexture = texture;
+                Color [] pix = texture.GetPixels(200 , 640 / 2, 640 / 5, 360 / 15);
+                Plane.GetComponent<Renderer> ().material.mainTexture = texture;
                 float r = 0;
                 float g = 0;
                 float b = 0;
@@ -137,11 +137,11 @@ public class CameraImageAccess : MonoBehaviour
                 b /= pix.Length;
                 a /= pix.Length;   
                 
-                //Plane.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor",  new Color (r, g, b, a));
-                Plane.GetComponent<Renderer> ().material.color = new Color (r, g, b, a);
+                Plane.GetComponent<Renderer>().material.SetColor("_EmissionColor",  new Color (r, g, b, a));
+                //Plane.GetComponent<Renderer>().material.color = new Color (r, g, b, a); 
             }
         }
-        isTracked = false;
+        isTracked = false; 
     }
 
     /// <summary>
