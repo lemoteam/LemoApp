@@ -13,6 +13,8 @@ public class CameraImageAccess : MonoBehaviour
 {
     private bool mAccessCameraImage = true;
     public RawImage rawImage;
+    public GameObject Plane;
+    // private Texture2D tex;
 
         // The desired camera image pixel format
         // private Image.PIXEL_FORMAT mPixelFormat = Image.PIXEL_FORMAT.RGB565;// or RGBA8888, RGB888, RGB565, YUV
@@ -30,7 +32,7 @@ public class CameraImageAccess : MonoBehaviour
 
     void Start()
     {
-        
+
         // Register Vuforia life-cycle callbacks:
         Vuforia.VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
         Vuforia.VuforiaARController.Instance.RegisterOnPauseCallback(OnPause);
@@ -92,12 +94,59 @@ public class CameraImageAccess : MonoBehaviour
 
                     if (pixels != null && pixels.Length > 0)
                     {
+                        Texture2D texture = new Texture2D (10, 10);
+                        image.CopyToTexture (texture);
+                        texture.Apply();
+                        Color [] pix = texture.GetPixels(0, 0, 10, 10);
+                        //Plane.GetComponent<Renderer> ().material.mainTexture = texture;
+                        float r = 0;
+                        float g = 0;
+                        float b = 0;
+                        float a = 0;
+                        foreach (Color col in pix){
+                            r += col.r;
+                            g += col.g;
+                            b += col.b;
+                            a += col.a;
+                        } 
+
+                        r /= pix.Length;
+                        g /= pix.Length;
+                        b /= pix.Length;
+                        a /= pix.Length;                  
+                        
+                        Plane.GetComponent<Renderer> ().material.color = new Color (r, g, b, a);
+                        
                         //Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
-                        Texture2D tex = new Texture2D(100, 100, TextureFormat.RGB24, false); // RGB24
+                      /*
+                       Texture2D tex = new Texture2D(100, 100, TextureFormat.RGB24, false); // RGB24
                         tex.LoadRawTextureData(pixels);
                         tex.Apply();
                         rawImage.texture = tex;
                         rawImage.material.mainTexture = tex;
+                        float r = 0;
+                        float g = 0;
+                        float b = 0;
+                        float a = 0;
+                        foreach (Color col in pixels){
+                            r += col.r;
+                            g += col.g;
+                            b += col.b;
+                            a += col.a;
+                        } 
+
+                        r /= pix.Length;
+                        g /= pix.Length;
+                        b /= pix.Length;
+                        a /= pix.Length;                        */
+
+                      //  Plane.GetComponent<Renderer> ().material.mainTexture = tex;
+             
+                        
+                        
+                        //Plane.GetComponent<MeshRenderer>().material.color = new Color(pixels[0],pixels[1],pixels[2],pixels[3]);
+                        //Plane.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor",  new Color(pixels[0],pixels[1],pixels[2],pixels[3]));
+                       // Plane.GetComponent<Renderer>().material.color = new Color(pixels[0],pixels[1],pixels[2],pixels[3]);
                     }
                 }
             }

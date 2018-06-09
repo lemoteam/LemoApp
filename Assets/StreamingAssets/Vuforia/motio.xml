@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="qrcode" size="320.000000 320.000000" />
+    <ImageTarget name="S5" size="739.000000 468.000000" />
+    <ImageTarget name="S3b" size="739.000000 238.000000" />
+    <ImageTarget name="S3a" size="739.000000 238.000000" />
+    <ImageTarget name="S2" size="738.000000 467.000000" />
+    <ImageTarget name="S1" size="745.000000 471.000000" />
+    <ImageTarget name="C1" size="1048.000000 240.000000" />
+    <ImageTarget name="B2" size="249.000000 741.000000" />
+    <ImageTarget name="B1" size="249.000000 741.000000" />
+    <ImageTarget name="A3" size="510.000000 1524.000000" />
+    <ImageTarget name="A2" size="249.000000 741.000000" />
+    <ImageTarget name="A1" size="509.000000 1526.000000" />
+    <ImageTarget name="connexion" size="239.000000 435.000000" />
+  </Tracking>
+</QCARConfig>
