@@ -58,7 +58,7 @@ public class StopSound : MonoBehaviour,
 	{
 		audioSource.Play();
 		
-		audioSource.volume = 0.003f;
+		audioSource.volume = 0.15f;
 		Debug.Log("Yeeaah");
 	}
 			

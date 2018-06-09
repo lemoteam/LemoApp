@@ -41,7 +41,7 @@ public class DistanceSongCam : MonoBehaviour
 				if (audioSource.volume == 1f && !isLerpin)
 				{
 					Debug.Log("<color=green> Coucou : emmi "+"</color>");
-					audioSource.volume = 0.003f;
+					audioSource.volume = 0.15f;
 					isPlayin = false;
 					/*isLerpin = true;
 					audioSource.volume = Mathf.Lerp(1f, 0.003f, t);
@@ -56,7 +56,7 @@ public class DistanceSongCam : MonoBehaviour
 			}
 			else
 			{
-				if (audioSource.volume == 0.003f && !isLerpin)
+				if (audioSource.volume == 0.15f && !isLerpin)
 				{
 					Debug.Log("<color=green> Coucou : catiche "+"</color>");
 					audioSource.volume = 1f;
