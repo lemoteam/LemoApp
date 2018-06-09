@@ -21,9 +21,9 @@ public class TreeForest : MonoBehaviour {
 		elementPosition = transform.position;
 
 		if (direction) {
-			destinationPosition = new Vector3(elementPosition.x - .6f, elementPosition.y, elementPosition.z);
+			destinationPosition = new Vector3(elementPosition.x - .2f, elementPosition.y, elementPosition.z);
 		} else {
-			destinationPosition = new Vector3(elementPosition.x + .6f, elementPosition.y, elementPosition.z);
+			destinationPosition = new Vector3(elementPosition.x + .2f, elementPosition.y, elementPosition.z);
 		} 
 	}
 

@@ -18,7 +18,7 @@ public class ElementForest : MonoBehaviour {
 	{
 		isActive = false;
 		elementPosition = transform.position;
-		destinationPosition = new Vector3(elementPosition.x, 1, elementPosition.z);
+		destinationPosition = new Vector3(elementPosition.x, elementPosition.y + .1f, elementPosition.z);
 	}
 
 

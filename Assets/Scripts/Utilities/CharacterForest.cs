@@ -52,6 +52,7 @@ public class CharacterForest : MonoBehaviour
 		Move(destinationPosition);
 
 	}
+	
 
 	private void FixedUpdate()
 	{
@@ -65,7 +66,7 @@ public class CharacterForest : MonoBehaviour
 		{
 			var elementForest = node.GetComponent<ElementForest>();
 
-			if (Vector3.Distance(transform.position, node.position) < 1f)
+			if (Vector3.Distance(transform.position, node.position) < .2f)
 			{
 				if (!elementForest.isActive)
 				{
@@ -91,7 +92,7 @@ public class CharacterForest : MonoBehaviour
 			Debug.Log(Vector3.Distance(transform.position, node.position));
 
 			
-			if (Vector3.Distance(transform.position, node.position) < 1.6f)
+			if (Vector3.Distance(transform.position, node.position) < .3f)
 			{
 				
 				if (!elementForest.isActive)
@@ -116,7 +117,7 @@ public class CharacterForest : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (!agent.pathPending && isAnimated)
 		{
 			if (agent.remainingDistance <= agent.stoppingDistance)

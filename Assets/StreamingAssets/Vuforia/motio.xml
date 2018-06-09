@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="S4b" size="752.000000 474.947357" />
+    <ImageTarget name="S4a" size="752.000000 474.000000" />
     <ImageTarget name="qrcode" size="320.000000 320.000000" />
     <ImageTarget name="S5" size="739.000000 468.000000" />
     <ImageTarget name="S3b" size="739.000000 238.000000" />
