@@ -3,6 +3,8 @@
  * 2017
  * Vuforia 6.2, Unity 5.6
 */
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +16,9 @@ public class CameraImageAccess : MonoBehaviour
     private bool mAccessCameraImage = true;
     public RawImage rawImage;
     public GameObject Plane;
+
+    private bool isTracked = false;
+    
     // private Texture2D tex;
 
         // The desired camera image pixel format
@@ -78,80 +83,67 @@ public class CameraImageAccess : MonoBehaviour
     /// </summary>
     private void OnTrackablesUpdated()
     {
+        
         if (mFormatRegistered)
         {
             if (mAccessCameraImage)
             {
-                Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
-                if (image != null && image.IsValid())
+                
+                if (!isTracked)
                 {
-                    string imageInfo = mPixelFormat + " image: \n";
-                    imageInfo += " size: " + image.Width + " x " + image.Height + "\n";
-                    imageInfo += " bufferSize: " + image.BufferWidth + " x " + image.BufferHeight + "\n";
-                    imageInfo += " stride: " + image.Stride;
-                    Debug.Log(imageInfo);
-                    byte[] pixels = image.Pixels;
-
-                    if (pixels != null && pixels.Length > 0)
-                    {
-                        Texture2D texture = new Texture2D (10, 10);
-                        image.CopyToTexture (texture);
-                        texture.Apply();
-                        Color [] pix = texture.GetPixels(0, 0, 10, 10);
-                        //Plane.GetComponent<Renderer> ().material.mainTexture = texture;
-                        float r = 0;
-                        float g = 0;
-                        float b = 0;
-                        float a = 0;
-                        foreach (Color col in pix){
-                            r += col.r;
-                            g += col.g;
-                            b += col.b;
-                            a += col.a;
-                        } 
-
-                        r /= pix.Length;
-                        g /= pix.Length;
-                        b /= pix.Length;
-                        a /= pix.Length;                  
-                        
-                        Plane.GetComponent<Renderer> ().material.color = new Color (r, g, b, a);
-                        
-                        //Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
-                      /*
-                       Texture2D tex = new Texture2D(100, 100, TextureFormat.RGB24, false); // RGB24
-                        tex.LoadRawTextureData(pixels);
-                        tex.Apply();
-                        rawImage.texture = tex;
-                        rawImage.material.mainTexture = tex;
-                        float r = 0;
-                        float g = 0;
-                        float b = 0;
-                        float a = 0;
-                        foreach (Color col in pixels){
-                            r += col.r;
-                            g += col.g;
-                            b += col.b;
-                            a += col.a;
-                        } 
-
-                        r /= pix.Length;
-                        g /= pix.Length;
-                        b /= pix.Length;
-                        a /= pix.Length;                        */
-
-                      //  Plane.GetComponent<Renderer> ().material.mainTexture = tex;
-             
-                        
-                        
-                        //Plane.GetComponent<MeshRenderer>().material.color = new Color(pixels[0],pixels[1],pixels[2],pixels[3]);
-                        //Plane.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor",  new Color(pixels[0],pixels[1],pixels[2],pixels[3]));
-                       // Plane.GetComponent<Renderer>().material.color = new Color(pixels[0],pixels[1],pixels[2],pixels[3]);
-                    }
+                    StartCoroutine(CorrectPlane());
                 }
+               
+                isTracked = true;
             }
         }
+
     }
+
+    private IEnumerator CorrectPlane()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Je fais ce que je veux");
+        Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
+        if (image != null && image.IsValid())
+        {
+            string imageInfo = mPixelFormat + " image: \n";
+            imageInfo += " size: " + image.Width + " x " + image.Height + "\n";
+            imageInfo += " bufferSize: " + image.BufferWidth + " x " + image.BufferHeight + "\n";
+            imageInfo += " stride: " + image.Stride;
+            Debug.Log(imageInfo);
+            byte[] pixels = image.Pixels;
+
+            if (pixels != null && pixels.Length > 0)
+            {
+                Texture2D texture = new Texture2D (640, 360);
+                image.CopyToTexture (texture);
+                texture.Apply();
+                Color [] pix = texture.GetPixels(640 - 640/ 2 , 360 / 2, 640 / 10, 360 / 10);
+                //Plane.GetComponent<Renderer> ().material.mainTexture = texture;
+                float r = 0;
+                float g = 0;
+                float b = 0;
+                float a = 0;
+                foreach (Color col in pix){
+                    r += col.r;
+                    g += col.g;
+                    b += col.b;
+                    a += col.a;
+                } 
+
+                r /= pix.Length;
+                g /= pix.Length;
+                b /= pix.Length;
+                a /= pix.Length;   
+                
+                //Plane.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor",  new Color (r, g, b, a));
+                Plane.GetComponent<Renderer> ().material.color = new Color (r, g, b, a);
+            }
+        }
+        isTracked = false;
+    }
+
     /// <summary>
     /// Unregister the camera pixel format (e.g. call this when app is paused)
     /// </summary>
