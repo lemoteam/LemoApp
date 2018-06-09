@@ -21,9 +21,9 @@ public class TreeForest : MonoBehaviour {
 		elementPosition = transform.position;
 
 		if (direction) {
-			destinationPosition = new Vector3(elementPosition.x - .2f, elementPosition.y, elementPosition.z);
+			destinationPosition = new Vector3(elementPosition.x, elementPosition.y, elementPosition.z + .2f);
 		} else {
-			destinationPosition = new Vector3(elementPosition.x + .2f, elementPosition.y, elementPosition.z);
+			destinationPosition = new Vector3(elementPosition.x, elementPosition.y, elementPosition.z - .2f);
 		} 
 	}
 
@@ -39,7 +39,7 @@ public class TreeForest : MonoBehaviour {
 				isActive = false;
 			};
 			gemReplaceFraction += Time.deltaTime * gemReplaceSpeed;
-			transform.position = new Vector3(Mathf.SmoothStep(currentPosition.x, destinationPosition.x, CubicEaseOut(gemReplaceFraction)), transform.position.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.SmoothStep(currentPosition.z, destinationPosition.z, CubicEaseOut(gemReplaceFraction)));
 			
 		} 
 	}
