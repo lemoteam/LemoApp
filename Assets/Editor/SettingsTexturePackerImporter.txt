@@ -2,8 +2,14 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Resources/Sprites/logo/sprite_logo.tpsheet
+- Assets/Resources/Sprites/test/sprite_logo.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Resources/Sprites/logo/sprite_logo.png
+- Assets/Resources/Sprites/test/sprite_logo.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 enableDebugOutput: 0
