@@ -38,7 +38,7 @@ public class DistanceCameraVolume : MonoBehaviour {
 			// Debug.Log ("dist :" + distance);
 			//float volumeMap = Map(1.0f,0.02f,900.0f,1200.0f,Len);
 			//float volumeMap = Map(1.0f,0.02f,1200f,2200f,Len);
-			float volumeMap = Map(1.0f,0.02f,3f,4f,distance);
+			float volumeMap = Map(1.0f,0.02f,3f,3.2f,distance);
 			soundTarget.volume = volumeMap;
 		//}
 	}
