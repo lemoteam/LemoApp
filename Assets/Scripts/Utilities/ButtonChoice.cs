@@ -13,6 +13,14 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 	void Start () {
 		Debug.Log("Btn ready");
 		virtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+
+		if (gemManager) {
+			foreach (var gem in GlobalManager.instance.gemManagerList)
+			{
+				// Stop Animation
+				gem.PlayOnlyAnimation();
+			}
+		}
 	}
 
 	public void OnButtonPressed(VirtualButtonBehaviour vb) {
@@ -23,13 +31,14 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 			foreach (var gem in GlobalManager.instance.gemManagerList)
 			{
 				// Stop Animation
-				gem.StopAnimation();
+				gem.StopBase();
 			}
 			
 			// Play Animation
-			gemManager.PlayAnimation();
+			gemManager.PlayBase();
 		}
-		
+	
+
 		Debug.Log("Btn pressed"+ parameter);
 	}
 

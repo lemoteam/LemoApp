@@ -34,18 +34,36 @@ public class GemManager : MonoBehaviour {
 	}
 	
 	
+	
 	// Methods
-	public void PlayAnimation()
-	{	
+
+	public void PlayOnlyAnimation()
+	{
 		if (animator)
 		{
 			animator.Play(animatorSlug);
 		}
 
+	}
+	
+	
+	public void PlayBase()
+	{	
 		if (baseParticle && particles && !baseParticle.isPlaying)
 		{
 			baseParticle.Play();
 			particles.Play();
+		}
+	}
+
+	public void StopBase()
+	{
+		if (baseParticle && particles && baseParticle.isPlaying)
+		{
+			baseParticle.Clear();
+			baseParticle.Stop();
+			particles.Clear();
+			particles.Stop();
 		}
 	}
 
@@ -54,14 +72,6 @@ public class GemManager : MonoBehaviour {
 		if (animator)
 		{
 			animator.Play("none");
-		}
-		
-		if (baseParticle && particles && baseParticle.isPlaying)
-		{
-			baseParticle.Clear();
-			baseParticle.Stop();
-			particles.Clear();
-			particles.Stop();
 		}
 	}
 }
