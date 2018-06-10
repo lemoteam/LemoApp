@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour {
 	private IEnumerator WaitBeforeLoadScene(string sceneName)
 	{
 		
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(.5f);
 		
 		StartCoroutine (NowLoadScene (sceneName));
 	}
