@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class sliderController : MonoBehaviour {
+public class SliderController : MonoBehaviour {
 	private GameObject indicator;
 	private GameObject indicatorS;
 	private GameObject[] indexes;

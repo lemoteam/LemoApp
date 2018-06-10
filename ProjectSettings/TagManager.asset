@@ -39,6 +39,7 @@ TagManager:
   - i-sliderc
   - i-wrapper
   - scanFade
+  - textMarker
   layers:
   - Default
   - TransparentFX

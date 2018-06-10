@@ -158,6 +158,8 @@ public class MessageManager : MonoBehaviour
         // Image targets to hide
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
+        var sceneMarker = GameObject.FindGameObjectsWithTag("sceneMarker");
+        var textMarker = GameObject.FindGameObjectsWithTag("textMarker");
 		
         foreach (var item in targetChoice) {
             item.SetActive(false);
@@ -165,6 +167,16 @@ public class MessageManager : MonoBehaviour
         }
 		
         foreach (var item in targetImage) {
+            item.SetActive(false);
+            imageTargetList.Add(item);
+        }
+        
+        foreach (var item in sceneMarker) {
+            item.SetActive(false);
+            imageTargetList.Add(item);
+        }
+		
+        foreach (var item in textMarker) {
             item.SetActive(false);
             imageTargetList.Add(item);
         }
