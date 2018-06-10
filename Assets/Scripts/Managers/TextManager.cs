@@ -23,7 +23,6 @@ public class TextManager : MonoBehaviour
 
     public void OnLoadScene()
     {
-        Debug.Log("ijfiodsjoifjsdio jiodsjfio jsdiofj iodsjfoi jsdoifjsdoijfoisj");
         GetText();
     }
     
