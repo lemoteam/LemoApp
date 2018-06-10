@@ -49,7 +49,7 @@ public class MessageManager : MonoBehaviour
         if (filteredPopup.Count > 0)
         {
             var message = filteredPopup[0];
-            StartCoroutine(WaitToShow(message.messageSlug, message.time, message.illuID));
+            ShowMessage(message.messageSlug, message.time, message.illuID, message.onScan);
         }
     }
     
@@ -81,27 +81,21 @@ public class MessageManager : MonoBehaviour
         // If a message exist show it
         if (filteredPopup.Count > 0) {
             var message = filteredPopup[0];
-            ShowMessage(message.messageSlug, message.time, message.illuID);
+            ShowMessage(message.messageSlug, message.time, message.illuID, message.onScan);
         }
     }
-
-    private static IEnumerator WaitToShow(string key, float time, int illuID)
-    {
-        yield return new WaitForSeconds(2f);
-        ShowMessage(key, time, illuID);
-    }
     
-    public static void ShowMessage(string key, float time, int illuID) { 
+    public static void ShowMessage(string key, float time, int illuID, bool onScan) { 
         var list = GlobalManager.instance.messageList; 
         
         foreach (var item in list) {
             if (item.id == key) {
-               ActivePopup(item, time, illuID);
+               ActivePopup(item, time, illuID, onScan);
             }
         }
     }
 
-    private static void ActivePopup(Message item, float time, int illuID) 
+    private static void ActivePopup(Message item, float time, int illuID,  bool onScan) 
     {
         var obj = Resources.Load("Prefabs/ui/modalDialoguePanelWrapper") as GameObject;
         GameObject cloneWrapper = (GameObject)Instantiate(obj);
@@ -118,23 +112,23 @@ public class MessageManager : MonoBehaviour
             illuSprite = illuWrapper.transform.GetChild(illuID);
         }
         
-        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, item, time));
+        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, item, time, onScan));
     }
 
 
-    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Message item, float time)
+    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Message item, float time,  bool onScan)
     {
         
         cloneText.text = item.content ;
         cloneTitle.text = !string.IsNullOrEmpty(item.title) ? item.title : null;
         
-        Show(cloneWrapper);
+        Show(cloneWrapper, onScan);
         yield return new WaitForSeconds(time);
         Hide(cloneWrapper);
     }
 
     
-    private static void Show(GameObject cloneWrapper)
+    private static void Show(GameObject cloneWrapper,  bool onScan)
     {    
         var cloneWrapperRect = cloneWrapper.GetComponent<RectTransform>();
         animator = cloneWrapper.GetComponent<Animator>();
@@ -174,9 +168,26 @@ public class MessageManager : MonoBehaviour
             item.SetActive(false);
             imageTargetList.Add(item);
         }
-
+        
+        if(onScan) {
+            instance.StartCoroutine(WaitToShow());
+        }
+        else
+        {
+            instance.StartCoroutine(WaitToShow());
+            //animator.Play("show");
+        }
+    }
+    
+    
+    
+    private static IEnumerator WaitToShow()
+    {
+        yield return new WaitForSeconds(2f);
+        animator.Play("show");
     }
 
+    
     
     private static void Hide(GameObject cloneWrapper)
     {     
@@ -187,6 +198,8 @@ public class MessageManager : MonoBehaviour
         
         instance.StartCoroutine(Show3D(cloneWrapper));
     }
+    
+    
     
     private static IEnumerator Show3D(GameObject cloneWrapper)
     {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
 using Image = UnityEngine.UI.Image;
@@ -9,6 +10,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private TrackableBehaviour mTrackableBehaviour;
 	private GameObject scan;
 	private string currentScene;
+	private bool isOff;
 
 	void Start() {
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -99,7 +101,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	private void OnTrackingLost() {
 		switch (mTrackableBehaviour.TrackableName) {
 			case "connexion":
-				OffScan();
 				break;
 			
 			default:
@@ -116,10 +117,14 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 	// Scan
 	private void OnScan() {
 		
-		scan = GameObject.FindWithTag("scan");
-		
+		if (!isOff)
+		{ 
+			scan = GameObject.FindWithTag("scan");
+			var ani = scan.GetComponent<Animator>();
+			ani.Play("scanHide");
+			isOff = true;
+		}
 		AuthManager.Instance.OnLogin(mTrackableBehaviour.TrackableName);
-		scan.GetComponent<Image>().color = new Color32(0,0,0,100);
 		// Show Loaded Message
 		var messageManager = GameObject.FindGameObjectWithTag("messageManager");
 		if (messageManager != null)
@@ -127,10 +132,6 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 			// Show message
 			messageManager.GetComponent<MessageManager>().OnScan();
 		}
-	}
-
-	private void OffScan() {
-		scan.GetComponent<Image>().color = new Color32(80,220,100,100);
 	}
 	
 	
