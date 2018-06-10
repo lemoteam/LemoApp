@@ -58,7 +58,9 @@ public class GemManager : MonoBehaviour {
 		
 		if (baseParticle && particles && baseParticle.isPlaying)
 		{
+			baseParticle.Clear();
 			baseParticle.Stop();
+			particles.Clear();
 			particles.Stop();
 		}
 	}
