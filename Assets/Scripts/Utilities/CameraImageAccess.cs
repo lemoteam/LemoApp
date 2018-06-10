@@ -81,7 +81,7 @@ public class CameraImageAccess : MonoBehaviour
             if (mAccessCameraImage)
             {
                 
-                if (!isTracked)
+                if (!isTracked && Plane.GetComponent<MeshRenderer>().enabled)
                 {
                     StartCoroutine(CorrectPlane());
                 }
