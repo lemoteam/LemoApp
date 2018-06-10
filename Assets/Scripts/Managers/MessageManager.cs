@@ -113,11 +113,9 @@ public class MessageManager : MonoBehaviour
         var cloneTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
         var cloneText = cloneWrapper.GetComponentsInChildren<Text>()[1];
         illuWrapper = cloneWrapper.transform.GetChild(0).transform.GetChild(1);
-        Transform toto;
-        if (illuID != null)
+        if (illuID >= 0)
         {
             illuSprite = illuWrapper.transform.GetChild(illuID);
-            toto = illuWrapper.transform.GetChild(illuID);
         }
         
         instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, item, time));
