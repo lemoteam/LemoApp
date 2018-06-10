@@ -47,17 +47,23 @@ public class ToggleSound : MonoBehaviour,
 
 	#region PRIVATE_METHODS
 
+	private void OnEnable()
+	{
+		audioSource = GetComponent<AudioSource>();
+		audioSource.Play();	
+		Debug.Log("Replay");
+	}
 
 	private void OnTrackingLost()
 	{
 		audioSource.Stop();	
-		Debug.Log("ciaaaao");
+		Debug.Log("Stop");
 	}
 	
 	private void OnTrackingFound()
 	{
 		audioSource.Play();	
-		Debug.Log("salut");
+		Debug.Log("Play");
 	}
 			
 	#endregion // PRIVATE_METHODS

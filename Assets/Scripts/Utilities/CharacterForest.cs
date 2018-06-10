@@ -165,7 +165,6 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 	private void StartMove()
 	{
 		if (agent && firstScan) {
-			Debug.Log("grgreger");
 			agent.Resume();
 		}
 	}
@@ -189,7 +188,6 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 	void Update () {
 		
 		if (agent) {
-			Debug.Log(agent.pathPending);
 			if (!agent.pathPending && isAnimated)
 			{
 				if (agent.remainingDistance <= agent.stoppingDistance)
