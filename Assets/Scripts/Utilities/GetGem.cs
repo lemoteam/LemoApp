@@ -153,7 +153,7 @@ public class GetGem : MonoBehaviour
                 
                 // Position cloneObj
                 cloneObj.transform.parent = imgTarget.transform;
-                cloneObj.transform.localScale = new Vector3(4.3f,4.3f,4.3f);
+                cloneObj.transform.localScale = new Vector3(4.1f,4.1f,4.1f);
                 
                 cloneObj.transform.localPosition = new Vector3(0f, 0.52f, 0.18f);
                 cloneObj.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
