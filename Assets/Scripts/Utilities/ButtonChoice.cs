@@ -36,6 +36,9 @@ public class ButtonChoice : MonoBehaviour, IVirtualButtonEventHandler
 			
 			// Play Animation
 			gemManager.PlayBase();
+			
+			// Play sound
+			gemManager.playSound();
 		}
 	
 

@@ -8,11 +8,13 @@ public class GemManager : MonoBehaviour {
 	public Animator animator;
 	public string animatorSlug;
 	public ParticleSystem baseParticle, particles;
+	private AudioSource audio;
 	
 	// Lifecycle
 	void Start()
 	{
 		GlobalManager.instance.gemManagerList.Add(this);
+		audio = GetComponent<AudioSource>();
 	}
 
 	/*private void FixedUpdate()
@@ -36,7 +38,13 @@ public class GemManager : MonoBehaviour {
 	
 	
 	// Methods
-
+	public void playSound()
+	{
+		if (audio)
+		{
+			audio.Play();
+		}
+	}
 	public void PlayOnlyAnimation()
 	{
 		if (animator)
