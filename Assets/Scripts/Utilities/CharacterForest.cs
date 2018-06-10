@@ -8,8 +8,9 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 	
 	private TrackableBehaviour mTrackableBehaviour;
 	
-	public NavMeshAgent agent;
+	private NavMeshAgent agent;
 	private bool isAnimated = false;
+	private bool firstScan = true;
 	
 	public GameObject forestElementsContainer;
 	public GameObject forestTreesContainer;
@@ -54,9 +55,9 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 		// Trackable Behaviour
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		if (mTrackableBehaviour)
-			mTrackableBehaviour.RegisterTrackableEventHandler(this);
+			mTrackableBehaviour.RegisterTrackableEventHandler(this);	
 		
-		// Launch Animation
+		agent = character.GetComponent<NavMeshAgent>();
 		destinationPosition = destination.transform.position;
 		agent.SetDestination(destinationPosition);
 		StopMove();
@@ -78,6 +79,7 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 			
 			Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
 			OnTrackingFound();
+			Debug.Log("pogkrpogkrepokg perogk repogkrepogk erpgorek gpreokgre ");
 		}
 		
 		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NO_POSE) {
@@ -91,6 +93,7 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 	// Tracking Found
 	private void OnTrackingFound()
 	{
+		
 		StartMove();
 	}
 	
@@ -143,17 +146,37 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 			} 
 		}
 	}
-	
+
+	private void OnDisable()
+	{
+		Debug.Log("DISABLE");
+		firstScan = false;
+	}
+
+
+	private void OnEnable()
+	{
+		firstScan = true;
+		Debug.Log(agent);
+		agent.SetDestination(destinationPosition);
+	}
+
 	// Start Move
 	private void StartMove()
 	{
-		agent.Resume();
+		if (agent && firstScan) {
+			Debug.Log("grgreger");
+			agent.Resume();
+		}
 	}
 	
 	// Stop Move
 	private void StopMove()
 	{
-		agent.Stop();
+		if (agent && firstScan)
+		{
+			agent.Stop();
+		}
 	} 
 
 	// Stop
@@ -164,14 +187,17 @@ public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (!agent.pathPending && isAnimated)
-		{
-			if (agent.remainingDistance <= agent.stoppingDistance)
+		
+		if (agent) {
+			Debug.Log(agent.pathPending);
+			if (!agent.pathPending && isAnimated)
 			{
-				if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+				if (agent.remainingDistance <= agent.stoppingDistance)
 				{
-					Stop();
+					if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+					{
+						Stop();
+					}
 				}
 			}
 		}

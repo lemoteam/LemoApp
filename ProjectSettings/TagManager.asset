@@ -40,6 +40,7 @@ TagManager:
   - i-wrapper
   - scanFade
   - textMarker
+  - navAgent
   layers:
   - Default
   - TransparentFX
