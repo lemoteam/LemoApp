@@ -1,15 +1,19 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Vuforia;
 
-public class CharacterForest : MonoBehaviour
+public class CharacterForest : MonoBehaviour, ITrackableEventHandler
 {
-	public Camera cam;
+	
+	private TrackableBehaviour mTrackableBehaviour;
+	
 	public NavMeshAgent agent;
-	public bool isAnimated = false;
+	private bool isAnimated = false;
 	
 	public GameObject forestElementsContainer;
 	public GameObject forestTreesContainer;
+	public GameObject character;
 
 	public GameObject destination;
 	public Light destinationLight;
@@ -17,6 +21,7 @@ public class CharacterForest : MonoBehaviour
 	private List<Transform> nodes;
 	private List<Transform> forestElNodes;
 	private List<Transform> forestTrNodes;
+	private Vector3 destinationPosition;
 	private int currentNode = 0;
 	private bool move = true;
 	private bool animatedLight = false;
@@ -46,11 +51,15 @@ public class CharacterForest : MonoBehaviour
 			forestTrNodes.Add(forestTrees.transform.GetChild(i));
 		}
 		
+		// Trackable Behaviour
+		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+		if (mTrackableBehaviour)
+			mTrackableBehaviour.RegisterTrackableEventHandler(this);
 		
 		// Launch Animation
-		var destinationPosition = destination.transform.position;
-		Move(destinationPosition);
-
+		destinationPosition = destination.transform.position;
+		agent.SetDestination(destinationPosition);
+		StopMove();
 	}
 	
 
@@ -59,6 +68,38 @@ public class CharacterForest : MonoBehaviour
 		CheckForestElementsDistance();
 		CheckForestTreesDistance();
 	}
+	
+	
+	public void OnTrackableStateChanged( TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus) {
+		
+		if (newStatus == TrackableBehaviour.Status.DETECTED ||
+		    newStatus == TrackableBehaviour.Status.TRACKED ||
+		    newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
+			
+			Debug.Log("Custom Trackable " + mTrackableBehaviour.TrackableName + " found");
+			OnTrackingFound();
+		}
+		
+		else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NO_POSE) {
+			
+			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+			OnTrackingLost();
+		}
+	}
+	
+	
+	// Tracking Found
+	private void OnTrackingFound()
+	{
+		StartMove();
+	}
+	
+	// Tracking Lost
+	private void OnTrackingLost()
+	{
+		StopMove();
+	}
+	
 
 	private void CheckForestElementsDistance()
 	{
@@ -66,7 +107,7 @@ public class CharacterForest : MonoBehaviour
 		{
 			var elementForest = node.GetComponent<ElementForest>();
 
-			if (Vector3.Distance(transform.position, node.position) < .2f)
+			if (Vector3.Distance(character.transform.position, node.position) < .2f)
 			{
 				if (!elementForest.isActive)
 				{
@@ -92,7 +133,7 @@ public class CharacterForest : MonoBehaviour
 			// Debug.Log(Vector3.Distance(transform.position, node.position));
 
 			
-			if (Vector3.Distance(transform.position, node.position) < .3f)
+			if (Vector3.Distance(character.transform.position, node.position) < .3f)
 			{
 				
 				if (!elementForest.isActive)
@@ -102,14 +143,20 @@ public class CharacterForest : MonoBehaviour
 			} 
 		}
 	}
-
-	private void Move(Vector3 destinationPos)
+	
+	// Start Move
+	private void StartMove()
 	{
-		agent.SetDestination(destinationPos);
-		isAnimated = true;
+		agent.Resume();
 	}
+	
+	// Stop Move
+	private void StopMove()
+	{
+		agent.Stop();
+	} 
 
-
+	// Stop
 	private void Stop()
 	{
 		animatedLight = true;
@@ -124,8 +171,6 @@ public class CharacterForest : MonoBehaviour
 			{
 				if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
 				{
-					Debug.Log("Je suis arrivé");
-					isAnimated = false;
 					Stop();
 				}
 			}
