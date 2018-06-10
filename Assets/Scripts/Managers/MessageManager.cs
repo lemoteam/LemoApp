@@ -13,6 +13,7 @@ public class MessageManager : MonoBehaviour
     public class Popup
     {
         public string messageSlug;
+        public int illuID; // Order in wrapper illu
         public float time = 5f;
         public bool onScan; // 0 => On scene load / 1 => On scan
     }
@@ -23,7 +24,8 @@ public class MessageManager : MonoBehaviour
     private static List<GameObject> popupList = new List<GameObject>();
     private static List<GameObject> imageTargetList = new List<GameObject>();
     private static Animator animator;
-    private static GameObject illuSprite;
+    private static Transform illuSprite;
+    private static Transform illuWrapper;
         
     private void Awake() {
         instance = this;
@@ -47,7 +49,7 @@ public class MessageManager : MonoBehaviour
         if (filteredPopup.Count > 0)
         {
             var message = filteredPopup[0];
-            ShowMessage(message.messageSlug, message.time);
+            StartCoroutine(WaitToShow(message.messageSlug, message.time, message.illuID));
         }
     }
     
@@ -79,25 +81,30 @@ public class MessageManager : MonoBehaviour
         // If a message exist show it
         if (filteredPopup.Count > 0) {
             var message = filteredPopup[0];
-            ShowMessage(message.messageSlug, message.time);
+            ShowMessage(message.messageSlug, message.time, message.illuID);
         }
     }
+
+    private static IEnumerator WaitToShow(string key, float time, int illuID)
+    {
+        yield return new WaitForSeconds(2f);
+        ShowMessage(key, time, illuID);
+    }
     
-    
-    public static void ShowMessage(string key, float time) { 
+    public static void ShowMessage(string key, float time, int illuID) { 
         var list = GlobalManager.instance.messageList; 
         
         foreach (var item in list) {
             if (item.id == key) {
-               ActivePopup(item, time);
+               ActivePopup(item, time, illuID);
             }
         }
     }
 
-    private static void ActivePopup(Message item, float time) 
+    private static void ActivePopup(Message item, float time, int illuID) 
     {
         var obj = Resources.Load("Prefabs/ui/modalDialoguePanelWrapper") as GameObject;
-        var cloneWrapper = Instantiate (obj);
+        GameObject cloneWrapper = (GameObject)Instantiate(obj);
         
         cloneWrapper.SetActive(false);
         cloneWrapper.transform.parent = globalManagerCanvas.transform;
@@ -105,7 +112,13 @@ public class MessageManager : MonoBehaviour
         
         var cloneTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
         var cloneText = cloneWrapper.GetComponentsInChildren<Text>()[1];
-        illuSprite = GameObject.FindWithTag("i-" + item.imageSlug);
+        illuWrapper = cloneWrapper.transform.GetChild(0).transform.GetChild(1);
+        Transform toto;
+        if (illuID != null)
+        {
+            illuSprite = illuWrapper.transform.GetChild(illuID);
+            toto = illuWrapper.transform.GetChild(illuID);
+        }
         
         instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, item, time));
     }
@@ -135,18 +148,21 @@ public class MessageManager : MonoBehaviour
         cloneWrapperRect.anchorMin = new Vector2(0, 0);
         cloneWrapperRect.anchorMax = new Vector2(1, 1);
         cloneWrapperRect.pivot = new Vector2(0.5f, 0.5f);
-        
-        
+
         if (illuSprite)
         {
+            illuWrapper.gameObject.SetActive(true);
             illuSprite.gameObject.SetActive(true);
+        }
+        else
+        {
+            illuWrapper.gameObject.SetActive(false);
         }
         
         cloneWrapper.SetActive(true);
-        
+        cloneWrapper.GetComponent<CanvasGroup>().alpha = 0;
         animator.Play("show");
             
-        
         // Image targets to hide
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var targetImage = GameObject.FindGameObjectsWithTag("targetImage");

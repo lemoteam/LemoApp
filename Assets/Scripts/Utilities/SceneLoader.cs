@@ -56,8 +56,6 @@ public class SceneLoader : MonoBehaviour {
 			yield return null;
 		}
 		
-		Debug.Log("<color=purple>Jui charge</color>");
-
 		
 		// Attach camera
 		var globalManagerCanvas = GameObject.Find("GlobalManagerCanvas");

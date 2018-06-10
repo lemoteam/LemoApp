@@ -4734,9 +4734,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popups:
   - messageSlug: scanBefore
+    illuID: 0
     time: 6
     onScan: 0
   - messageSlug: scanAfter
+    illuID: 1
     time: 6
     onScan: 1
 --- !u!4 &1647173034
