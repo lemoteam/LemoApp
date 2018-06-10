@@ -49,7 +49,17 @@ ModelImporter:
     4300004: pSphere11
     4300006: pSphere10
     4300008: "C\xF4ne_2"
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4ab1867ee42b2439d97d3361a2475a60, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir
+    second: {fileID: 2100000, guid: 3d5cc33379c7e4829838933dc877e66d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

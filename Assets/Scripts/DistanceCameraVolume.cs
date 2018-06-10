@@ -20,7 +20,7 @@ public class DistanceCameraVolume : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sceneMarker = GameObject.FindWithTag("sceneMarker");
-		soundTarget = sceneMarker.GetComponent<AudioSource>();
+		soundTarget = GetComponent<AudioSource>();
 		arCamera = GameObject.Find ("ARCamera"); 
 		Debug.Log ("camera : " + arCamera);
 		soundTarget.loop = true;
@@ -30,20 +30,16 @@ public class DistanceCameraVolume : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (!tree)
-		{
-			tree = GameObject.FindWithTag("tree");
-		}
-		else
-		{ 
-			Vector3 distance = arCamera.transform.position - sceneMarker.transform.position;
-			var Len = distance.magnitude;
+		//if (!tree)
+		//{
+			var distance = Vector3.Distance(arCamera.transform.position, transform.position);
+			//var Len = distance.magnitude;
 			//Debug.Log ("dist :" + distance);
-			//Debug.Log ("len :" + Len);
+			// Debug.Log ("dist :" + distance);
 			//float volumeMap = Map(1.0f,0.02f,900.0f,1200.0f,Len);
-			float volumeMap = Map(1.0f,0.02f,1200f,2200f,Len);
+			//float volumeMap = Map(1.0f,0.02f,1200f,2200f,Len);
+			float volumeMap = Map(1.0f,0.02f,3f,4f,distance);
 			soundTarget.volume = volumeMap;
-		}
-	
+		//}
 	}
 }
