@@ -82,7 +82,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Scene3");
 				break;
 			
-			case "S4" :
+			case "S4a" :
 				ChangeScene("Scene4");
 				break;
 			
