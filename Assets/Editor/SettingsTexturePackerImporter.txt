@@ -2,20 +2,14 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Resources/Sprites/logo/sprite_logo.tpsheet
-- Assets/Resources/Sprites/slider/sliderc.tpsheet
-- Assets/Resources/Sprites/sliderChoice/slider.tpsheet
-- Assets/Resources/Sprites/test/sprite_logo.tpsheet
+- Assets/Resources/Sprites/check/check.tpsheet
+- Assets/Resources/Sprites/choice/choice.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Resources/Sprites/logo/sprite_logo.png
-- Assets/Resources/Sprites/slider/sliderc.png
-- Assets/Resources/Sprites/sliderChoice/slider.png
-- Assets/Resources/Sprites/test/sprite_logo.png
+- Assets/Resources/Sprites/check/check.png
+- Assets/Resources/Sprites/choice/choice.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
-- 
 - 
 - 
 enableDebugOutput: 0

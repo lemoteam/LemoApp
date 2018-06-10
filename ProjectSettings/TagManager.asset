@@ -33,6 +33,11 @@ TagManager:
   - dLight
   - characterBase
   - cFade
+  - i-check
+  - i-sliderObjet
+  - i-slider
+  - i-sliderc
+  - i-wrapper
   layers:
   - Default
   - TransparentFX

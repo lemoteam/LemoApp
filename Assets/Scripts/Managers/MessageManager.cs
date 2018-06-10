@@ -23,6 +23,7 @@ public class MessageManager : MonoBehaviour
     private static List<GameObject> popupList = new List<GameObject>();
     private static List<GameObject> imageTargetList = new List<GameObject>();
     private static Animator animator;
+    private static GameObject illuSprite;
         
     private void Awake() {
         instance = this;
@@ -104,23 +105,17 @@ public class MessageManager : MonoBehaviour
         
         var cloneTitle = cloneWrapper.GetComponentsInChildren<Text>()[0];
         var cloneText = cloneWrapper.GetComponentsInChildren<Text>()[1];
-        var cloneIllu = cloneWrapper.GetComponentsInChildren<Image>()[3];
+        illuSprite = GameObject.FindWithTag("i-" + item.imageSlug);
         
-        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, cloneIllu, item, time));
+        instance.StartCoroutine(DisplayPopup(cloneWrapper, cloneTitle, cloneText, item, time));
     }
 
 
-    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Image cloneIllu, Message item, float time)
+    private static IEnumerator DisplayPopup(GameObject cloneWrapper, Text cloneTitle, Text cloneText, Message item, float time)
     {
         
         cloneText.text = item.content ;
         cloneTitle.text = !string.IsNullOrEmpty(item.title) ? item.title : null;
-        cloneIllu.sprite = !string.IsNullOrEmpty(item.imageSlug) ? Resources.Load<Sprite>("Sprites/" + item.imageSlug) : null;
-
-        if (cloneIllu.sprite == null)
-        {
-            cloneIllu.gameObject.SetActive(false);
-        }
         
         Show(cloneWrapper);
         yield return new WaitForSeconds(time);
@@ -140,10 +135,18 @@ public class MessageManager : MonoBehaviour
         cloneWrapperRect.anchorMin = new Vector2(0, 0);
         cloneWrapperRect.anchorMax = new Vector2(1, 1);
         cloneWrapperRect.pivot = new Vector2(0.5f, 0.5f);
+        
+        
+        if (illuSprite)
+        {
+            illuSprite.gameObject.SetActive(true);
+        }
+        
         cloneWrapper.SetActive(true);
         
         animator.Play("show");
             
+        
         // Image targets to hide
         var targetChoice = GameObject.FindGameObjectsWithTag("targetChoice");
         var targetImage = GameObject.FindGameObjectsWithTag("targetImage");
