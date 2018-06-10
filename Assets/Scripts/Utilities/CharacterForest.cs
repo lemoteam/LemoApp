@@ -89,7 +89,7 @@ public class CharacterForest : MonoBehaviour
 		{
 			var elementForest = node.GetComponent<TreeForest>();
 			
-			Debug.Log(Vector3.Distance(transform.position, node.position));
+			// Debug.Log(Vector3.Distance(transform.position, node.position));
 
 			
 			if (Vector3.Distance(transform.position, node.position) < .3f)
@@ -136,7 +136,7 @@ public class CharacterForest : MonoBehaviour
 		{	
 			if (!(replaceFraction < 1));
 			replaceFraction += Time.deltaTime * replaceSpeed;
-			lt.intensity = Mathf.SmoothStep(0, 10, CubicEaseOut(replaceFraction));
+			lt.intensity = Mathf.SmoothStep(0, 50, CubicEaseOut(replaceFraction));
 		}
 	}
 	
