@@ -46,7 +46,13 @@ public class StopSound : MonoBehaviour,
 	#endregion // PUBLIC_METHODS
 
 	#region PRIVATE_METHODS
-
+	
+	private void OnEnable()
+	{
+		audioSource = GetComponent<AudioSource>();
+		audioSource.Play();	
+		Debug.Log("Replay");
+	}
 
 	private void OnTrackingLost()
 	{

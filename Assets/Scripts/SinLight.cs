@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SinLight : MonoBehaviour {
 	Light light;
-	private float minIntensity = 0.78f;
+	private float minIntensity = 1f;
 	private float maxIntensity = 10f;	
 	private float frequency = 0.25f;
 	private float phase = 4f;

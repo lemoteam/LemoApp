@@ -7,6 +7,7 @@ public class DistanceSongCam : MonoBehaviour
 	private GameObject catiche;
 	private GameObject buisson;
 	private GameObject emmi;
+	private GameObject refSound;
 	private GameObject[] players;
 	private Camera camera;
 	private float previousIndex = -1;
@@ -20,8 +21,9 @@ public class DistanceSongCam : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		buisson = GameObject.FindWithTag("buisson");
-		catiche = GameObject.Find("catiche");
-		emmi = GameObject.Find("emmi");
+		catiche = GameObject.Find("RefCatiche");
+		emmi = GameObject.Find("RefEmmi");
+		refSound = GameObject.Find("RefSound");
 		camera = Camera.main;
 		players = GameObject.FindGameObjectsWithTag("Player");
 		audioSource = GetComponent<AudioSource>();
@@ -38,39 +40,32 @@ public class DistanceSongCam : MonoBehaviour
 			if (emmiDist < caticheDist)
 			{
 				
-				if (audioSource.volume == 1f && !isLerpin)
-				{
-					Debug.Log("<color=green> Coucou : emmi "+"</color>");
-					audioSource.volume = 0.15f;
-					isPlayin = false;
-					/*isLerpin = true;
-					audioSource.volume = Mathf.Lerp(1f, 0.003f, t);
-					t += 0.5f * Time.deltaTime;
-
-					if (t > 1.0f)
-					{
-						isLerpin = false;
-						t = 0.0f;
-					}*/
-				}
+				Debug.Log("<color=green> Coucou : emmi "+"</color>");
+				var distance = Vector3.Distance(camera.transform.position, refSound.transform.position);
+				float volumeMap = Map(0.2f,.05f,1f,2.5f, distance);
+				audioSource.volume = volumeMap;
+				isPlayin = false;
+				
 			}
 			else
 			{
-				if (audioSource.volume == 0.15f && !isLerpin)
-				{
-					Debug.Log("<color=green> Coucou : catiche "+"</color>");
-					audioSource.volume = 1f;
-					/*audioSource.volume = Mathf.Lerp(0.003f, 1f, t);
-					t += 0.5f * Time.deltaTime;
-
-					if (t > 1.0f)
-					{
-						isLerpin = false;
-						t = 0.0f;
-					}
-					isPlayin = true;*/
-				}
+		
+				Debug.Log("<color=green> Coucou : catiche "+"</color>");
+				var distance = Vector3.Distance(camera.transform.position, refSound.transform.position);
+				float volumeMap = Map(1.0f,0.2f,1f,2.5f, distance);
+				audioSource.volume = volumeMap;
 			}
+		}
+	}
+	
+	
+	public float Map(float from, float to, float from2, float to2, float value) {
+		if(value <= from2) {
+			return from;
+		} else if(value >= to2) {
+			return to;
+		} else {
+			return (to - from) * ((value - from2) / (to2 - from2)) + from;
 		}
 	}
 }

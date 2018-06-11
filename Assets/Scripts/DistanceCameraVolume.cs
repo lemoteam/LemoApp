@@ -18,17 +18,18 @@ public class DistanceCameraVolume : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
-		sceneMarker = GameObject.FindWithTag("sceneMarker");
-		soundTarget = GetComponent<AudioSource>();
-		arCamera = GameObject.Find ("ARCamera"); 
-		Debug.Log ("camera : " + arCamera);
-		soundTarget.loop = true;
-		Debug.Log ("audio volume : " + soundTarget.volume);
+	void Start ()
+	{
+		Init();
 	}
 
 
 	private void OnEnable()
+	{
+		Init();
+	}
+
+	private void Init()
 	{
 		sceneMarker = GameObject.FindWithTag("sceneMarker");
 		soundTarget = GetComponent<AudioSource>();
@@ -37,7 +38,7 @@ public class DistanceCameraVolume : MonoBehaviour {
 		soundTarget.loop = true;
 		Debug.Log ("audio volume : " + soundTarget.volume);
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		
