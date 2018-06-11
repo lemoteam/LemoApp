@@ -812,7 +812,7 @@ MonoBehaviour:
   popups:
   - messageSlug: S3
     illuID: -1
-    time: 6
+    time: 3
     onScan: 0
 --- !u!4 &287574941
 Transform:

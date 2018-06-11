@@ -909,7 +909,7 @@ MonoBehaviour:
   popups:
   - messageSlug: S5
     illuID: -1
-    time: 6
+    time: 3
     onScan: 0
 --- !u!4 &1450446946
 Transform:

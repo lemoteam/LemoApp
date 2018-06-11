@@ -276,7 +276,7 @@ MonoBehaviour:
   popups:
   - messageSlug: S4
     illuID: -1
-    time: 6
+    time: 3
     onScan: 0
 --- !u!4 &301454047
 Transform:

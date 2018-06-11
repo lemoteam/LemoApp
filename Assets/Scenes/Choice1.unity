@@ -5592,7 +5592,7 @@ MonoBehaviour:
   popups:
   - messageSlug: A1
     illuID: 1
-    time: 6
+    time: 2
     onScan: 0
 --- !u!4 &765393332
 Transform:

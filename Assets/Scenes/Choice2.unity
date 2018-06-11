@@ -504,7 +504,7 @@ MonoBehaviour:
   popups:
   - messageSlug: B1
     illuID: 1
-    time: 6
+    time: 2
     onScan: 0
 --- !u!4 &1089347092
 Transform:
