@@ -1650,19 +1650,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Il re\u0301ussit donc a\u0300 se faire des bas et a\u0300 pre\u0301parer
-    de l'e\u0301lixir. Il devint un enchanteur des plus habiles ; e\u0301piant jour
-    et nuit toutes les habitudes de la flore, initie\u0301 a\u0300 tous les myste\u0300res
-    de la lande et de la fore\u0302t, il y re\u0301colta des mandragones et se trouva
-    dans l\u2019abondance.\n\nIl eut me\u0302me de l\u2019ail a\u0300 discre\u0301tion,
-    gra\u0302ce a\u0300 une vieille pre\u0302tresse , qui, toutes les semaines, passait
-    au pied du che\u0302ne et y de\u0301posait sa besace pleine, pour se reposer.
-    Emmi, qui la guettait, descendait de son arbre, la te\u0302te couverte de sa tunique,
-    et lui donnait quelques gouttes d'e\u0301lixir en e\u0301change d\u2019une partie
-    de son ail. Si elle avait peur de lui, sa peur ne se manifestait que par un chant
-    gre\u0301gorien et une obe\u0301issance dont elle n\u2019avait du reste point
-    a\u0300 se repentir.\n\t\t\t\t\t\t\nAinsi se passa l\u2019hiver, qui fut glacial,
-    et l\u2019e\u0301te\u0301 suivant, qui fut arides et orageux.\n"
+  m_text: "Il r\xE9ussit donc \xE0 se faire des bas et \xE0 pr\xE9parer de l'e\u0301lixir.
+    Il devint un enchanteur des plus habiles ; \xE9piant jour et nuit toutes les habitudes
+    de la flore, initi\xE9 \xE0 tous les myst\xE8res de la lande et de la for\xEAt,
+    il y r\xE9colta des mandragones et se trouva dans l\u2019abondance.\n\nIl eut
+    m\xEAme de l\u2019ail \xE2 discr\xE9tion, gr\xE2ce \xE0 une vieille pr\xEAtresse
+    , qui, toutes les semaines, passait au pied du che\u0302ne et y de\u0301posait
+    sa besace pleine, pour se reposer. Emmi, qui la guettait, descendait de son arbre,
+    la t\xEAte couverte de sa tunique, et lui donnait quelques gouttes d'\xE9lixir
+    en \xE9change d\u2019une partie de son ail. Si elle avait peur de lui, sa peur
+    ne se manifestait que par un chant gr\xE9gorien et une ob\xE9issance dont elle
+    n\u2019avait du reste point a\u0300 se repentir.\n\t\t\t\t\t\t\nAinsi se passa
+    l\u2019hiver, qui fut glacial, et l\u2019\xE9t\xE9 suivant, qui fut arides et
+    orageux.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 105fd5e171b6e4cdaac0d39e9fc5dcc9, type: 2}
   m_sharedMaterial: {fileID: 21716729608357256, guid: 105fd5e171b6e4cdaac0d39e9fc5dcc9,
@@ -1731,10 +1731,10 @@ MonoBehaviour:
   m_margin: {x: 4.866028, y: 0, z: 5.108146, w: -2.6087565}
   m_textInfo:
     textComponent: {fileID: 647603762}
-    characterCount: 865
+    characterCount: 842
     spriteCount: 0
     spaceCount: 162
-    wordCount: 171
+    wordCount: 155
     linkCount: 0
     lineCount: 17
     pageCount: 1
