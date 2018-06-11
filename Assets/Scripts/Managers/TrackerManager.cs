@@ -78,7 +78,7 @@ public class TrackerManager : MonoBehaviour, ITrackableEventHandler
 				ChangeScene("Scene2");
 				break;
 			
-			case "S3a" :
+			case "page-28" :
 				ChangeScene("Scene3");
 				break;
 			
