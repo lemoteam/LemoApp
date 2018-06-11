@@ -4,12 +4,21 @@ tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 - Assets/Resources/Sprites/check/check.tpsheet
 - Assets/Resources/Sprites/choice/choice.tpsheet
+- Assets/Resources/Sprites/logo/sprite_logo.tpsheet
+- Assets/Resources/Sprites/slider/sliderc.tpsheet
+- Assets/Resources/Sprites/sliderChoice/slider.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Resources/Sprites/check/check.png
 - Assets/Resources/Sprites/choice/choice.png
+- Assets/Resources/Sprites/logo/sprite_logo.png
+- Assets/Resources/Sprites/slider/sliderc.png
+- Assets/Resources/Sprites/sliderChoice/slider.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
 - 
 - 
 enableDebugOutput: 0
