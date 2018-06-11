@@ -12,6 +12,8 @@ public class BallScriptElement :  MonoBehaviour, ITrackableEventHandler
 	private GameObject character;
 	private GameObject spawn;
 	private Vector3 position;
+	private IEnumerator coroutine;
+
 	
 	private TrackableBehaviour mTrackableBehaviour;
 
@@ -55,8 +57,10 @@ public class BallScriptElement :  MonoBehaviour, ITrackableEventHandler
 	}
 	
 	// Tracking Found
-	private void OnTrackingFound() {
-		StartCoroutine(addGravity());
+	private void OnTrackingFound()
+	{
+		coroutine = addGravity();
+		StartCoroutine(coroutine);
 	}
 	
 	// Tracking Lost
@@ -70,5 +74,15 @@ public class BallScriptElement :  MonoBehaviour, ITrackableEventHandler
 	private void FixedUpdate()
 	{
 		character.transform.rotation = new Quaternion(0, 0, 0, 0);
+	}
+
+	private void OnDisable()
+	{
+		StopCoroutine(coroutine);
+	}
+
+	private void OnEnable()
+	{
+		StartCoroutine(coroutine);
 	}
 }
