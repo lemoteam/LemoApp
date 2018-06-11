@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
 	public GameObject pursuer;
 	private float replaceFraction = 1;
 	private float replaceSpeed = .2f;
-	private float lightIntensity = 10f;
+	private float lightIntensity = 15f;
 	public int index = 0;
 	private int prevIndex = -2;
 	public int nbPursuer;
