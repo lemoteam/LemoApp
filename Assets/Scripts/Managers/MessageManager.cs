@@ -26,6 +26,7 @@ public class MessageManager : MonoBehaviour
     private static Animator animator;
     private static Transform illuSprite;
     private static Transform illuWrapper;
+    private static bool isScanYet = false;
         
     private void Awake() {
         instance = this;
@@ -182,21 +183,28 @@ public class MessageManager : MonoBehaviour
         }
         
         if(onScan) {
-            instance.StartCoroutine(WaitToShow());
+            instance.StartCoroutine(WaitToShow(cloneWrapper, true));
+            cloneWrapper.GetComponent<AudioSource>().Play();
         }
         else
         {
-            instance.StartCoroutine(WaitToShow());
+            instance.StartCoroutine(WaitToShow(cloneWrapper, false));
             //animator.Play("show");
         }
     }
     
     
     
-    private static IEnumerator WaitToShow()
+    private static IEnumerator WaitToShow(GameObject popin, bool isScan)
     {
         yield return new WaitForSeconds(2f);
         animator.Play("show");
+        
+        if (!isScan && !isScanYet) {
+            popin.GetComponent<AudioSource>().Play();
+        }
+        
+        isScanYet = true;
     }
 
     
