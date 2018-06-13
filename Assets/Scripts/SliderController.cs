@@ -23,14 +23,17 @@ public class SliderController : MonoBehaviour {
 			for (int i = 0; i < indexes.Length; i++)
 			{
 				var num = Vector3.Distance(indexes[i].transform.position, indicator.transform.position);
+				Debug.Log("index : " + i + "distance : " + num);
+				
 				if (num < minimum)
 				{
 					minimum = num;	
-					// Debug.Log("<color=black> min distance : "+ minimum +"</color>");
+					//Debug.Log("<color=black> min distance : "+ minimum +"</color>");
 					var currentIndex = i;
 					if (previousIndex != currentIndex)
 					{
-						playerManager.goToCheckpoint(currentIndex);
+						//Debug.Log("current index: " + currentIndex);
+						playerManager.goToCheckpoint(currentIndex + 1);
 						previousIndex = currentIndex;
 					}
 				}
