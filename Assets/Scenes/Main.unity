@@ -678,7 +678,7 @@ MonoBehaviour:
   popups:
   - messageSlug: scanBefore
     illuID: 0
-    time: 3
+    time: 2
     onScan: 0
   - messageSlug: scanAfter
     illuID: -1
