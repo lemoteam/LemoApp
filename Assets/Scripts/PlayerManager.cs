@@ -92,9 +92,6 @@ public class PlayerManager : MonoBehaviour
 			}
 			else
 			{
-				
-			}
-			{
 				prevIndex = checkpoints.Length - 1;
 				index = 0;
 			}
