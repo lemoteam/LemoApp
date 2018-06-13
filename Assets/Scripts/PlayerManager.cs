@@ -92,6 +92,9 @@ public class PlayerManager : MonoBehaviour
 			}
 			else
 			{
+				
+			}
+			{
 				prevIndex = checkpoints.Length - 1;
 				index = 0;
 			}
@@ -101,7 +104,8 @@ public class PlayerManager : MonoBehaviour
 		if (replaceFraction < 1)
 		{
 			replaceFraction += Time.deltaTime * replaceSpeed;
-			
+			/*
+
 			// Light On
 			var indexL = index - 1 == -1 ? checkpoints.Length - 1 : index - 1;
 			var indexPrev = prevIndex - 1 == -1 ? checkpoints.Length - 1 : prevIndex - 1;
@@ -113,7 +117,8 @@ public class PlayerManager : MonoBehaviour
 				var prevlight = checkpoints[indexPrev].GetComponent<Light>();
 				prevlight.intensity = Mathf.SmoothStep(lightIntensity, 0, CubicEaseOut(replaceFraction));
 			}
-		
+		*/
+
 			// Light Off
 			/*if (prevIndex != -2)
 			{
