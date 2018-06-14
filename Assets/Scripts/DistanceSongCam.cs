@@ -13,7 +13,7 @@ public class DistanceSongCam : MonoBehaviour
 	private float previousIndex = -1;
 	private float minimum ;
 	private AudioSource audioSource;
-	public AudioClip audioClip;
+	//public AudioClip audioClip;
 	private bool isPlayin;
 	private bool isLerpin;
 	static float t = 0.0f;
@@ -54,11 +54,11 @@ public class DistanceSongCam : MonoBehaviour
 				var distance = Vector3.Distance(camera.transform.position, refSound.transform.position);
 				float volumeMap = Map(1.0f,0.2f,1f,2.5f, distance);
 				audioSource.volume = volumeMap;
-				if (!isPlayin)
+				/*if (!isPlayin)
 				{
 					isPlayin = true;
 					audioSource.PlayOneShot(audioClip);
-				}
+				}*/
 			}
 		}
 	}
