@@ -677,8 +677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popups:
   - messageSlug: scanBefore
-    illuID: 9
-    time: 3
+    illuID: 8
+    time: 5
     onScan: 0
   - messageSlug: scanAfter
     illuID: 0

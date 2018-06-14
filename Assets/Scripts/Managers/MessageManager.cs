@@ -184,7 +184,7 @@ public class MessageManager : MonoBehaviour
         
         if(onScan) {
             instance.StartCoroutine(WaitToShow(cloneWrapper, true));
-            cloneWrapper.GetComponent<AudioSource>().Play();
+            //cloneWrapper.GetComponent<AudioSource>().Play();
         }
         else
         {
@@ -201,7 +201,7 @@ public class MessageManager : MonoBehaviour
         animator.Play("show");
         
         if (!isScan && !isScanYet) {
-            popin.GetComponent<AudioSource>().Play();
+            //popin.GetComponent<AudioSource>().Play();
         }
         
         isScanYet = true;
